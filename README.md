@@ -1,71 +1,135 @@
-# Fatafat Synthetic Personas — Audience Simulation Engine
+# Audience Simulation Engine — Synthetic Personas
 
-**Amazon MX Player | Fatafat Micro-Drama Vertical**
+## Overview
 
-## What This Is
+An audience intelligence system that constructs data-backed synthetic personas from streaming behavioral data, then uses those personas to inform content acquisition, commissioning, and advertising strategy. The engine merges viewing behavior with demographic profiles and consumer interest signals to produce a unified audience model.
 
-The core of an Audience Simulation Engine for Fatafat. While the end goal is to predict who a show is for before we buy or commission it, the current state delivers the foundation: 5 validated audience personas with content preferences, commercial profiles, and a slate gap analysis — all derived from how 1.9 million viewers actually behave.
+The end goal: evaluate who a show is for before it's bought or commissioned — replacing post-launch reactive analysis with pre-launch predictive intelligence.
 
-## Live Dashboard
+## Architecture
 
-**[View Dashboard →](https://d3eijncil08ojn.cloudfront.net/reports/synthetic-personas-phase2/index.html)**
+Three-layer system, built in phases:
+
+```
+Layer 1: Unified Audience Dataset
+  Streaming behavioral signals + demographics + interest segments
+  → UUID-level join across engagement, CMS, demographic, and persona tables
+
+Layer 2: Synthesized Persona Set
+  K-Means clustering across 5 behavioral dimensions
+  → Statistically validated personas with content identity + commercial profile
+
+Layer 3: AI Simulation Engine (planned)
+  Pseudo-viewer models trained per persona on historical show performance
+  → Pre-launch engagement prediction, narrative density fit, audience-fit scoring
+```
+
+## Methodology
+
+### Feature Matrix Construction
+
+User-level feature vectors built across 5 dimensions from streaming event data (7-day window):
+
+| Dimension | Features | Source |
+|-----------|----------|--------|
+| Engagement Depth | Total minutes, MPC, streams, active days, sessions, episodes/session | Player engagement events |
+| Content Preference | Shows watched, genre breadth, show concentration, content source, content origin | Engagement + CMS metadata |
+| Retention Profile | Max episode depth, lock boundary survival (Ep5→6), binge propensity | Engagement + CMS episode numbers |
+| Demographics | Age group, gender, age×gender interaction | Demographic lookup table |
+| Channel & Interest | Primary channel (paid/organic/push), interest tag count, 8 interest category flags | UTM attribution + ML persona tags |
+
+### Clustering Algorithm
+
+- K-Means with k=4 through k=8 evaluated via silhouette score and elbow method
+- One-hot encoding for categorical features, StandardScaler for numerics
+- Validated by Agglomerative Hierarchical Clustering (Ward linkage) using Adjusted Rand Index
+- Iterative refinement across 4 phases to optimize cluster quality vs hypothesis alignment
+
+| Iteration | Change | Silhouette | ARI | Hypotheses Validated |
+|-----------|--------|-----------|-----|---------------------|
+| Phase 2.0 | k=4, basic features | 0.46 | 0.61 | 3/6 |
+| Phase 2.1 | + ML persona tags, k=6 | 0.42 | 0.65 | 4/6 |
+| Phase 2.2 | + content source/origin | 0.43 | 0.75 | 4/6 ← selected |
+| Phase 2.3 | + secondary genre one-hot | 0.11 | 0.38 | 5/6 (rejected) |
+
+Phase 2.3 tested secondary genre as a clustering input but degraded silhouette from 0.43 to 0.11 — most users watch 1-2 shows, making per-user genre distributions binary and noisy. Secondary genre is instead applied as post-clustering enrichment.
+
+### Two-Level Content Identity
+
+Content preference is captured at two levels, applied after clustering:
+
+- **Level 1 (Theme):** Per-cluster distribution of secondary genre watchtime (Edgy, Forbidden Love, Melodrama, Revenge, Secret Lives, etc.)
+- **Level 2 (Archetype):** Derived from top 10 shows per cluster — their names, genres, and narrative patterns produce a human-readable content archetype
+
+### Slate Gap Analysis
+
+Demand (watchtime share) vs supply (catalog share) computed per secondary genre to identify acquisition gaps and oversupply. Per-persona gap analysis surfaces which personas are underserved by which content themes.
+
+### Commercial Value Index
+
+Composite score (0-100, platform average = 50) estimating per-persona commercial value:
+
+| Component | Weight |
+|-----------|--------|
+| Engagement depth (log watchtime) | 30% |
+| Session frequency (active days / 7) | 25% |
+| Interest breadth (tag count) | 15% |
+| Organic share | 15% |
+| Lock survival | 15% |
+
+### Strategic Framework
+
+Personas are assigned to Grow / Nourish / Sustain / Convert roles based on segment size × engagement depth, per the implementation plan's taxonomy.
 
 ## Project Structure
 
 ```
-synthetic-personas/
 ├── docs/                              # Project documents
-│   ├── phase2_report.md               # Phase 2 final report (main deliverable)
-│   ├── phase2_execution_plan.md       # Methodology & content enrichment rationale
-│   ├── phase1_report.md               # Phase 1 data foundation findings
-│   ├── implementation_plan.md         # Full 5-phase project plan
+│   ├── phase2_report.md               # Phase 2 final report
+│   ├── phase2_execution_plan.md       # Full methodology + content enrichment rationale
+│   ├── phase1_report.md               # Phase 1 data foundation
+│   ├── implementation_plan.md         # 5-phase project plan
 │   ├── strategy_paper.md              # Anticipatory content strategy paper
-│   └── source/                        # Original docx source documents
+│   └── source/                        # Original source documents
 ├── dashboard/                         # Interactive HTML dashboard
 │   └── index.html                     # Self-contained, no dependencies
-├── src/                               # Python & SQL code
-│   ├── phase2_queries.sql             # All Redshift queries
+├── src/                               # Python & SQL
+│   ├── phase2_queries.sql             # Redshift queries (7 queries)
 │   ├── export_csvs.py                 # Redshift → CSV export
-│   ├── export_persona_tags.py         # Interest tag aggregation export
-│   ├── phase2_clustering.py           # Phase 2.0: base K-Means clustering
-│   ├── phase2_1_refinement.py         # Phase 2.1: + persona tags, k=6
-│   ├── phase2_2_enriched.py           # Phase 2.2: + content source/origin (selected)
-│   ├── phase2_3_content_enriched.py   # Phase 2.3: secondary genre experiment (rejected)
-│   ├── phase2_final_content_enrichment.py  # Two-level content identity enrichment
+│   ├── export_persona_tags.py         # Interest tag aggregation
+│   ├── phase2_clustering.py           # Base clustering pipeline
+│   ├── phase2_1_refinement.py         # + persona tags
+│   ├── phase2_2_enriched.py           # + content source/origin (selected)
+│   ├── phase2_3_content_enriched.py   # Secondary genre experiment (rejected)
+│   ├── phase2_final_content_enrichment.py  # Two-level content identity
 │   ├── phase2_commercial_profiles.py  # CVI + advertiser affinity
-│   ├── slate_gap_analysis.py          # Demand vs supply gap analysis
+│   ├── slate_gap_analysis.py          # Demand vs supply analysis
 │   ├── archive/                       # Original agent-generated code
-│   └── exploration/                   # One-off CMS exploration scripts
+│   └── exploration/                   # CMS field exploration scripts
 ├── output/                            # Generated outputs
-│   ├── persona_cards_final.txt        # Final persona cards
-│   ├── slate_gap_analysis.csv         # Gap analysis data
+│   ├── persona_cards_final.txt
+│   ├── slate_gap_analysis.csv
 │   └── archive/                       # Superseded versions
-└── data/                              # CSVs (gitignored — too large)
+└── data/                              # CSVs (gitignored)
 ```
-
-## Key Findings
-
-- **5 personas** on an engagement ladder: Discovery Sampler (64.5%) → Male Crossover (18.3%) → Romance Binger (11.8%) → Engaged Explorer (3.2%) → Platform Devotee (2.3%)
-- **Content maturation signal**: as engagement deepens, preference shifts from "Edgy" (28%) → "Forbidden Love" (24%) → "Secret Lives" (13%)
-- **Slate gaps**: Melodrama is 2.3x undersupplied, Crime is 10x oversupplied
-- **Male opportunity**: 351K male 25-34 viewers with highest Electronics/Tech + Affluent/Premium affinity
 
 ## Phases
 
-| Phase | Status | Description |
+| Phase | Status | Deliverable |
 |-------|--------|-------------|
-| 1. Data Foundation | ✅ Complete | 8 queries, 6 hypotheses, behavioral baseline |
-| 2. Persona Construction | ✅ Complete | 5 personas, two-level content identity, slate gaps |
-| 3. AI Model Training | Planned | Pseudo-viewer models per persona |
-| 4. Integration Pilot | Planned | Test on upcoming commission |
-| 5. Live Deployment | Planned | Production system |
+| 1. Data Foundation | ✅ Complete | Unified behavioral dataset, 8 analytical queries, 6 persona hypotheses |
+| 2. Persona Construction | ✅ Complete | Validated persona set, two-level content identity, slate gap analysis, interactive dashboard |
+| 3. AI Model Training | Planned | Pseudo-viewer models per persona, retention curve prediction (target: r ≥ 0.70) |
+| 4. Integration Pilot | Planned | Prediction vs actuals on upcoming commission |
+| 5. Live Deployment | Planned | Production system across commissioning, slate planning, ad targeting |
 
-## Data
+## Running the Pipeline
 
-CSV data files are gitignored (too large). To regenerate:
 1. Set `REDSHIFT_USERNAME` and `REDSHIFT_PASSWORD` in `.env`
-2. Run `python src/export_csvs.py` (exports 6 CSVs from Redshift)
-3. Run `python src/export_persona_tags.py` (exports interest tags)
-4. Run `python src/phase2_2_enriched.py` (clustering)
-5. Run `python src/phase2_final_content_enrichment.py` (content enrichment)
-6. Run `python src/slate_gap_analysis.py` (gap analysis)
+2. `python src/export_csvs.py` — exports 6 CSVs from Redshift
+3. `python src/export_persona_tags.py` — exports aggregated interest tags
+4. `python src/phase2_2_enriched.py` — runs clustering (Phase 2.2)
+5. `python src/phase2_final_content_enrichment.py` — adds two-level content identity
+6. `python src/slate_gap_analysis.py` — computes demand vs supply gaps
+
+Requirements: `pandas`, `numpy`, `scikit-learn`, `scipy`, `psycopg2-binary`
