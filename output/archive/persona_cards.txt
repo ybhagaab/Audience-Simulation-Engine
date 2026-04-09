@@ -1,0 +1,121 @@
+FATAFAT SYNTHETIC PERSONAS — PHASE 2 PERSONA CARDS
+Generated: 2026-04-07 22:15
+Clustering: K-Means k=4, Silhouette=0.4561
+Hierarchical ARI: 0.6138
+Hypotheses Validated: 3/6
+
+======================================================================
+PERSONA CARD: Discovery Sampler
+Cluster 0 | CONVERT | 1,538,614 users (80.0% of audience)
+======================================================================
+
+  ARCHETYPE: Discovery Sampler
+  STRATEGIC ROLE: CONVERT
+    Rationale: Large segment, low engagement — conversion priority
+
+  BEHAVIORAL FINGERPRINT:
+    Engagement:  1 avg min/week | 1 MPC | 1.1 active days/7
+    Retention:   2 avg ep depth | 5% lock survival | 1.8 eps/session
+    Content:     Romance/CEO (51%), Other (17%), Empowerment (16%)
+    Top Shows:   Why Do You Love Me? (155,642), My Cursed Kiss (106,513), His Allergic Love (82,100)
+    Show Focus:  1% concentration (explorer)
+
+  DEMOGRAPHIC PROFILE:
+    Gender:      40% F / 60% M
+    Age:         40% 18-24 | 38% 25-34 | 22% 35+
+    Top Cells:   M_25-34 (28%), F_18-24 (22%), M_18-24 (18%)
+
+  CHANNEL PROFILE:
+    Paid (53%), Organic (26%), Push (14%), Internal Ad (7%), OTT Notification (0%), Other (0%)
+
+  COMMERCIAL PROFILE:
+    Persona Tags: N/A avg tags/user (interest breadth)
+
+  COVERAGE: 80.0% of active Fatafat audience
+
+======================================================================
+PERSONA CARD: Young Female Romance Binger
+Cluster 1 | NOURISH | 254,480 users (13.2% of audience)
+======================================================================
+
+  ARCHETYPE: Young Female Romance Binger
+  STRATEGIC ROLE: NOURISH
+    Rationale: Mid-size, deep engagement — loyalty priority
+
+  BEHAVIORAL FINGERPRINT:
+    Engagement:  55 avg min/week | 38 MPC | 1.7 active days/7
+    Retention:   47 avg ep depth | 100% lock survival | 22.6 eps/session
+    Content:     Romance/CEO (41%), Other (24%), Empowerment (23%)
+    Top Shows:   Our Love Is The Ocean Of Stars (22,792), Mr. Huo, Your Wife's Back with Babies! (20,775), Why Do You Love Me? (16,119)
+    Show Focus:  1% concentration (explorer)
+
+  DEMOGRAPHIC PROFILE:
+    Gender:      66% F / 33% M
+    Age:         52% 18-24 | 31% 25-34 | 17% 35+
+    Top Cells:   F_18-24 (39%), F_25-34 (17%), M_25-34 (14%)
+
+  CHANNEL PROFILE:
+    Organic (63%), Paid (34%), Push (2%), Internal Ad (1%), OTT Notification (0%), Other (0%)
+
+  COMMERCIAL PROFILE:
+    Persona Tags: N/A avg tags/user (interest breadth)
+
+  COVERAGE: 13.2% of active Fatafat audience
+
+======================================================================
+PERSONA CARD: Young Female Romance Binger
+Cluster 2 | NOURISH | 108,998 users (5.7% of audience)
+======================================================================
+
+  ARCHETYPE: Young Female Romance Binger
+  STRATEGIC ROLE: NOURISH
+    Rationale: Mid-size, deep engagement — loyalty priority
+
+  BEHAVIORAL FINGERPRINT:
+    Engagement:  253 avg min/week | 82 MPC | 3.6 active days/7
+    Retention:   83 avg ep depth | 100% lock survival | 37.6 eps/session
+    Content:     Romance/CEO (45%), Empowerment (26%), Other (18%)
+    Top Shows:   Our Love Is The Ocean Of Stars (9,862), Lucky Trio: CEO Daddy's Doting Love (6,576), The Cold CEO's Torturous Love Game (6,172)
+    Show Focus:  0% concentration (explorer)
+
+  DEMOGRAPHIC PROFILE:
+    Gender:      78% F / 22% M
+    Age:         54% 18-24 | 30% 25-34 | 16% 35+
+    Top Cells:   F_18-24 (45%), F_25-34 (21%), M_25-34 (9%)
+
+  CHANNEL PROFILE:
+    Organic (78%), Paid (21%), Push (1%), Internal Ad (0%), OTT Notification (0%), Other (0%)
+
+  COMMERCIAL PROFILE:
+    Persona Tags: N/A avg tags/user (interest breadth)
+
+  COVERAGE: 5.7% of active Fatafat audience
+
+======================================================================
+PERSONA CARD: Young Female Romance Binger
+Cluster 3 | SUSTAIN | 20,146 users (1.0% of audience)
+======================================================================
+
+  ARCHETYPE: Young Female Romance Binger
+  STRATEGIC ROLE: SUSTAIN
+    Rationale: Small, highly engaged — retention priority
+
+  BEHAVIORAL FINGERPRINT:
+    Engagement:  880 avg min/week | 182 MPC | 5.2 active days/7
+    Retention:   101 avg ep depth | 100% lock survival | 62.0 eps/session
+    Content:     Romance/CEO (50%), Empowerment (20%), Other (12%)
+    Top Shows:   The Wrong Moonlight (1,560), Secrets In Every Scent (1,344), For Your Eyes Only (1,098)
+    Show Focus:  0% concentration (explorer)
+
+  DEMOGRAPHIC PROFILE:
+    Gender:      82% F / 18% M
+    Age:         56% 18-24 | 28% 25-34 | 16% 35+
+    Top Cells:   F_18-24 (48%), F_25-34 (21%), M_18-24 (8%)
+
+  CHANNEL PROFILE:
+    Organic (89%), Paid (11%), Push (0%), OTT Notification (0%), Internal Ad (0%)
+
+  COMMERCIAL PROFILE:
+    Persona Tags: N/A avg tags/user (interest breadth)
+
+  COVERAGE: 1.0% of active Fatafat audience

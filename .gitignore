@@ -1,0 +1,16 @@
+# Data files (too large for git)
+data/
+*.csv
+
+# Environment / credentials
+.env
+.kiro/
+
+# OS
+.DS_Store
+__pycache__/
+*.pyc
+
+# Source docx (in docs/source/ — tracked, but large)
+# Uncomment below to exclude:
+# docs/source/*.docx

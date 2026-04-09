@@ -1,0 +1,105 @@
+FATAFAT SYNTHETIC PERSONAS — PHASE 2.2 (Enriched Content)
+K-Means k=6 | Silhouette=0.4326 | ARI=0.7465
+Hypotheses Validated: 4/6
+
+======================================================================
+CLUSTER 0 — CONVERT — 1,239,814 users (64.5%)
+======================================================================
+
+  ENGAGEMENT: 2 min/wk | 2 MPC | 1.1 days | 1.2 shows
+  RETENTION:  3 max ep | 8% lock | 2.1 eps/sess
+  GENRE:      Romance/CEO (51%), Empowerment (17%), Power Struggles (16%)
+  SUB-GENRE:  Edgy (30%), Forbidden Love (22%), Revenge (12%), Melodrama (11%)
+  SOURCE:     International Dubbed (85%), Repack (7%), Partner Studio (4%)
+  ORIGIN:     International (85%), Hindi (15%), Unknown (0%)
+  MATURITY:   16+ (30%), 13+ (27%), 7+ (25%)
+  TOP SHOWS:  Why Do You Love Me? (115,170), My Cursed Kiss (89,100), His Allergic Love (68,858)
+  DEMO:       42% F / 58% M | 44% 18-24 | 34% 25-34 | 22% 35+
+  TOP CELLS:  M_25-34 (26%), F_18-24 (25%), M_18-24 (19%)
+  CHANNEL:    Paid (53%), Organic (26%), Push (13%)
+  COMMERCIAL: Tags 100% | Fashion/Beauty (100%), Electronics/Tech (100%), Home/Kitchen (99%)
+
+======================================================================
+CLUSTER 1 — NOURISH — 225,968 users (11.8%)
+======================================================================
+
+  ENGAGEMENT: 103 min/wk | 51 MPC | 2.2 days | 3.5 shows
+  RETENTION:  61 max ep | 100% lock | 28.0 eps/sess
+  GENRE:      Romance/CEO (41%), Empowerment (27%), Power Struggles (22%)
+  SUB-GENRE:  Forbidden Love (21%), Edgy (20%), Melodrama (16%), Revenge (15%)
+  SOURCE:     International Dubbed (92%), Partner Studio (4%), Fatafat Original (3%)
+  ORIGIN:     International (92%), Hindi (8%)
+  MATURITY:   16+ (30%), 7+ (26%), All Ages (24%)
+  TOP SHOWS:  Our Love Is The Ocean Of Stars (23,203), Mr. Huo, Your Wife's Back with Babies! (18,152), Why Do You Love Me? (12,018)
+  DEMO:       72% F / 28% M | 56% 18-24 | 28% 25-34 | 16% 35+
+  TOP CELLS:  F_18-24 (46%), F_25-34 (17%), M_25-34 (11%)
+  CHANNEL:    Organic (67%), Paid (30%), Push (1%)
+  COMMERCIAL: Tags 100% | Fashion/Beauty (100%), Electronics/Tech (100%), Home/Kitchen (99%)
+
+======================================================================
+CLUSTER 2 — SUSTAIN — 44,047 users (2.3%)
+======================================================================
+
+  ENGAGEMENT: 630 min/wk | 143 MPC | 4.8 days | 14.7 shows
+  RETENTION:  97 max ep | 100% lock | 52.6 eps/sess
+  GENRE:      Romance/CEO (45%), Empowerment (32%), Power Struggles (16%)
+  SUB-GENRE:  Forbidden Love (26%), Edgy (19%), Secret Lives (15%), Revenge (12%)
+  SOURCE:     International Dubbed (99%), Partner Studio (1%), Fatafat Original (1%)
+  ORIGIN:     International (99%), Hindi (1%)
+  MATURITY:   All Ages (41%), 13+ (26%), 16+ (23%)
+  TOP SHOWS:  Flash Marriage: Mrs. Gu's Online Unmasking (3,558), Our Love Is The Ocean Of Stars (2,646), Secrets In Every Scent (2,577)
+  DEMO:       82% F / 18% M | 56% 18-24 | 28% 25-34 | 16% 35+
+  TOP CELLS:  F_18-24 (49%), F_25-34 (21%), M_18-24 (8%)
+  CHANNEL:    Organic (86%), Paid (14%), Push (0%)
+  COMMERCIAL: Tags 91% | Fashion/Beauty (99%), Electronics/Tech (99%), Home/Kitchen (97%)
+
+======================================================================
+CLUSTER 3 — NOURISH — 351,187 users (18.3%)
+======================================================================
+
+  ENGAGEMENT: 2 min/wk | 2 MPC | 1.1 days | 1.2 shows
+  RETENTION:  3 max ep | 9% lock | 2.1 eps/sess
+  GENRE:      Romance/CEO (50%), Empowerment (17%), Power Struggles (16%)
+  SUB-GENRE:  Edgy (30%), Forbidden Love (20%), Revenge (12%), Melodrama (11%)
+  SOURCE:     International Dubbed (84%), Repack (8%), Fatafat Original (4%)
+  ORIGIN:     International (84%), Hindi (16%), Unknown (0%)
+  MATURITY:   13+ (30%), 16+ (29%), 7+ (25%)
+  TOP SHOWS:  Why Do You Love Me? (44,125), My Cursed Kiss (20,168), Ek Badnaam Aashram (18,685)
+  DEMO:       34% F / 64% M | 27% 18-24 | 50% 25-34 | 21% 35+
+  TOP CELLS:  M_25-34 (35%), F_25-34 (15%), M_18-24 (14%)
+  CHANNEL:    Paid (51%), Organic (29%), Push (15%)
+  COMMERCIAL: Tags 24% | Electronics/Tech (71%), Fashion/Beauty (68%), Home/Kitchen (25%)
+
+======================================================================
+CLUSTER 4 — NOURISH — 7 users (0.0%)
+======================================================================
+
+  ENGAGEMENT: 2406 min/wk | 1961 MPC | 1.1 days | 1.0 shows
+  RETENTION:  2 max ep | 0% lock | 1.1 eps/sess
+  GENRE:      Romance/CEO (57%), Empowerment (29%), Thriller/Crime (14%)
+  SUB-GENRE:  Forbidden Love (43%), Melodrama (29%), Edgy (14%), Crime (14%)
+  SOURCE:     International Dubbed (86%), Repack (14%)
+  ORIGIN:     International (86%), Hindi (14%)
+  MATURITY:   13+ (43%), 16+ (29%), 7+ (29%)
+  TOP SHOWS:  Lucky Trio: CEO Daddy's Doting Love (2), Back From My Funeral (2), My Cursed Kiss (1)
+  DEMO:       0% F / 100% M | 14% 18-24 | 86% 25-34 | 0% 35+
+  TOP CELLS:  M_25-34 (86%), M_18-24 (14%)
+  CHANNEL:    Paid (57%), Push (29%), Organic (14%)
+
+======================================================================
+CLUSTER 5 — NOURISH — 61,215 users (3.2%)
+======================================================================
+
+  ENGAGEMENT: 125 min/wk | 58 MPC | 2.3 days | 3.8 shows
+  RETENTION:  65 max ep | 100% lock | 32.0 eps/sess
+  GENRE:      Romance/CEO (41%), Empowerment (27%), Power Struggles (22%)
+  SUB-GENRE:  Forbidden Love (21%), Edgy (20%), Melodrama (16%), Revenge (15%)
+  SOURCE:     International Dubbed (92%), Partner Studio (4%), Fatafat Original (3%)
+  ORIGIN:     International (92%), Hindi (8%)
+  MATURITY:   16+ (28%), 7+ (25%), All Ages (25%)
+  TOP SHOWS:  Our Love Is The Ocean Of Stars (6,456), Mr. Huo, Your Wife's Back with Babies! (4,998), Why Do You Love Me? (3,416)
+  DEMO:       64% F / 34% M | 38% 18-24 | 42% 25-34 | 18% 35+
+  TOP CELLS:  F_18-24 (26%), F_25-34 (26%), M_25-34 (16%)
+  CHANNEL:    Organic (73%), Paid (25%), Push (1%)
+  COMMERCIAL: Tags 22% | Fashion/Beauty (61%), Electronics/Tech (56%), Home/Kitchen (25%)
+

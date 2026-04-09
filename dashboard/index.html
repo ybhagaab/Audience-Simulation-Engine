@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fatafat Synthetic Personas — Phase 2</title>
+<style>
+:root {
+  --bg: #0f1117; --surface: #1a1d27; --surface2: #232733; --border: #2d3140;
+  --text: #e4e6ed; --dim: #8b8fa3; --accent: #6c5ce7;
+  --convert: #e74c3c; --grow: #f39c12; --nourish: #00b894; --sustain: #0984e3;
+  --female: #fd79a8; --male: #74b9ff; --organic: #00b894; --paid: #e17055; --push: #fdcb6e;
+  --edgy: #e17055; --forblove: #fd79a8; --melodrama: #a29bfe; --revenge: #fdcb6e;
+  --secretlives: #00cec9; --crime: #636e72;
+  --r: 12px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+nav{position:sticky;top:0;z-index:100;background:rgba(15,17,23,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;overflow-x:auto;-webkit-overflow-scrolling:touch}
+nav::-webkit-scrollbar{display:none}
+nav ul{display:flex;gap:0;list-style:none;max-width:1400px;margin:0 auto;min-width:max-content}
+nav li a{display:block;padding:1rem 1.2rem;font-size:.85rem;color:var(--dim);white-space:nowrap;transition:color .2s;border-bottom:2px solid transparent}
+nav li a:hover,nav li a.active{color:var(--text);border-bottom-color:var(--accent)}
+.container{max-width:1400px;margin:0 auto;padding:2rem}
+section{margin-bottom:3rem}
+h1{font-size:2.2rem;font-weight:700;margin-bottom:.5rem}
+h2{font-size:1.5rem;font-weight:600;margin-bottom:1.5rem}
+h3{font-size:1.1rem;font-weight:600;margin-bottom:1rem}
+.sub{color:var(--dim);font-size:1rem;margin-bottom:2rem}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:20px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.b-convert{background:rgba(231,76,60,.15);color:var(--convert)}
+.b-grow{background:rgba(243,156,18,.15);color:var(--grow)}
+.b-nourish{background:rgba(0,184,148,.15);color:var(--nourish)}
+.b-sustain{background:rgba(9,132,227,.15);color:var(--sustain)}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:2rem}
+.mc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem}
+.mc .l{font-size:.75rem;color:var(--dim);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.25rem}
+.mc .v{font-size:1.8rem;font-weight:700}
+.mc .d{font-size:.8rem;color:var(--dim);margin-top:.25rem}
+.br{display:flex;align-items:center;margin-bottom:.4rem;font-size:.8rem}
+.br .bl{width:110px;flex-shrink:0;color:var(--dim)}
+.br .bt{flex:1;height:8px;background:var(--surface2);border-radius:4px;overflow:hidden;margin:0 .5rem}
+.br .bf{height:100%;border-radius:4px}
+.br .bv{width:45px;text-align:right;font-weight:600}
+.pc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:1.5rem}
+.pc:hover{box-shadow:0 4px 24px rgba(0,0,0,.3)}
+.ph{padding:1.5rem;border-bottom:1px solid var(--border)}
+.ph h3{margin-bottom:.5rem;font-size:1.2rem}
+.ph .meta{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.ph .meta span{font-size:.85rem;color:var(--dim)}
+.pb{padding:1.5rem}
+.ps{margin-bottom:1.25rem}
+.pst{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);margin-bottom:.5rem;font-weight:600}
+.si{display:flex;justify-content:space-between;padding:.25rem 0;border-bottom:1px solid var(--border);font-size:.8rem}
+.si:last-child{border-bottom:none}
+.ret{display:inline-block;padding:.2rem .6rem;border-radius:4px;font-size:.75rem;font-weight:600}
+.r-early{background:rgba(231,76,60,.15);color:var(--convert)}
+.r-deep{background:rgba(9,132,227,.15);color:var(--sustain)}
+.r-full{background:rgba(108,92,231,.15);color:var(--accent)}
+.cvi-g{display:flex;align-items:center;gap:1rem}
+.cvi-n{font-size:2rem;font-weight:700}
+.cvi-b{flex:1;height:12px;background:var(--surface2);border-radius:6px;overflow:hidden}
+.cvi-f{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--convert),var(--grow),var(--nourish),var(--sustain))}
+.donut-c{display:flex;align-items:center;gap:1rem}
+.donut{width:80px;height:80px}
+.donut-l{font-size:.8rem}
+.donut-l div{display:flex;align-items:center;gap:.4rem;margin-bottom:.25rem}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;display:inline-block}
+.ladder-step{display:flex;flex-direction:column;align-items:center;flex:1;max-width:200px;cursor:pointer;transition:transform .2s,filter .2s;-webkit-tap-highlight-color:transparent}
+.ladder-step:hover,.ladder-step:active{transform:translateY(-6px);filter:brightness(1.1)}
+.hyp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem}
+.hyp{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem}
+.hyp.ok{border-left:3px solid var(--nourish)}
+.hyp.no{border-left:3px solid var(--convert)}
+.collapsible{cursor:pointer;user-select:none}
+.collapsible::after{content:' ▸'}
+.collapsible.open::after{content:' ▾'}
+.cc{display:none;padding-top:1rem}
+.cc.show{display:block}
+.arrow.open{transform:rotate(90deg)}
+table.at{width:100%;border-collapse:collapse;font-size:.8rem}
+table.at th{text-align:left;padding:.5rem;border-bottom:2px solid var(--border);color:var(--dim);font-size:.7rem;text-transform:uppercase}
+table.at td{padding:.5rem;border-bottom:1px solid var(--border)}
+@media(max-width:900px){
+  .container{padding:1rem}h1{font-size:1.6rem}.metrics{grid-template-columns:repeat(2,1fr)}.mc .v{font-size:1.4rem}
+  .pb>div{grid-template-columns:1fr!important}.ladder-step{flex:0 0 calc(33%-0.75rem);min-width:100px;max-width:none}
+  .hyp-grid{grid-template-columns:1fr}nav li a{padding:.75rem .8rem;font-size:.75rem}
+  .br .bl{width:85px;font-size:.7rem}.br .bv{width:40px;font-size:.7rem}
+}
+@media(max-width:480px){
+  .container{padding:.75rem}.metrics{grid-template-columns:1fr}.ladder-step{flex:0 0 calc(50%-.5rem)}
+  .donut-c{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<nav><ul>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#ladder">Engagement Ladder</a></li>
+  <li><a href="#content-signal">Content Signal</a></li>
+  <li><a href="#content-taxonomy">Taxonomy</a></li>
+  <li><a href="#personas">Personas</a></li>
+  <li><a href="#strategy">Strategy</a></li>
+  <li><a href="#slate-gaps">Slate Gaps</a></li>
+  <li><a href="#commercial">Commercial</a></li>
+  <li><a href="#validation">Validation</a></li>
+  <li><a href="#methodology">Methodology</a></li>
+</ul></nav>
+
+<div class="container">
+<section id="overview">
+<h1>Fatafat Synthetic Personas</h1>
+<p class="sub">Phase 2 Final — 1.9M weekly streamers, 5 personas, two-level content identity</p>
+<div class="metrics">
+  <div class="mc"><div class="l">Weekly Streamers</div><div class="v">1.92M</div><div class="d">Mar 30 – Apr 5, 2026</div></div>
+  <div class="mc"><div class="l">Personas</div><div class="v">5</div><div class="d">K-Means k=6, 1 outlier discarded</div></div>
+  <div class="mc"><div class="l">Silhouette</div><div class="v" style="color:var(--nourish)">0.43</div><div class="d">Target ≥0.3 ✅</div></div>
+  <div class="mc"><div class="l">Hierarchical ARI</div><div class="v">0.75</div><div class="d">Cross-method stability</div></div>
+  <div class="mc"><div class="l">Hypotheses</div><div class="v">4/6</div><div class="d">Target ≥4 ✅</div></div>
+  <div class="mc"><div class="l">Demo Overlay</div><div class="v">99.5%</div><div class="d">Age + gender coverage</div></div>
+</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem">
+<h3 style="margin-bottom:.75rem">Key Findings</h3>
+<p style="color:var(--dim);font-size:.9rem">Fatafat's audience organizes along an <strong style="color:var(--text)">engagement gradient</strong> — a conversion ladder from samplers (64.5%) to devotees (2.3%). A secondary finding is the <strong style="color:var(--text)">content maturation signal</strong>: as engagement deepens, preference shifts from "Edgy" hook-driven romance (28%) toward "Forbidden Love" (24%) and "Secret Lives" (13%) — deeper, more emotionally complex narratives.</p>
+</div>
+</section>
+</div>
+</body>
+</html>
+
+<div class="container">
+<!-- STRATEGIC ROLES + ENGAGEMENT LADDER -->
+<section id="ladder">
+<h2>Strategic Framework & Engagement Ladder</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem;margin-bottom:2rem">
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;border-top:3px solid var(--convert)">
+    <span class="badge b-convert">Convert</span>
+    <p style="font-size:.8rem;color:var(--dim);margin-top:.5rem">Largest segment, minimal engagement. Job: get them to watch a second show. Content: strong onboarding hooks.</p>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;border-top:3px solid var(--grow)">
+    <span class="badge b-grow">Grow</span>
+    <p style="font-size:.8rem;color:var(--dim);margin-top:.5rem">Large, low engagement, distinct demographic. Job: genre expansion for untapped audience. Content: male-appeal, Hindi originals.</p>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;border-top:3px solid var(--nourish)">
+    <span class="badge b-nourish">Nourish</span>
+    <p style="font-size:.8rem;color:var(--dim);margin-top:.5rem">Mid-size, deep engagement, 100% lock survival. Job: deepen investment with more content in their zone.</p>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;border-top:3px solid var(--sustain)">
+    <span class="badge b-sustain">Sustain</span>
+    <p style="font-size:.8rem;color:var(--dim);margin-top:.5rem">Small, highest value per user. They watch everything. Job: retention protection, content freshness.</p>
+  </div>
+</div>
+
+<p style="color:var(--dim);margin-bottom:1rem;font-size:.9rem">Click any bar to jump to its persona card.</p>
+<div style="display:flex;gap:1rem;align-items:flex-end;justify-content:center;padding:2rem 0;min-height:420px;flex-wrap:wrap">
+  <div class="ladder-step" onclick="document.getElementById('p0').scrollIntoView({behavior:'smooth'})">
+    <div style="width:100%;height:60px;background:linear-gradient(180deg,#c0392b,#e74c3c);border-radius:10px 10px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.5rem">
+      <div style="font-size:.8rem;font-weight:700;color:#fff">Discovery Sampler</div>
+      <div style="font-size:.7rem;color:rgba(255,255,255,.8)">2 min/wk · 1.2 shows</div>
+    </div>
+    <div style="padding:.5rem;text-align:center;background:var(--surface);border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px">
+      <div style="font-size:1.5rem;font-weight:800;color:var(--convert)">64.5%</div>
+      <div style="font-size:.65rem;text-transform:uppercase;color:var(--dim)">Convert · 1.2M</div>
+    </div>
+  </div>
+  <div class="ladder-step" onclick="document.getElementById('p3').scrollIntoView({behavior:'smooth'})">
+    <div style="width:100%;height:75px;background:linear-gradient(180deg,#d4a017,#f39c12);border-radius:10px 10px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.5rem">
+      <div style="font-size:.8rem;font-weight:700;color:#1a1d27">Male Crossover</div>
+      <div style="font-size:.7rem;color:rgba(0,0,0,.6)">2 min/wk · 1.2 shows</div>
+    </div>
+    <div style="padding:.5rem;text-align:center;background:var(--surface);border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px">
+      <div style="font-size:1.5rem;font-weight:800;color:var(--grow)">18.3%</div>
+      <div style="font-size:.65rem;text-transform:uppercase;color:var(--dim)">Grow · 351K</div>
+    </div>
+  </div>
+  <div class="ladder-step" onclick="document.getElementById('p1').scrollIntoView({behavior:'smooth'})">
+    <div style="width:100%;height:150px;background:linear-gradient(180deg,#1abc9c,#00b894);border-radius:10px 10px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.5rem">
+      <div style="font-size:.8rem;font-weight:700;color:#fff">Romance Binger</div>
+      <div style="font-size:.7rem;color:rgba(255,255,255,.8)">103 min/wk · 3.5 shows</div>
+      <div style="font-size:.65rem;color:rgba(255,255,255,.6);margin-top:.25rem">100% lock · 72% F</div>
+    </div>
+    <div style="padding:.5rem;text-align:center;background:var(--surface);border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px">
+      <div style="font-size:1.5rem;font-weight:800;color:var(--nourish)">11.8%</div>
+      <div style="font-size:.65rem;text-transform:uppercase;color:var(--dim)">Nourish · 226K</div>
+    </div>
+  </div>
+  <div class="ladder-step" onclick="document.getElementById('p5').scrollIntoView({behavior:'smooth'})">
+    <div style="width:100%;height:180px;background:linear-gradient(180deg,#0abde3,#48dbfb);border-radius:10px 10px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.5rem">
+      <div style="font-size:.8rem;font-weight:700;color:#1a1d27">Engaged Explorer</div>
+      <div style="font-size:.7rem;color:rgba(0,0,0,.6)">125 min/wk · 3.8 shows</div>
+      <div style="font-size:.65rem;color:rgba(0,0,0,.5);margin-top:.25rem">100% lock · 64% F</div>
+    </div>
+    <div style="padding:.5rem;text-align:center;background:var(--surface);border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px">
+      <div style="font-size:1.5rem;font-weight:800;color:#48dbfb">3.2%</div>
+      <div style="font-size:.65rem;text-transform:uppercase;color:var(--dim)">Nourish · 61K</div>
+    </div>
+  </div>
+  <div class="ladder-step" onclick="document.getElementById('p2').scrollIntoView({behavior:'smooth'})">
+    <div style="width:100%;height:300px;background:linear-gradient(180deg,#0652DD,#1B9CFC);border-radius:10px 10px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.5rem">
+      <div style="font-size:.8rem;font-weight:700;color:#fff">Platform Devotee</div>
+      <div style="font-size:.7rem;color:rgba(255,255,255,.8)">630 min/wk · 14.7 shows</div>
+      <div style="font-size:.65rem;color:rgba(255,255,255,.6);margin-top:.25rem">100% lock · 82% F · 86% organic</div>
+    </div>
+    <div style="padding:.5rem;text-align:center;background:var(--surface);border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px">
+      <div style="font-size:1.5rem;font-weight:800;color:#1B9CFC">2.3%</div>
+      <div style="font-size:.65rem;text-transform:uppercase;color:var(--dim)">Sustain · 44K</div>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+<div class="container">
+<!-- CONTENT MATURATION SIGNAL -->
+<section id="content-signal">
+<h2>Content Maturation Signal</h2>
+<p style="color:var(--dim);margin-bottom:1.5rem;font-size:.9rem">As engagement deepens, the dominant content theme shifts. This is the most actionable content insight from the two-level analysis.</p>
+
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;overflow-x:auto">
+<table class="at">
+<thead><tr><th>Secondary Genre</th><th>Samplers (64.5%)</th><th>Male Cross. (18.3%)</th><th>Romance Binger (11.8%)</th><th>Explorer (3.2%)</th><th>Devotee (2.3%)</th><th>Trend</th></tr></thead>
+<tbody>
+<tr><td><span class="dot" style="background:var(--edgy)"></span> Edgy</td><td><strong>28%</strong></td><td>27%</td><td>19%</td><td>19%</td><td>17%</td><td style="color:var(--convert)">↓ Declines</td></tr>
+<tr><td><span class="dot" style="background:var(--forblove)"></span> Forbidden Love</td><td>23%</td><td>22%</td><td>22%</td><td>23%</td><td><strong>24%</strong></td><td style="color:var(--dim)">→ Stable backbone</td></tr>
+<tr><td><span class="dot" style="background:var(--melodrama)"></span> Melodrama</td><td>11%</td><td>11%</td><td><strong>17%</strong></td><td><strong>16%</strong></td><td>14%</td><td style="color:var(--nourish)">↑ Rises in engaged</td></tr>
+<tr><td><span class="dot" style="background:var(--revenge)"></span> Revenge</td><td>12%</td><td>13%</td><td><strong>16%</strong></td><td><strong>16%</strong></td><td>13%</td><td style="color:var(--nourish)">↑ Then stabilizes</td></tr>
+<tr><td><span class="dot" style="background:var(--secretlives)"></span> Secret Lives</td><td>6%</td><td>5%</td><td>10%</td><td>10%</td><td><strong>13%</strong></td><td style="color:var(--sustain)">↑↑ Doubles to devotee</td></tr>
+<tr><td><span class="dot" style="background:var(--crime)"></span> Crime</td><td>6%</td><td>6%</td><td>2%</td><td>2%</td><td>1%</td><td style="color:var(--convert)">↓ Drops sharply</td></tr>
+</tbody>
+</table>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1.5rem">
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;border-left:3px solid var(--edgy)">
+    <strong style="color:var(--edgy)">Edgy = Acquisition Hook</strong>
+    <p style="font-size:.8rem;color:var(--dim);margin-top:.5rem">Attracts first-time viewers but doesn't retain them. 28% of sampler watchtime, drops to 17% in devotees.</p>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;border-left:3px solid var(--melodrama)">
+    <strong style="color:var(--melodrama)">Melodrama = Engagement Deepener</strong>
+    <p style="font-size:.8rem;color:var(--dim);margin-top:.5rem">Rises from 11% to 17% as users commit. Emotional depth content that builds loyalty.</p>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;border-left:3px solid var(--secretlives)">
+    <strong style="color:var(--secretlives)">Secret Lives = Loyalty Signal</strong>
+    <p style="font-size:.8rem;color:var(--dim);margin-top:.5rem">Doubles from 6% to 13% sampler→devotee. Appetite for narrative complexity grows with engagement.</p>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;border-left:3px solid var(--crime)">
+    <strong style="color:var(--crime)">Crime = Low-Convert Genre</strong>
+    <p style="font-size:.8rem;color:var(--dim);margin-top:.5rem">6% in samplers, drops to 1% in devotees. These viewers don't convert — ROI is lower than reach suggests.</p>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- CONTENT TAXONOMY EXPLORER -->
+<div class="container">
+<section id="content-taxonomy">
+<h2 style="cursor:pointer;user-select:none" onclick="var b=document.getElementById('tax-body');b.style.display=b.style.display==='none'?'block':'none';this.querySelector('.ta').classList.toggle('open')">Content Taxonomy Explorer <span class="ta arrow" style="color:var(--dim);transition:transform .2s;display:inline-block;font-size:.8rem">▸</span></h2>
+<p style="color:var(--dim);font-size:.85rem;margin-bottom:1rem">A reference tool mapping primary genres to their content themes and shows. <span style="cursor:pointer;color:var(--accent)" onclick="var b=document.getElementById('tax-body');b.style.display='block';document.querySelector('.ta').classList.add('open')">Click to explore →</span></p>
+
+<div id="tax-body" style="display:none">
+<!-- Genre Pills -->
+<div id="genre-pills" style="display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap"></div>
+
+<!-- Theme Bars -->
+<div id="theme-explorer"></div>
+
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:.75rem 1rem;margin-top:1rem">
+  <p style="font-size:.8rem;color:var(--dim)">Bar width and overlay % = share of total Fatafat watchtime. Number after bar = show count in catalog. Click any theme to see its shows.</p>
+</div>
+</div>
+</section>
+
+<script>
+(function(){
+const TD={
+"Romance":[
+{t:"Edgy",n:55,wt:18.3,g:1.3,s:"bal",c:"var(--edgy)",sh:["Why Do You Love Me?","My Cursed Kiss","His Allergic Love","Connected Hearts","Contract Marriage","Campus Diaries","Deal","Dhokha-E-Ishq","Dil Se Dangerous","The Elusive Runaway Princess","Hope Line","Love Ex Aur Dhokha"]},
+{t:"Forbidden Love",n:48,wt:23.1,g:1.9,s:"buy",c:"var(--forblove)",sh:["Our Love Is The Ocean Of Stars","I Won His Heart","CEO Daddy","A Royal Marriage","Ancient Emperor","Billionaire Love","Closer Than Ever","Falling For The Enemy","Lucky Trio: CEO Daddy's Doting Love","Pampered By The President"]},
+{t:"Second Chances",n:32,wt:3.4,g:0.4,s:"over",c:"var(--dim)",sh:["Blooming After Love Fades","CEO's Second Chance","A Couple Who Got Married First","Beinteha Mohabbat","Rising After Divorce"]}
+],
+"Drama":[
+{t:"Secret Lives",n:40,wt:11.2,g:1.1,s:"bal",c:"var(--secretlives)",sh:["Flash Marriage: Mrs. Gu's Online Unmasking","I Married A Mystery","The Prince And The Maid","Boss Bahu","Contract Girlfriend","Darzi","Detective Bhabhi","Hisaab Baaki","Rich Girl's Secret"]},
+{t:"Melodrama",n:25,wt:15.2,g:2.3,s:"pri",c:"var(--melodrama)",sh:["Back From My Funeral","Amnesia To Adored","Breaking My Chains","Dad I'm Coming!","I Owe You Everything","Tough To Please","Humko Humise Chura Lo"]},
+{t:"Inspiring",n:19,wt:2.5,g:0.5,s:"over",c:"var(--nourish)",sh:["I Found My Own Strength","A Mother's Love","Bruh - Dil Dosti Pyaar Vyaar","CEO Se Romeo","Collector Aaya Badla Lene","Delivery Boy Bana Crorepati"]}
+],
+"Power Struggles":[
+{t:"Revenge",n:34,wt:14.5,g:1.6,s:"buy",c:"var(--revenge)",sh:["Unbossed Wife","Mr. Huo Your Wife's Back with Babies!","Aakhri Jung","Baazigar Ka Badla","CEO Ki Wapsi","Dear Boss Please Die!"]},
+{t:"Inheritance",n:23,wt:3.1,g:0.5,s:"over",c:"var(--dim)",sh:["Brothers Everywhere","Ek Chehra 2 Pehchan","Don Of Jaunpur","Naqli Waaris Asli Badla","Bhai Ka Dhokha"]},
+{t:"Hidden Identity",n:17,wt:4.3,g:1.0,s:"bal",c:"var(--dim)",sh:["Beauty Was My Fate","I Fell Twice For Him","Main Hoon Millionaire","Mr. Chuppa Rustam","Game Revenge"]}
+],
+"Thriller":[
+{t:"Crime",n:22,wt:0.6,g:0.1,s:"stop",c:"var(--crime)",sh:["Ek Badnaam Aashram","Bhaukaal","Dharavi Bank","Raktanchal","100 Days","12 Ghante 12 Lakh","Band Baja Murder","Detective Danny"]},
+{t:"Pulp",n:19,wt:2.0,g:0.4,s:"over",c:"var(--dim)",sh:["Aatish","Alpha College","Apavitra","Baazi","The Missing Piece","Bibhats"]},
+{t:"Horror",n:5,wt:0.1,g:0.1,s:"over",c:"var(--dim)",sh:["Nafrat","Secrets Of House No. 16"]}
+],
+"Fantasy":[
+{t:"Time Travel",n:9,wt:1.5,g:0.7,s:"over",c:"var(--secretlives)",sh:["Dragon Lord","Love Through Time","The Legend Of Azure Dragon"]},
+{t:"Mythical Action",n:4,wt:0.2,g:0.2,s:"over",c:"var(--dim)",sh:["Wild Princess"]},
+{t:"Creature Romance",n:2,wt:0.05,g:0.05,s:"over",c:"var(--dim)",sh:["Darr De Dil","The Vampire's Bride"]}
+]};
+const gc={Romance:"var(--forblove)",Drama:"var(--melodrama)","Power Struggles":"var(--revenge)",Thriller:"var(--crime)",Fantasy:"var(--secretlives)"};
+const gn={Romance:147,Drama:92,"Power Struggles":73,Thriller:46,Fantasy:16};
+function badge(s){return '';}
+function render(genre){
+const box=document.getElementById('theme-explorer');
+let items=[];
+if(genre==='all'){Object.values(TD).forEach(a=>items.push(...a));items.sort((a,b)=>b.wt-a.wt);}
+else items=TD[genre]||[];
+const mx=Math.max(...items.map(i=>i.wt),1);
+box.innerHTML=items.map(i=>{
+const bw=Math.max(i.wt/mx*100,6);
+return`<div style="margin-bottom:3px">
+<div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'" style="cursor:pointer;display:flex;align-items:center;gap:.75rem;padding:.4rem .75rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;transition:all .15s;font-size:.8rem" onmouseover="this.style.background='var(--surface2)';this.style.borderColor='${i.c}'" onmouseout="this.style.background='var(--surface)';this.style.borderColor='var(--border)'">
+<div style="width:110px;flex-shrink:0;font-weight:600">${i.t}</div>
+<div style="flex:1;position:relative;height:18px;background:var(--surface2);border-radius:5px;overflow:hidden">
+<div style="height:100%;width:${bw}%;background:${i.c};opacity:.75;border-radius:5px;transition:width .4s"></div>
+<div style="position:absolute;top:1px;left:6px;font-size:.7rem;font-weight:700;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6)">${i.wt}%</div>
+</div>
+<div style="width:70px;flex-shrink:0;text-align:right;color:var(--dim);font-size:.7rem">${i.n} shows</div>
+</div>
+<div style="display:none;flex-wrap:wrap;gap:.3rem;padding:.5rem .75rem;background:var(--surface);border:1px solid var(--border);border-top:none;border-radius:0 0 8px 8px;margin-top:-1px">
+${i.sh.map(s=>`<span style="display:inline-block;padding:.2rem .5rem;background:var(--surface2);border:1px solid var(--border);border-radius:6px;font-size:.7rem;color:var(--text);transition:border-color .15s" onmouseover="this.style.borderColor='${i.c}'" onmouseout="this.style.borderColor='var(--border)'">${s}</span>`).join('')}
+</div>
+</div>`;}).join('');}
+// Build pills — individual genres first, All Genres last
+const pp=document.getElementById('genre-pills');
+const genreOrder = Object.keys(TD);
+genreOrder.forEach((g,i)=>{
+const b=document.createElement('button');
+b.innerHTML=g+' <span style="opacity:.5;font-weight:400">'+gn[g]+'</span>';
+b.dataset.genre=g;
+const isFirst = i===0;
+b.style.cssText='padding:.5rem 1.25rem;border-radius:20px;border:2px solid '+(isFirst?'var(--accent)':'var(--border)')+';background:'+(isFirst?'var(--accent)':'var(--surface)')+';color:'+(isFirst?'#fff':gc[g])+';cursor:pointer;font-size:.85rem;font-weight:600;transition:all .2s';
+pp.appendChild(b);});
+const allBtn=document.createElement('button');
+allBtn.textContent='All Genres';allBtn.dataset.genre='all';
+allBtn.style.cssText='padding:.5rem 1.25rem;border-radius:20px;border:2px solid var(--border);background:var(--surface);color:var(--dim);cursor:pointer;font-size:.85rem;font-weight:600;transition:all .2s';
+pp.appendChild(allBtn);
+pp.querySelectorAll('button').forEach(btn=>{
+btn.addEventListener('click',()=>{
+pp.querySelectorAll('button').forEach(b=>{b.style.background='var(--surface)';b.style.borderColor='var(--border)';b.style.color=gc[b.dataset.genre]||'var(--dim)';});
+btn.style.background='var(--accent)';btn.style.borderColor='var(--accent)';btn.style.color='#fff';
+render(btn.dataset.genre);});});
+render(genreOrder[0]);
+})();
+</script>
+</section>
+</div>
+
+<div class="container">
+<section id="personas">
+<h2>The 5 Personas</h2>
+
+<!-- P0: Discovery Sampler -->
+<div class="pc" id="p0">
+<div class="ph" style="border-left:4px solid var(--convert)">
+  <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:.5rem">
+    <div><h3>Discovery Sampler</h3><div class="meta"><span class="badge b-convert">Convert</span><span>1,239,814 users</span><span>64.5%</span></div></div>
+    <span class="ret r-early">Early Exit</span>
+  </div>
+  <p style="margin-top:.75rem;font-size:.85rem;color:var(--dim)">3 out of 5 weekly users watch one episode and leave. "Edgy" content dominates — hook-driven bait that attracts but doesn't retain. The 1→2 show transition is the highest-leverage conversion point.</p>
+</div>
+<div class="pb"><div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+<div>
+  <div class="ps"><div class="pst">Behavioral Fingerprint</div>
+    <div class="br"><span class="bl">Minutes/Week</span><div class="bt"><div class="bf" style="width:0.3%;background:var(--convert)"></div></div><span class="bv">2</span></div>
+    <div class="br"><span class="bl">MPC</span><div class="bt"><div class="bf" style="width:1%;background:var(--convert)"></div></div><span class="bv">2</span></div>
+    <div class="br"><span class="bl">Active Days</span><div class="bt"><div class="bf" style="width:16%;background:var(--convert)"></div></div><span class="bv">1.1/7</span></div>
+    <div class="br"><span class="bl">Shows</span><div class="bt"><div class="bf" style="width:6%;background:var(--convert)"></div></div><span class="bv">1.2</span></div>
+    <div class="br"><span class="bl">Lock Survival</span><div class="bt"><div class="bf" style="width:8%;background:var(--convert)"></div></div><span class="bv">8%</span></div>
+  </div>
+  <div class="ps"><div class="pst">Content Identity</div>
+    <div style="font-size:.75rem;color:var(--accent);margin-bottom:.5rem;font-weight:600">Level 1 — Theme (by watchtime)</div>
+    <div class="br"><span class="bl">Edgy</span><div class="bt"><div class="bf" style="width:28%;background:var(--edgy)"></div></div><span class="bv">28%</span></div>
+    <div class="br"><span class="bl">Forbidden Love</span><div class="bt"><div class="bf" style="width:23%;background:var(--forblove)"></div></div><span class="bv">23%</span></div>
+    <div class="br"><span class="bl">Revenge</span><div class="bt"><div class="bf" style="width:12%;background:var(--revenge)"></div></div><span class="bv">12%</span></div>
+    <div class="br"><span class="bl">Melodrama</span><div class="bt"><div class="bf" style="width:11%;background:var(--melodrama)"></div></div><span class="bv">11%</span></div>
+    <div class="br"><span class="bl">Crime</span><div class="bt"><div class="bf" style="width:6%;background:var(--crime)"></div></div><span class="bv">6%</span></div>
+    <div style="font-size:.75rem;color:var(--accent);margin:.75rem 0 .5rem;font-weight:600">Level 2 — Archetype</div>
+    <div style="font-size:.9rem;font-weight:600;color:var(--convert)">Hook-Driven Romance</div>
+    <div style="font-size:.75rem;color:var(--dim)">Provocative first episodes, high-concept hooks. Edgy dominates at 28%.</div>
+    <div style="font-size:.75rem;color:var(--dim);margin-top:.5rem">Source: Intl Dubbed 87% | Hindi 13%</div>
+    <div class="si" style="margin-top:.5rem"><span>Why Do You Love Me?</span><span>131K</span></div>
+    <div class="si"><span>My Cursed Kiss</span><span>103K</span></div>
+    <div class="si"><span>His Allergic Love</span><span>78K</span></div>
+    <div class="si"><span>I Won His Heart</span><span>74K</span></div>
+    <div class="si"><span>Ek Badnaam Aashram</span><span>68K</span></div>
+  </div>
+</div>
+<div>
+  <div class="ps"><div class="pst">Demographics</div>
+    <div class="donut-c">
+      <svg class="donut" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9" fill="none" stroke="var(--female)" stroke-width="3" stroke-dasharray="42 58" stroke-dashoffset="25"/><circle cx="18" cy="18" r="15.9" fill="none" stroke="var(--male)" stroke-width="3" stroke-dasharray="58 42" stroke-dashoffset="83"/></svg>
+      <div class="donut-l"><div><span class="dot" style="background:var(--male)"></span>58% Male</div><div><span class="dot" style="background:var(--female)"></span>42% Female</div></div>
+    </div>
+    <div style="margin-top:.75rem">
+      <div class="br"><span class="bl">18-24</span><div class="bt"><div class="bf" style="width:44%;background:var(--accent)"></div></div><span class="bv">44%</span></div>
+      <div class="br"><span class="bl">25-34</span><div class="bt"><div class="bf" style="width:34%;background:var(--accent);opacity:.7"></div></div><span class="bv">34%</span></div>
+      <div class="br"><span class="bl">35+</span><div class="bt"><div class="bf" style="width:22%;background:var(--accent);opacity:.5"></div></div><span class="bv">22%</span></div>
+    </div>
+    <div style="font-size:.8rem;color:var(--dim);margin-top:.5rem">Top: M_25-34 (26%), F_18-24 (25%), M_18-24 (19%)</div>
+  </div>
+  <div class="ps"><div class="pst">Channel</div>
+    <div style="display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:.5rem"><div style="width:53%;background:var(--paid)"></div><div style="width:26%;background:var(--organic)"></div><div style="width:13%;background:var(--push)"></div><div style="width:8%;background:var(--crime)"></div></div>
+    <div style="display:flex;gap:1rem;font-size:.75rem;color:var(--dim);flex-wrap:wrap"><span>Paid 53%</span><span>Organic 26%</span><span>Push 13%</span></div>
+  </div>
+  <div class="ps"><div class="pst">Commercial</div>
+    <div style="font-size:.8rem;color:var(--dim)">Tags 100% | Fashion/Beauty (100%), Electronics/Tech (100%), Home/Kitchen (99%)<br>Broad profile — no differentiation. Best for awareness campaigns.</div>
+  </div>
+</div>
+</div></div></div>
+
+<!-- P3: Male Crossover -->
+<div class="pc" id="p3">
+<div class="ph" style="border-left:4px solid var(--grow)">
+  <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:.5rem">
+    <div><h3>Male Crossover Viewer</h3><div class="meta"><span class="badge b-grow">Grow</span><span>351,187 users</span><span>18.3%</span></div></div>
+    <span class="ret r-early">Early Exit</span>
+  </div>
+  <p style="margin-top:.75rem;font-size:.85rem;color:var(--dim)">The male audience opportunity. M25-34 dominant (35%). Ek Badnaam Aashram (Hindi crime) in top 3. Highest Hindi share (15%) and Affluent/Premium affinity (36%) of any persona.</p>
+</div>
+<div class="pb"><div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+<div>
+  <div class="ps"><div class="pst">Behavioral Fingerprint</div>
+    <div class="br"><span class="bl">Minutes/Week</span><div class="bt"><div class="bf" style="width:0.3%;background:var(--grow)"></div></div><span class="bv">2</span></div>
+    <div class="br"><span class="bl">MPC</span><div class="bt"><div class="bf" style="width:1%;background:var(--grow)"></div></div><span class="bv">2</span></div>
+    <div class="br"><span class="bl">Active Days</span><div class="bt"><div class="bf" style="width:16%;background:var(--grow)"></div></div><span class="bv">1.1/7</span></div>
+    <div class="br"><span class="bl">Shows</span><div class="bt"><div class="bf" style="width:6%;background:var(--grow)"></div></div><span class="bv">1.2</span></div>
+    <div class="br"><span class="bl">Lock Survival</span><div class="bt"><div class="bf" style="width:9%;background:var(--grow)"></div></div><span class="bv">9%</span></div>
+  </div>
+  <div class="ps"><div class="pst">Content Identity</div>
+    <div style="font-size:.75rem;color:var(--accent);margin-bottom:.5rem;font-weight:600">Level 1 — Theme</div>
+    <div class="br"><span class="bl">Edgy</span><div class="bt"><div class="bf" style="width:27%;background:var(--edgy)"></div></div><span class="bv">27%</span></div>
+    <div class="br"><span class="bl">Forbidden Love</span><div class="bt"><div class="bf" style="width:22%;background:var(--forblove)"></div></div><span class="bv">22%</span></div>
+    <div class="br"><span class="bl">Revenge</span><div class="bt"><div class="bf" style="width:13%;background:var(--revenge)"></div></div><span class="bv">13%</span></div>
+    <div class="br"><span class="bl">Melodrama</span><div class="bt"><div class="bf" style="width:11%;background:var(--melodrama)"></div></div><span class="bv">11%</span></div>
+    <div class="br"><span class="bl">Crime</span><div class="bt"><div class="bf" style="width:6%;background:var(--crime)"></div></div><span class="bv">6%</span></div>
+    <div style="font-size:.75rem;color:var(--accent);margin:.75rem 0 .5rem;font-weight:600">Level 2 — Archetype</div>
+    <div style="font-size:.9rem;font-weight:600;color:var(--grow)">Hook-Driven Romance + Hindi Crime</div>
+    <div style="font-size:.75rem;color:var(--dim)">Similar to Sampler but with Hindi content signal. Ek Badnaam Aashram in top 3.</div>
+    <div style="font-size:.75rem;color:var(--dim);margin-top:.5rem">Source: Intl Dubbed 85% | <strong style="color:var(--text)">Hindi 15%</strong> (highest)</div>
+    <div class="si" style="margin-top:.5rem"><span>Why Do You Love Me?</span><span>49K</span></div>
+    <div class="si"><span>My Cursed Kiss</span><span>23K</span></div>
+    <div class="si"><span style="color:var(--grow)">Ek Badnaam Aashram 🇮🇳</span><span>22K</span></div>
+    <div class="si"><span>I Married A Mystery</span><span>19K</span></div>
+    <div class="si"><span>His Allergic Love</span><span>18K</span></div>
+  </div>
+</div>
+<div>
+  <div class="ps"><div class="pst">Demographics</div>
+    <div class="donut-c">
+      <svg class="donut" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9" fill="none" stroke="var(--female)" stroke-width="3" stroke-dasharray="34 66" stroke-dashoffset="25"/><circle cx="18" cy="18" r="15.9" fill="none" stroke="var(--male)" stroke-width="3" stroke-dasharray="64 36" stroke-dashoffset="91"/></svg>
+      <div class="donut-l"><div><span class="dot" style="background:var(--male)"></span><strong>64% Male</strong></div><div><span class="dot" style="background:var(--female)"></span>34% Female</div></div>
+    </div>
+    <div style="margin-top:.75rem">
+      <div class="br"><span class="bl">25-34</span><div class="bt"><div class="bf" style="width:50%;background:var(--grow)"></div></div><span class="bv"><strong>50%</strong></span></div>
+      <div class="br"><span class="bl">18-24</span><div class="bt"><div class="bf" style="width:27%;background:var(--grow);opacity:.7"></div></div><span class="bv">27%</span></div>
+      <div class="br"><span class="bl">35+</span><div class="bt"><div class="bf" style="width:21%;background:var(--grow);opacity:.5"></div></div><span class="bv">21%</span></div>
+    </div>
+    <div style="font-size:.8rem;color:var(--dim);margin-top:.5rem">Top: <strong style="color:var(--text)">M_25-34 (35%)</strong>, F_25-34 (15%), M_18-24 (14%)</div>
+  </div>
+  <div class="ps"><div class="pst">Channel</div>
+    <div style="display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:.5rem"><div style="width:51%;background:var(--paid)"></div><div style="width:29%;background:var(--organic)"></div><div style="width:15%;background:var(--push)"></div></div>
+    <div style="font-size:.75rem;color:var(--dim)">Paid 51% | Organic 29% | Push 15%</div>
+  </div>
+  <div class="ps"><div class="pst">Commercial</div>
+    <div style="font-size:.8rem;color:var(--dim)">Tags 24% | <strong style="color:var(--text)">Electronics/Tech (71%)</strong>, Fashion/Beauty (68%), <strong style="color:var(--text)">Affluent/Premium (36%)</strong><br>Unique profile: Electronics + Premium. Target: Samsung, OnePlus, Apple, Tanishq.</div>
+  </div>
+</div>
+</div></div></div>
+
+<!-- P1: Romance Binger -->
+<div class="pc" id="p1">
+<div class="ph" style="border-left:4px solid var(--nourish)">
+  <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:.5rem">
+    <div><h3>Romance Binger</h3><div class="meta"><span class="badge b-nourish">Nourish</span><span>225,968 users</span><span>11.8%</span></div></div>
+    <span class="ret r-deep">Deep Binger</span>
+  </div>
+  <p style="margin-top:.75rem;font-size:.85rem;color:var(--dim)">First engaged tier. 100% lock survival, 3.5 shows. Content shifts from Edgy to Forbidden Love + Melodrama — deeper emotional investment. The "converted" sampler.</p>
+</div>
+<div class="pb"><div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+<div>
+  <div class="ps"><div class="pst">Behavioral Fingerprint</div>
+    <div class="br"><span class="bl">Minutes/Week</span><div class="bt"><div class="bf" style="width:11%;background:var(--nourish)"></div></div><span class="bv">103</span></div>
+    <div class="br"><span class="bl">MPC</span><div class="bt"><div class="bf" style="width:28%;background:var(--nourish)"></div></div><span class="bv">51</span></div>
+    <div class="br"><span class="bl">Active Days</span><div class="bt"><div class="bf" style="width:31%;background:var(--nourish)"></div></div><span class="bv">2.2/7</span></div>
+    <div class="br"><span class="bl">Shows</span><div class="bt"><div class="bf" style="width:18%;background:var(--nourish)"></div></div><span class="bv">3.5</span></div>
+    <div class="br"><span class="bl">Lock Survival</span><div class="bt"><div class="bf" style="width:100%;background:var(--nourish)"></div></div><span class="bv">100%</span></div>
+    <div class="br"><span class="bl">Eps/Session</span><div class="bt"><div class="bf" style="width:45%;background:var(--nourish)"></div></div><span class="bv">28</span></div>
+  </div>
+  <div class="ps"><div class="pst">Content Identity</div>
+    <div style="font-size:.75rem;color:var(--accent);margin-bottom:.5rem;font-weight:600">Level 1 — Theme</div>
+    <div class="br"><span class="bl">Forbidden Love</span><div class="bt"><div class="bf" style="width:22%;background:var(--forblove)"></div></div><span class="bv">22%</span></div>
+    <div class="br"><span class="bl">Edgy</span><div class="bt"><div class="bf" style="width:19%;background:var(--edgy)"></div></div><span class="bv">19%</span></div>
+    <div class="br"><span class="bl">Melodrama</span><div class="bt"><div class="bf" style="width:17%;background:var(--melodrama)"></div></div><span class="bv">17%</span></div>
+    <div class="br"><span class="bl">Revenge</span><div class="bt"><div class="bf" style="width:16%;background:var(--revenge)"></div></div><span class="bv">16%</span></div>
+    <div class="br"><span class="bl">Secret Lives</span><div class="bt"><div class="bf" style="width:10%;background:var(--secretlives)"></div></div><span class="bv">10%</span></div>
+    <div style="font-size:.75rem;color:var(--accent);margin:.75rem 0 .5rem;font-weight:600">Level 2 — Archetype</div>
+    <div style="font-size:.9rem;font-weight:600;color:var(--nourish)">Forbidden Love → Melodrama Transition</div>
+    <div style="font-size:.75rem;color:var(--dim)">Forbidden Love overtakes Edgy. Melodrama rises to 17%. Deeper emotional content.</div>
+    <div style="font-size:.75rem;color:var(--dim);margin-top:.5rem">Source: Intl Dubbed 95% | Hindi 5%</div>
+    <div class="si" style="margin-top:.5rem"><span>Our Love Is The Ocean Of Stars</span><span>51K</span></div>
+    <div class="si"><span>Mr. Huo, Your Wife's Back with Babies!</span><span>37K</span></div>
+    <div class="si"><span>Why Do You Love Me?</span><span>36K</span></div>
+    <div class="si"><span>Back From My Funeral</span><span>32K</span></div>
+    <div class="si"><span>Lucky Trio: CEO Daddy's Doting Love</span><span>26K</span></div>
+  </div>
+</div>
+<div>
+  <div class="ps"><div class="pst">Demographics</div>
+    <div class="donut-c">
+      <svg class="donut" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9" fill="none" stroke="var(--female)" stroke-width="3" stroke-dasharray="72 28" stroke-dashoffset="25"/><circle cx="18" cy="18" r="15.9" fill="none" stroke="var(--male)" stroke-width="3" stroke-dasharray="28 72" stroke-dashoffset="53"/></svg>
+      <div class="donut-l"><div><span class="dot" style="background:var(--female)"></span><strong>72% Female</strong></div><div><span class="dot" style="background:var(--male)"></span>28% Male</div></div>
+    </div>
+    <div style="margin-top:.75rem">
+      <div class="br"><span class="bl">18-24</span><div class="bt"><div class="bf" style="width:56%;background:var(--nourish)"></div></div><span class="bv">56%</span></div>
+      <div class="br"><span class="bl">25-34</span><div class="bt"><div class="bf" style="width:28%;background:var(--nourish);opacity:.7"></div></div><span class="bv">28%</span></div>
+      <div class="br"><span class="bl">35+</span><div class="bt"><div class="bf" style="width:16%;background:var(--nourish);opacity:.5"></div></div><span class="bv">16%</span></div>
+    </div>
+    <div style="font-size:.8rem;color:var(--dim);margin-top:.5rem">Top: <strong style="color:var(--text)">F_18-24 (46%)</strong>, F_25-34 (17%), M_25-34 (11%)</div>
+  </div>
+  <div class="ps"><div class="pst">Channel</div>
+    <div style="display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:.5rem"><div style="width:67%;background:var(--organic)"></div><div style="width:30%;background:var(--paid)"></div><div style="width:3%;background:var(--push)"></div></div>
+    <div style="font-size:.75rem;color:var(--dim)">Organic 67% | Paid 30%</div>
+  </div>
+  <div class="ps"><div class="pst">Commercial</div>
+    <div style="font-size:.8rem;color:var(--dim)">Tags 100% | Fashion/Beauty (100%), Electronics (100%), Home (99%)<br>Target: Nykaa, Myntra, Lakme, Sugar Cosmetics — F18-24 fashion audience.</div>
+  </div>
+</div>
+</div></div></div>
+
+<!-- P5: Engaged Explorer -->
+<div class="pc" id="p5">
+<div class="ph" style="border-left:4px solid var(--nourish)">
+  <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:.5rem">
+    <div><h3>Engaged Explorer</h3><div class="meta"><span class="badge b-nourish">Nourish</span><span>61,215 users</span><span>3.2%</span></div></div>
+    <span class="ret r-deep">Deep Binger</span>
+  </div>
+  <p style="margin-top:.75rem;font-size:.85rem;color:var(--dim)">Cross-age engaged viewer. Top cells split equally F_18-24 and F_25-34. Similar content to Romance Binger but older demographic. Low tag coverage (22%) = non-Amazon users.</p>
+</div>
+<div class="pb"><div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+<div>
+  <div class="ps"><div class="pst">Behavioral Fingerprint</div>
+    <div class="br"><span class="bl">Minutes/Week</span><div class="bt"><div class="bf" style="width:14%;background:var(--nourish)"></div></div><span class="bv">125</span></div>
+    <div class="br"><span class="bl">MPC</span><div class="bt"><div class="bf" style="width:32%;background:var(--nourish)"></div></div><span class="bv">58</span></div>
+    <div class="br"><span class="bl">Active Days</span><div class="bt"><div class="bf" style="width:33%;background:var(--nourish)"></div></div><span class="bv">2.3/7</span></div>
+    <div class="br"><span class="bl">Shows</span><div class="bt"><div class="bf" style="width:19%;background:var(--nourish)"></div></div><span class="bv">3.8</span></div>
+    <div class="br"><span class="bl">Lock Survival</span><div class="bt"><div class="bf" style="width:100%;background:var(--nourish)"></div></div><span class="bv">100%</span></div>
+    <div class="br"><span class="bl">Eps/Session</span><div class="bt"><div class="bf" style="width:52%;background:var(--nourish)"></div></div><span class="bv">32</span></div>
+  </div>
+  <div class="ps"><div class="pst">Content Identity</div>
+    <div style="font-size:.75rem;color:var(--accent);margin-bottom:.5rem;font-weight:600">Level 1 — Theme</div>
+    <div class="br"><span class="bl">Forbidden Love</span><div class="bt"><div class="bf" style="width:23%;background:var(--forblove)"></div></div><span class="bv">23%</span></div>
+    <div class="br"><span class="bl">Edgy</span><div class="bt"><div class="bf" style="width:19%;background:var(--edgy)"></div></div><span class="bv">19%</span></div>
+    <div class="br"><span class="bl">Melodrama</span><div class="bt"><div class="bf" style="width:16%;background:var(--melodrama)"></div></div><span class="bv">16%</span></div>
+    <div class="br"><span class="bl">Revenge</span><div class="bt"><div class="bf" style="width:16%;background:var(--revenge)"></div></div><span class="bv">16%</span></div>
+    <div class="br"><span class="bl">Secret Lives</span><div class="bt"><div class="bf" style="width:10%;background:var(--secretlives)"></div></div><span class="bv">10%</span></div>
+    <div style="font-size:.75rem;color:var(--accent);margin:.75rem 0 .5rem;font-weight:600">Level 2 — Archetype</div>
+    <div style="font-size:.9rem;font-weight:600;color:var(--nourish)">Cross-Age Romance Explorer</div>
+    <div style="font-size:.75rem;color:var(--dim)">Most balanced genre mix — no single theme dominates. True explorer behavior across age groups.</div>
+    <div style="font-size:.75rem;color:var(--dim);margin-top:.5rem">Source: Intl Dubbed 95% | Hindi 5%</div>
+    <div class="si" style="margin-top:.5rem"><span>Our Love Is The Ocean Of Stars</span><span>15K</span></div>
+    <div class="si"><span>Mr. Huo, Your Wife's Back with Babies!</span><span>11K</span></div>
+    <div class="si"><span>Why Do You Love Me?</span><span>11K</span></div>
+  </div>
+</div>
+<div>
+  <div class="ps"><div class="pst">Demographics</div>
+    <div class="donut-c">
+      <svg class="donut" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9" fill="none" stroke="var(--female)" stroke-width="3" stroke-dasharray="64 36" stroke-dashoffset="25"/><circle cx="18" cy="18" r="15.9" fill="none" stroke="var(--male)" stroke-width="3" stroke-dasharray="34 66" stroke-dashoffset="61"/></svg>
+      <div class="donut-l"><div><span class="dot" style="background:var(--female)"></span>64% Female</div><div><span class="dot" style="background:var(--male)"></span>34% Male</div></div>
+    </div>
+    <div style="margin-top:.75rem">
+      <div class="br"><span class="bl">25-34</span><div class="bt"><div class="bf" style="width:42%;background:var(--nourish)"></div></div><span class="bv"><strong>42%</strong></span></div>
+      <div class="br"><span class="bl">18-24</span><div class="bt"><div class="bf" style="width:38%;background:var(--nourish);opacity:.7"></div></div><span class="bv">38%</span></div>
+      <div class="br"><span class="bl">35+</span><div class="bt"><div class="bf" style="width:18%;background:var(--nourish);opacity:.5"></div></div><span class="bv">18%</span></div>
+    </div>
+    <div style="font-size:.8rem;color:var(--dim);margin-top:.5rem">Top: <strong style="color:var(--text)">F_18-24 (26%), F_25-34 (26%)</strong> — equal split</div>
+  </div>
+  <div class="ps"><div class="pst">Channel</div>
+    <div style="display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:.5rem"><div style="width:73%;background:var(--organic)"></div><div style="width:25%;background:var(--paid)"></div></div>
+    <div style="font-size:.75rem;color:var(--dim)">Organic 73% | Paid 25%</div>
+  </div>
+  <div class="ps"><div class="pst">Commercial</div>
+    <div style="font-size:.8rem;color:var(--dim)">Tags 22% | Fashion/Beauty (61%), Electronics (56%), Home (25%)<br>Low tag coverage — harder to target via Amazon ad infra.</div>
+  </div>
+</div>
+</div></div></div>
+
+<!-- P2: Platform Devotee -->
+<div class="pc" id="p2">
+<div class="ph" style="border-left:4px solid var(--sustain)">
+  <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:.5rem">
+    <div><h3>Platform Devotee</h3><div class="meta"><span class="badge b-sustain">Sustain</span><span>44,047 users</span><span>2.3%</span></div></div>
+    <span class="ret r-full">Full Completer</span>
+  </div>
+  <p style="margin-top:.75rem;font-size:.85rem;color:var(--dim)">The platform's most valuable viewers. 10.5 hrs/week, 15 shows, 86% organic. The ONLY persona with a distinct archetype: CEO/Billionaire Romance. Secret Lives at 13% = 2x sampler rate.</p>
+</div>
+<div class="pb"><div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+<div>
+  <div class="ps"><div class="pst">Behavioral Fingerprint</div>
+    <div class="br"><span class="bl">Minutes/Week</span><div class="bt"><div class="bf" style="width:70%;background:var(--sustain)"></div></div><span class="bv">630</span></div>
+    <div class="br"><span class="bl">MPC</span><div class="bt"><div class="bf" style="width:78%;background:var(--sustain)"></div></div><span class="bv">143</span></div>
+    <div class="br"><span class="bl">Active Days</span><div class="bt"><div class="bf" style="width:69%;background:var(--sustain)"></div></div><span class="bv">4.8/7</span></div>
+    <div class="br"><span class="bl">Shows</span><div class="bt"><div class="bf" style="width:74%;background:var(--sustain)"></div></div><span class="bv">14.7</span></div>
+    <div class="br"><span class="bl">Lock Survival</span><div class="bt"><div class="bf" style="width:100%;background:var(--sustain)"></div></div><span class="bv">100%</span></div>
+    <div class="br"><span class="bl">Eps/Session</span><div class="bt"><div class="bf" style="width:85%;background:var(--sustain)"></div></div><span class="bv">53</span></div>
+    <div class="br"><span class="bl">Binge</span><div class="bt"><div class="bf" style="width:97%;background:var(--sustain)"></div></div><span class="bv">2.97</span></div>
+  </div>
+  <div class="ps"><div class="pst">Content Identity</div>
+    <div style="font-size:.75rem;color:var(--accent);margin-bottom:.5rem;font-weight:600">Level 1 — Theme</div>
+    <div class="br"><span class="bl">Forbidden Love</span><div class="bt"><div class="bf" style="width:24%;background:var(--forblove)"></div></div><span class="bv">24%</span></div>
+    <div class="br"><span class="bl">Edgy</span><div class="bt"><div class="bf" style="width:17%;background:var(--edgy)"></div></div><span class="bv">17%</span></div>
+    <div class="br"><span class="bl">Melodrama</span><div class="bt"><div class="bf" style="width:14%;background:var(--melodrama)"></div></div><span class="bv">14%</span></div>
+    <div class="br"><span class="bl">Revenge</span><div class="bt"><div class="bf" style="width:13%;background:var(--revenge)"></div></div><span class="bv">13%</span></div>
+    <div class="br"><span class="bl">Secret Lives</span><div class="bt"><div class="bf" style="width:13%;background:var(--secretlives)"></div></div><span class="bv"><strong>13%</strong></span></div>
+    <div style="font-size:.75rem;color:var(--accent);margin:.75rem 0 .5rem;font-weight:600">Level 2 — Archetype</div>
+    <div style="font-size:.9rem;font-weight:600;color:var(--sustain)">CEO/Billionaire Romance</div>
+    <div style="font-size:.75rem;color:var(--dim)">The ONLY persona with a distinct archetype. Lucky Trio, Flash Marriage, Cold CEO dominate. Secret Lives 2x sampler rate.</div>
+    <div style="font-size:.75rem;color:var(--dim);margin-top:.5rem">Source: <strong style="color:var(--text)">Intl Dubbed 98%</strong> | Hindi 2%</div>
+    <div class="si" style="margin-top:.5rem"><span>Our Love Is The Ocean Of Stars</span><span>23K</span></div>
+    <div class="si"><span style="color:var(--sustain)">Lucky Trio: CEO Daddy's Doting Love</span><span>20K</span></div>
+    <div class="si"><span style="color:var(--sustain)">Flash Marriage: Mrs. Gu's Online Unmasking</span><span>20K</span></div>
+    <div class="si"><span>Back From My Funeral</span><span>18K</span></div>
+    <div class="si"><span style="color:var(--sustain)">The Cold CEO's Torturous Love Game</span><span>18K</span></div>
+  </div>
+</div>
+<div>
+  <div class="ps"><div class="pst">Demographics</div>
+    <div class="donut-c">
+      <svg class="donut" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9" fill="none" stroke="var(--female)" stroke-width="3" stroke-dasharray="82 18" stroke-dashoffset="25"/><circle cx="18" cy="18" r="15.9" fill="none" stroke="var(--male)" stroke-width="3" stroke-dasharray="18 82" stroke-dashoffset="43"/></svg>
+      <div class="donut-l"><div><span class="dot" style="background:var(--female)"></span><strong>82% Female</strong></div><div><span class="dot" style="background:var(--male)"></span>18% Male</div></div>
+    </div>
+    <div style="margin-top:.75rem">
+      <div class="br"><span class="bl">18-24</span><div class="bt"><div class="bf" style="width:56%;background:var(--sustain)"></div></div><span class="bv">56%</span></div>
+      <div class="br"><span class="bl">25-34</span><div class="bt"><div class="bf" style="width:28%;background:var(--sustain);opacity:.7"></div></div><span class="bv">28%</span></div>
+      <div class="br"><span class="bl">35+</span><div class="bt"><div class="bf" style="width:16%;background:var(--sustain);opacity:.5"></div></div><span class="bv">16%</span></div>
+    </div>
+    <div style="font-size:.8rem;color:var(--dim);margin-top:.5rem">Top: <strong style="color:var(--text)">F_18-24 (49%)</strong>, F_25-34 (21%), M_18-24 (8%)</div>
+  </div>
+  <div class="ps"><div class="pst">Channel</div>
+    <div style="display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:.5rem"><div style="width:86%;background:var(--organic)"></div><div style="width:14%;background:var(--paid)"></div></div>
+    <div style="font-size:.75rem;color:var(--dim)"><strong style="color:var(--text)">Organic 86%</strong> | Paid 14% — almost entirely self-returning</div>
+  </div>
+  <div class="ps"><div class="pst">Commercial</div>
+    <div style="font-size:.8rem;color:var(--dim)">Tags 91% | Fashion/Beauty (99%), Electronics (99%), Home (97%)<br>Maximum value per user. Premium content environments for brand advertisers.</div>
+  </div>
+</div>
+</div></div></div>
+
+</section>
+</div>
+
+<div class="container">
+<!-- STRATEGY (comes first — the "what to do" framework) -->
+<section id="strategy">
+<h2>Strategic Playbook</h2>
+<p style="color:var(--dim);font-size:.9rem;margin-bottom:1.5rem">Each persona has a strategic job. The Slate Gaps section below provides the specific genre-level acquisition data.</p>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem">
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;border-top:3px solid var(--convert)">
+    <span class="badge b-convert">Convert — 64.5%</span>
+    <div style="font-size:1rem;font-weight:600;margin-top:.75rem">Get them to watch a second show</div>
+    <p style="font-size:.85rem;color:var(--dim);margin-top:.5rem">The 1→2 show transition is the single highest-leverage metric. Converting 5% = +62K engaged users, +3.4M min/week.</p>
+    <div style="margin-top:.75rem;font-size:.8rem;padding:.5rem;background:var(--surface2);border-radius:6px">
+      <strong>Lever:</strong> Recommendation quality after first episode<br>
+      <strong>Avoid:</strong> More Crime content (attracts non-converters)
+    </div>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;border-top:3px solid var(--grow)">
+    <span class="badge b-grow">Grow — 18.3%</span>
+    <div style="font-size:1rem;font-weight:600;margin-top:.75rem">Unlock the male audience with genre expansion</div>
+    <p style="font-size:.85rem;color:var(--dim);margin-top:.5rem">351K male 25-34 viewers with no content made for them. Hindi content is the only lever that differentiates this segment.</p>
+    <div style="margin-top:.75rem;font-size:.8rem;padding:.5rem;background:var(--surface2);border-radius:6px">
+      <strong>Lever:</strong> Hindi originals, action/thriller<br>
+      <strong>Ad story:</strong> Electronics/Tech + Affluent/Premium
+    </div>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;border-top:3px solid var(--nourish)">
+    <span class="badge b-nourish">Nourish — 15.0%</span>
+    <div style="font-size:1rem;font-weight:600;margin-top:.75rem">Deepen engagement with catalog breadth</div>
+    <p style="font-size:.85rem;color:var(--dim);margin-top:.5rem">287K viewers who've committed past the lock. They need more content in their zone — Melodrama and Revenge are the engagement deepeners.</p>
+    <div style="margin-top:.75rem;font-size:.8rem;padding:.5rem;background:var(--surface2);border-radius:6px">
+      <strong>Lever:</strong> Franchise content, "if you liked X" recs<br>
+      <strong>Gap:</strong> Melodrama is 2.3x undersupplied
+    </div>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;border-top:3px solid var(--sustain)">
+    <span class="badge b-sustain">Sustain — 2.3%</span>
+    <div style="font-size:1rem;font-weight:600;margin-top:.75rem">Protect retention with content freshness</div>
+    <p style="font-size:.85rem;color:var(--dim);margin-top:.5rem">44K users watching 10.5 hrs/week. They've consumed the popular catalog and are in the long tail. Their top shows predict what others will discover next.</p>
+    <div style="margin-top:.75rem;font-size:.8rem;padding:.5rem;background:var(--surface2);border-radius:6px">
+      <strong>Lever:</strong> Release cadence, new show pipeline<br>
+      <strong>Signal:</strong> Secret Lives demand 2x sampler rate
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- SLATE GAP ANALYSIS (the data backing the strategy) -->
+<section id="slate-gaps">
+<h2>Slate Gap Analysis: What to Buy</h2>
+
+<!-- Executive summary cards -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem">
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;border-left:4px solid var(--nourish)">
+    <h3 style="font-size:1rem;color:var(--nourish);margin-bottom:.75rem">🟢 Buy More</h3>
+    <div style="font-size:.9rem"><strong>Melodrama</strong> — 2.3x gap (25 shows, 15.2% demand)</div>
+    <div style="font-size:.9rem;margin-top:.25rem"><strong>Forbidden Love</strong> — 1.9x gap (48 shows, 23.1% demand)</div>
+    <div style="font-size:.9rem;margin-top:.25rem"><strong>Revenge</strong> — 1.6x gap (34 shows, 14.5% demand)</div>
+    <div style="font-size:.8rem;color:var(--dim);margin-top:.75rem">These 3 genres = 52.8% of all watchtime but only 27.8% of catalog</div>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;border-left:4px solid var(--convert)">
+    <h3 style="font-size:1rem;color:var(--convert);margin-bottom:.75rem">🔴 Stop Buying</h3>
+    <div style="font-size:.9rem"><strong>Crime</strong> — 0.1x ratio (22 shows, 0.6% demand)</div>
+    <div style="font-size:.9rem;margin-top:.25rem"><strong>Second Chances</strong> — 0.4x ratio (32 shows, 3.4% demand)</div>
+    <div style="font-size:.9rem;margin-top:.25rem"><strong>Pulp</strong> — 0.4x ratio (19 shows, 2.0% demand)</div>
+    <div style="font-size:.8rem;color:var(--dim);margin-top:.75rem">These 3 genres = 73 shows (19% of catalog) generating only 3% of watchtime</div>
+  </div>
+</div>
+
+<!-- Demand vs Supply bars -->
+<h3>Demand vs Supply by Genre</h3>
+<p style="color:var(--dim);font-size:.85rem;margin-bottom:1rem">Green = watchtime demand. Gray = catalog supply. Gap ratio > 1.3 = undersupplied.</p>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;overflow-x:auto">
+<table class="at" style="min-width:600px">
+<thead><tr><th style="width:140px">Genre</th><th>Demand vs Supply</th><th style="width:60px">Gap</th><th style="width:100px">Signal</th></tr></thead>
+<tbody>
+<tr><td>Melodrama</td><td><div style="display:flex;gap:2px;align-items:center"><div style="width:152px;height:10px;background:var(--nourish);border-radius:3px" title="Demand 15.2%"></div><div style="font-size:.7rem;color:var(--dim);margin:0 4px">vs</div><div style="width:65px;height:10px;background:var(--dim);opacity:.4;border-radius:3px" title="Supply 6.5%"></div></div><div style="font-size:.7rem;color:var(--dim);margin-top:2px">15.2% demand · 6.5% supply · 25 shows</div></td><td style="font-weight:700;color:var(--nourish)">2.3x</td><td><span style="font-size:.75rem;color:var(--nourish)">🟢🟢 PRIORITY</span></td></tr>
+<tr><td>Forbidden Love</td><td><div style="display:flex;gap:2px;align-items:center"><div style="width:231px;height:10px;background:var(--nourish);border-radius:3px"></div><div style="font-size:.7rem;color:var(--dim);margin:0 4px">vs</div><div style="width:125px;height:10px;background:var(--dim);opacity:.4;border-radius:3px"></div></div><div style="font-size:.7rem;color:var(--dim);margin-top:2px">23.1% demand · 12.5% supply · 48 shows</div></td><td style="font-weight:700;color:var(--nourish)">1.9x</td><td><span style="font-size:.75rem;color:var(--nourish)">🟢 BUY MORE</span></td></tr>
+<tr><td>Revenge</td><td><div style="display:flex;gap:2px;align-items:center"><div style="width:145px;height:10px;background:var(--nourish);border-radius:3px"></div><div style="font-size:.7rem;color:var(--dim);margin:0 4px">vs</div><div style="width:88px;height:10px;background:var(--dim);opacity:.4;border-radius:3px"></div></div><div style="font-size:.7rem;color:var(--dim);margin-top:2px">14.5% demand · 8.8% supply · 34 shows</div></td><td style="font-weight:700;color:var(--nourish)">1.6x</td><td><span style="font-size:.75rem;color:var(--nourish)">🟢 BUY MORE</span></td></tr>
+<tr><td>Edgy</td><td><div style="display:flex;gap:2px;align-items:center"><div style="width:183px;height:10px;background:var(--grow);border-radius:3px"></div><div style="font-size:.7rem;color:var(--dim);margin:0 4px">vs</div><div style="width:143px;height:10px;background:var(--dim);opacity:.4;border-radius:3px"></div></div><div style="font-size:.7rem;color:var(--dim);margin-top:2px">18.3% demand · 14.3% supply · 55 shows</div></td><td style="color:var(--dim)">1.3x</td><td><span style="font-size:.75rem;color:var(--dim)">🟡 Balanced</span></td></tr>
+<tr><td>Secret Lives</td><td><div style="display:flex;gap:2px;align-items:center"><div style="width:112px;height:10px;background:var(--grow);border-radius:3px"></div><div style="font-size:.7rem;color:var(--dim);margin:0 4px">vs</div><div style="width:104px;height:10px;background:var(--dim);opacity:.4;border-radius:3px"></div></div><div style="font-size:.7rem;color:var(--dim);margin-top:2px">11.2% demand · 10.4% supply · 40 shows</div></td><td style="color:var(--dim)">1.1x</td><td><span style="font-size:.75rem;color:var(--dim)">🟡 Balanced</span></td></tr>
+<tr><td>Second Chances</td><td><div style="display:flex;gap:2px;align-items:center"><div style="width:34px;height:10px;background:var(--convert);border-radius:3px"></div><div style="font-size:.7rem;color:var(--dim);margin:0 4px">vs</div><div style="width:83px;height:10px;background:var(--dim);opacity:.4;border-radius:3px"></div></div><div style="font-size:.7rem;color:var(--dim);margin-top:2px">3.4% demand · 8.3% supply · 32 shows</div></td><td style="color:var(--convert)">0.4x</td><td><span style="font-size:.75rem;color:var(--convert)">🔴 Over</span></td></tr>
+<tr><td>Crime</td><td><div style="display:flex;gap:2px;align-items:center"><div style="width:6px;height:10px;background:var(--convert);border-radius:3px"></div><div style="font-size:.7rem;color:var(--dim);margin:0 4px">vs</div><div style="width:57px;height:10px;background:var(--dim);opacity:.4;border-radius:3px"></div></div><div style="font-size:.7rem;color:var(--dim);margin-top:2px">0.6% demand · 5.7% supply · 22 shows</div></td><td style="font-weight:700;color:var(--convert)">0.1x</td><td><span style="font-size:.75rem;color:var(--convert)">🔴 STOP</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- Content Source -->
+<h3 style="margin-top:2rem">Content Source: Where Watchtime Comes From</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1rem">
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;text-align:center">
+    <div style="font-size:2rem;font-weight:700;color:var(--sustain)">95.8%</div>
+    <div style="font-size:.85rem;color:var(--dim)">Intl Dubbed watchtime</div>
+    <div style="font-size:.75rem;color:var(--dim);margin-top:.25rem">51.4% of catalog → 1.86x demand</div>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;text-align:center">
+    <div style="font-size:2rem;font-weight:700;color:var(--convert)">2.2%</div>
+    <div style="font-size:.85rem;color:var(--dim)">Partner Studios watchtime</div>
+    <div style="font-size:.75rem;color:var(--dim);margin-top:.25rem">22.9% of catalog → 0.10x demand</div>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;text-align:center">
+    <div style="font-size:2rem;font-weight:700;color:var(--grow)">1.5%</div>
+    <div style="font-size:.85rem;color:var(--dim)">Hindi Originals watchtime</div>
+    <div style="font-size:.75rem;color:var(--dim);margin-top:.25rem">13.5% of catalog → serves Male Crossover</div>
+  </div>
+</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;margin-top:1rem">
+  <p style="font-size:.85rem;color:var(--dim)"><strong style="color:var(--text)">The dubbed Mandarin pipeline is the platform's lifeline.</strong> Partner studio content (Reelies, Pratilipi, Reelsaga) occupies 23% of catalog slots but generates only 2% of watchtime — a significant opportunity cost. Hindi Originals serve audience diversification (Male Crossover, 351K users) rather than watchtime volume.</p>
+</div>
+</section>
+
+<!-- COMMERCIAL -->
+<section id="commercial">
+<h2>Commercial Profiles</h2>
+<h3>Advertiser Category Affinity</h3>
+<table class="at">
+<thead><tr><th>Vertical</th><th>Key Advertisers</th><th>Best Persona Fit</th></tr></thead>
+<tbody>
+<tr><td>Fashion & Beauty</td><td>Nykaa, Myntra, AJIO, Lakme, Mamaearth</td><td>Romance Binger, Devotee (99-100%)</td></tr>
+<tr><td>Consumer Electronics</td><td>Samsung, OnePlus, Xiaomi, Boat</td><td><strong>Male Crossover (71%)</strong> — unique</td></tr>
+<tr><td>Premium & Luxury</td><td>Apple, Tanishq, Titan</td><td><strong>Male Crossover (36%)</strong> — highest</td></tr>
+<tr><td>Home & Household</td><td>Asian Paints, Godrej, Prestige</td><td>Sampler, Devotee (97-99%)</td></tr>
+<tr><td>Travel</td><td>MakeMyTrip, Goibibo, OYO</td><td>Broad (91-95% in engaged tiers)</td></tr>
+<tr><td>Parenting</td><td>FirstCry, Pampers</td><td>Low in Male Crossover (7%)</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- VALIDATION -->
+<section id="validation">
+<h2>Phase 1 Hypothesis Validation</h2>
+<div class="hyp-grid">
+  <div class="hyp ok"><span style="font-size:1.2rem">✅</span> <strong>P1: Young Female Romance Binger</strong><br><span style="font-size:.85rem;color:var(--dim)">→ Romance Binger + Engaged Explorer. F18-24 dominant, Forbidden Love + Melodrama content.</span></div>
+  <div class="hyp ok"><span style="font-size:1.2rem">✅</span> <strong>P2: Male Crossover Viewer</strong><br><span style="font-size:.85rem;color:var(--dim)">→ Cluster 3. 64% male, M_25-34 (35%), Hindi content signal, Electronics/Tech + Affluent/Premium.</span></div>
+  <div class="hyp ok"><span style="font-size:1.2rem">✅</span> <strong>P3: Discovery Sampler</strong><br><span style="font-size:.85rem;color:var(--dim)">→ Cluster 0. 64.5% of audience, 2 min/wk, Edgy-dominant hook content.</span></div>
+  <div class="hyp ok"><span style="font-size:1.2rem">✅</span> <strong>P4: Multi-Show Power User</strong><br><span style="font-size:.85rem;color:var(--dim)">→ Romance Binger + Explorer + Devotee. Three engagement tiers above sampling.</span></div>
+  <div class="hyp no"><span style="font-size:1.2rem">❌</span> <strong>P5: Mature Loyal Viewer</strong><br><span style="font-size:.85rem;color:var(--dim)">35+ viewers are 15-22% of every cluster. Age doesn't create a distinct behavioral segment — address as demographic overlay.</span></div>
+  <div class="hyp no"><span style="font-size:1.2rem">❌</span> <strong>P6: Hindi Content Explorer</strong><br><span style="font-size:.85rem;color:var(--dim)">Sub-segment of Male Crossover (15% Hindi). Phase 2.3 found 330-user cluster — too small. Hindi originals are the content lever for Male Crossover.</span></div>
+</div>
+</section>
+
+<!-- METHODOLOGY -->
+<section id="methodology">
+<h2 class="collapsible" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Methodology</h2>
+<div class="cc">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+<div>
+<h3>Clustering</h3>
+<ul style="font-size:.85rem;color:var(--dim);padding-left:1.2rem">
+<li>K-Means k=6, one-hot encoding, StandardScaler</li>
+<li>1,922,238 users × 45 features</li>
+<li>Validated by Agglomerative Hierarchical (Ward) — ARI=0.75</li>
+<li>1 outlier cluster (7 users) discarded</li>
+</ul>
+<h3 style="margin-top:1.5rem">Content Identity Approach</h3>
+<p style="font-size:.85rem;color:var(--dim)">Secondary genre tested as clustering input (Phase 2.3) but degraded silhouette from 0.43→0.11. Most users watch 1-2 shows, making genre distributions binary/noisy. Instead applied as post-clustering enrichment — preserves strong clusters while adding rich content differentiation.</p>
+</div>
+<div>
+<h3>Iterative Refinement</h3>
+<table class="at">
+<tr><td>Phase 2.0</td><td>k=4, basic</td><td>Sil 0.46, 3/6 hyp</td></tr>
+<tr><td>Phase 2.1</td><td>+ tags, k=6</td><td>Sil 0.42, 4/6 hyp</td></tr>
+<tr><td>Phase 2.2</td><td>+ source/origin</td><td><strong>Sil 0.43, ARI 0.75</strong> ← selected</td></tr>
+<tr><td>Phase 2.3</td><td>+ sec genre one-hot</td><td>Sil 0.11 — rejected</td></tr>
+<tr><td>Final</td><td>2.2 + content enrichment</td><td>Best of both</td></tr>
+</table>
+<h3 style="margin-top:1.5rem">Data Sources</h3>
+<table class="at">
+<tr><td>fatafat_player_engagement</td><td>46M events</td></tr>
+<tr><td>daily_cms_data_table</td><td>21K videos</td></tr>
+<tr><td>age_gender_details_v3</td><td>99.5% match</td></tr>
+<tr><td>persona_details_v3</td><td>83.4% match</td></tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+
+<footer style="text-align:center;padding:2rem;color:var(--dim);font-size:.8rem;border-top:1px solid var(--border);margin-top:2rem">
+  Fatafat Synthetic Personas — Phase 2 Final<br>
+  Amazon MX Player | Mar 30 – Apr 5, 2026 | Generated April 8, 2026<br>
+  CONFIDENTIAL — INTERNAL USE ONLY
+</footer>
+</div>
+
+<script>
+document.querySelectorAll('nav a').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+const secs=document.querySelectorAll('section[id]'),navs=document.querySelectorAll('nav a');
+window.addEventListener('scroll',()=>{let c='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-100)c=s.id});navs.forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+c)})});
+</script>
+</body>
+</html>

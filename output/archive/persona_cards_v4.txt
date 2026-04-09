@@ -1,0 +1,107 @@
+FATAFAT SYNTHETIC PERSONAS — PHASE 2.3
+Secondary Genre One-Hot + Content Archetypes
+K=6 | Sil=0.1120 | ARI=0.3809 | Hyp=5/6
+Features: 64 (40 numeric + 24 one-hot)
+
+======================================================================
+CLUSTER 0 — NOURISH — Epic Forbidden Love
+377,849 users (19.7%)
+======================================================================
+
+  ENGAGEMENT:  2 min/wk | 2 MPC | 1.1 days | 1.2 shows
+  RETENTION:   3 max ep | 9% lock | 2.1 eps/sess
+  CONTENT L1 (Theme):  Edgy (99%), Creature Romance (1%), Forbidden Love (0%), Melodrama (0%), Time Travel (0%)
+  CONTENT L2 (Archetype):  Epic Forbidden Love
+  SOURCE:      Intl Dubbed (93%), Partner (5%), Original (2%)
+  ORIGIN:      International (93%), Hindi (7%)
+  TOP SHOWS:   Why Do You Love Me? (118,233), My Cursed Kiss (89,680), His Allergic Love (70,916), The Divorce Sisters (33,574), For Your Eyes Only (16,791)
+  DEMO:        42% F / 58% M | 40% 18-24 | 36% 25-34 | 24% 35+
+  TOP CELLS:   M_25-34 (27%), F_18-24 (23%), M_18-24 (17%)
+  CHANNEL:     Organic 15% | Paid 73% | Push 7%
+  COMMERCIAL:  Tags 100% | Fashion/Beauty (100%), Electronics/Tech (100%), Home/Kitchen (99%)
+
+======================================================================
+CLUSTER 1 — CONVERT — Epic Forbidden Love
+884,898 users (46.0%)
+======================================================================
+
+  ENGAGEMENT:  2 min/wk | 2 MPC | 1.1 days | 1.2 shows
+  RETENTION:   3 max ep | 10% lock | 2.3 eps/sess
+  CONTENT L1 (Theme):  Forbidden Love (31%), Revenge (17%), Melodrama (16%), Crime (11%), Secret Lives (7%)
+  CONTENT L2 (Archetype):  Epic Forbidden Love
+  SOURCE:      Intl Dubbed (81%), Repack (10%), Original (5%)
+  ORIGIN:      International (81%), Hindi (19%), Unknown (0%)
+  TOP SHOWS:   I Won His Heart (64,517), I Married A Mystery (59,582), Ek Badnaam Aashram (57,275), Unbossed Wife (52,144), Back From My Funeral (51,781)
+  DEMO:        43% F / 57% M | 45% 18-24 | 33% 25-34 | 21% 35+
+  TOP CELLS:   F_18-24 (26%), M_25-34 (25%), M_18-24 (20%)
+  CHANNEL:     Organic 32% | Paid 44% | Push 16%
+  COMMERCIAL:  Tags 100% | Fashion/Beauty (100%), Electronics/Tech (100%), Home/Kitchen (99%)
+
+======================================================================
+CLUSTER 2 — EXPLORE — Epic Forbidden Love
+330 users (0.0%)
+======================================================================
+
+  ENGAGEMENT:  4 min/wk | 3 MPC | 1.2 days | 1.2 shows
+  RETENTION:   4 max ep | 12% lock | 2.7 eps/sess
+  CONTENT L1 (Theme):  Other (100%), Secret Lives (0%)
+  CONTENT L2 (Archetype):  Epic Forbidden Love
+  SOURCE:      Original (95%), Intl Dubbed (5%)
+  ORIGIN:      Hindi (95%), International (5%)
+  TOP SHOWS:   Kidnapper Bhaisahab (314), The Price Of Friendship (15), Flash Marriage: Mrs. Gu's Online Unmasking (1)
+  DEMO:        50% F / 50% M | 38% 18-24 | 37% 25-34 | 25% 35+
+  TOP CELLS:   F_18-24 (25%), M_25-34 (22%), F_25-34 (15%)
+  CHANNEL:     Organic 17% | Paid 82% | Push 0%
+  COMMERCIAL:  Tags 90% | Fashion/Beauty (98%), Electronics/Tech (98%), Affluent/Premium (96%)
+
+======================================================================
+CLUSTER 3 — NOURISH — Epic Forbidden Love
+385,084 users (20.0%)
+======================================================================
+
+  ENGAGEMENT:  10 min/wk | 6 MPC | 1.2 days | 1.3 shows
+  RETENTION:   9 max ep | 19% lock | 4.8 eps/sess
+  CONTENT L1 (Theme):  Edgy (28%), Forbidden Love (20%), Revenge (12%), Melodrama (12%), Crime (8%)
+  CONTENT L2 (Archetype):  Epic Forbidden Love
+  SOURCE:      Intl Dubbed (84%), Repack (8%), Partner (4%)
+  ORIGIN:      International (84%), Hindi (16%), Unknown (0%)
+  TOP SHOWS:   Why Do You Love Me? (44,956), My Cursed Kiss (19,946), Ek Badnaam Aashram (19,141), I Married A Mystery (18,282), His Allergic Love (16,134)
+  DEMO:        37% F / 61% M | 28% 18-24 | 50% 25-34 | 20% 35+
+  TOP CELLS:   M_25-34 (34%), F_25-34 (16%), M_18-24 (14%)
+  CHANNEL:     Organic 33% | Paid 49% | Push 13%
+  COMMERCIAL:  Tags 21% | Electronics/Tech (66%), Fashion/Beauty (64%), Affluent/Premium (34%)
+
+======================================================================
+CLUSTER 4 — NOURISH — Epic Forbidden Love
+210,668 users (11.0%)
+======================================================================
+
+  ENGAGEMENT:  103 min/wk | 53 MPC | 2.2 days | 3.4 shows
+  RETENTION:   63 max ep | 99% lock | 29.1 eps/sess
+  CONTENT L1 (Theme):  Forbidden Love (21%), Edgy (19%), Melodrama (16%), Revenge (15%), Secret Lives (10%)
+  CONTENT L2 (Archetype):  Epic Forbidden Love
+  SOURCE:      Intl Dubbed (93%), Partner (4%), Original (2%)
+  ORIGIN:      International (93%), Hindi (7%)
+  TOP SHOWS:   Our Love Is The Ocean Of Stars (21,465), Mr. Huo, Your Wife's Back with Babies! (17,796), Why Do You Love Me? (11,005), I Won His Heart (9,465), I Raised Our Child Alone (8,096)
+  DEMO:        73% F / 27% M | 56% 18-24 | 28% 25-34 | 16% 35+
+  TOP CELLS:   F_18-24 (45%), F_25-34 (18%), M_25-34 (11%)
+  CHANNEL:     Organic 68% | Paid 30% | Push 1%
+  COMMERCIAL:  Tags 98% | Fashion/Beauty (99%), Electronics/Tech (99%), Home/Kitchen (98%)
+
+======================================================================
+CLUSTER 5 — SUSTAIN — Epic Forbidden Love
+63,409 users (3.3%)
+======================================================================
+
+  ENGAGEMENT:  526 min/wk | 125 MPC | 4.5 days | 12.8 shows
+  RETENTION:   94 max ep | 100% lock | 48.7 eps/sess
+  CONTENT L1 (Theme):  Forbidden Love (28%), Edgy (20%), Melodrama (13%), Revenge (11%), Secret Lives (10%)
+  CONTENT L2 (Archetype):  Epic Forbidden Love
+  SOURCE:      Intl Dubbed (98%), Partner (1%), Original (1%)
+  ORIGIN:      International (98%), Hindi (2%)
+  TOP SHOWS:   The Wrong Moonlight (4,180), Lucky Trio: CEO Daddy's Doting Love (3,913), The Cold CEO's Torturous Love Game (3,718), Our Love Is The Ocean Of Stars (3,139), Flash Marriage: Mrs. Gu's Online Unmasking (2,525)
+  DEMO:        80% F / 20% M | 54% 18-24 | 30% 25-34 | 16% 35+
+  TOP CELLS:   F_18-24 (46%), F_25-34 (22%), M_18-24 (8%)
+  CHANNEL:     Organic 85% | Paid 15% | Push 0%
+  COMMERCIAL:  Tags 82% | Fashion/Beauty (98%), Electronics/Tech (97%), Home/Kitchen (95%)
+
