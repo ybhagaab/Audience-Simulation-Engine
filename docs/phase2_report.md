@@ -488,3 +488,54 @@ The following analysis compares watchtime share (demand) against catalog share (
 1. Shift Partner Studio slots toward dubbed Melodrama/Forbidden Love content
 2. Maintain Hindi Original pipeline for Male Crossover audience diversification
 3. Edgy content is balanced (1.3x) — don't add more, but don't cut either. It's the acquisition hook.
+
+
+---
+
+## Appendix C: Tiered Commercial Profiles (Amazon vs ML Tags)
+
+### Finding: ML Tags Over-Predict Interest Categories
+
+The ML persona model assigns 95-100% of users to nearly every interest category, making the tags undifferentiated and commercially useless for precision targeting. Amazon-sourced tags (derived from actual shopping behavior on Amazon) show much more realistic and differentiated rates.
+
+| Category | ML Rate (predicted) | Amazon Rate (actual) | ML Over-Prediction |
+|----------|-------------------|---------------------|-------------------|
+| Travel | 95% | 50-79% | +16 to +44 points |
+| Parents/Baby | 92% | 54-80% | +12 to +38 points |
+| Automotive | 97% | 63-84% | +10 to +34 points |
+| Home/Kitchen | 99% | 69-88% | +11 to +30 points |
+| Fashion/Beauty | 100% | 85-97% | +3 to +14 points |
+| Electronics/Tech | 100% | 93-98% | +2 to +6 points |
+
+### Tag Source Distribution by Persona
+
+| Persona | Amazon Tags | ML Tags | Both | None |
+|---------|------------|---------|------|------|
+| Discovery Sampler | 3% | 100% | 3% | 0% |
+| Romance Binger | 3% | 100% | 3% | 0% |
+| Platform Devotee | 12% | 92% | 4% | 0% |
+| Male Crossover | 83% | 24% | 9% | 3% |
+| Engaged Explorer | 85% | 22% | 9% | 2% |
+
+The Male Crossover and Engaged Explorer personas are primarily Amazon-identified users (75% Amazon-only). Their sparse ML coverage (22-24%) is because these users entered the platform through Amazon channels and were never profiled by the ML model. For these personas, Amazon tags are the only reliable commercial signal.
+
+### Agreement Analysis (81K Users with Both Sources)
+
+For the 81,130 users who have both Amazon and ML tags, agreement varies dramatically by category:
+
+| Category | Agreement | Assessment |
+|----------|-----------|------------|
+| Electronics/Tech | 78% | Good — both sources agree |
+| Fashion/Beauty | 73% | Good |
+| Health/Fitness | 46% | Poor — ML over-predicts |
+| Affluent/Premium | 44% | Poor |
+| Home/Kitchen | 44% | Poor |
+| Parents/Baby | 38% | Poor |
+| Travel | 30% | Very poor |
+| Automotive | 4% | Essentially random — ML is unreliable |
+
+### Recommendation
+
+Use Amazon-sourced rates as the primary commercial signal where available (83-85% of Male Crossover and Engaged Explorer). For Discovery Sampler and Romance Binger (97% ML-only), flag commercial profiles as "predicted — lower confidence" and apply a deflation factor based on the Amazon vs ML divergence observed in overlap users.
+
+The most commercially actionable insight: the Male Crossover persona's Amazon profile shows genuine high interest in Automotive (83%), Affluent/Premium (86%), and Health/Fitness (88%) — categories that the ML model almost completely misses for this segment. This is a real advertiser targeting opportunity that was invisible in the ML-only analysis.

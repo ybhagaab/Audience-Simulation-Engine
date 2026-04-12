@@ -1,10 +1,11 @@
-FATAFAT SYNTHETIC PERSONAS — PHASE 2 FINAL
+FATAFAT SYNTHETIC PERSONAS — FINAL PERSONA CARDS
 Base: Phase 2.2 clusters (sil=0.43, ARI=0.75)
-Enrichment: Two-level content identity (secondary genre + archetype)
-Clusters: 5
+Content: Two-level identity (secondary genre + archetype)
+Commercial: Tiered profiles (Amazon shopping behavior + ML predicted)
 
 ======================================================================
-CLUSTER 0 — CONVERT — 1,239,814 users (64.5%)
+CLUSTER 0 — CONVERT — Discovery Sampler
+1,239,814 users (64.5%)
 Content Archetype: Hook-Driven Romance | Retention: Early Exit
 ======================================================================
 
@@ -19,77 +20,37 @@ Content Archetype: Hook-Driven Romance | Retention: Early Exit
     Archetype (L2): Hook-Driven Romance
     Source:         Intl Dubbed (87%), Original (5%), Repack (5%)
     Origin:         International (87%), Hindi (13%)
-    Top Shows:      Why Do You Love Me? (131,109), My Cursed Kiss (103,126), His Allergic Love (78,356), I Won His Heart (73,764), Ek Badnaam Aashram (67,789)
+    Top Shows:      Why Do You Love Me? (131K), My Cursed Kiss (103K), His Allergic Love (78K)
 
   DEMOGRAPHIC PROFILE:
     42% F / 58% M | 44% 18-24 | 34% 25-34 | 22% 35+
     Top Cells: M_25-34 (26%), F_18-24 (25%), M_18-24 (19%)
 
   CHANNEL:
-    Organic 26% | Paid 53% | Push 13%
+    Paid 53% | Organic 26% | Push 13%
 
-  COMMERCIAL:
-    Tags 100% | Fashion/Beauty (100%), Electronics/Tech (100%), Home/Kitchen (99%)
-
-======================================================================
-CLUSTER 1 — NOURISH — 225,968 users (11.8%)
-Content Archetype: Hook-Driven Romance | Retention: Deep Binger
-======================================================================
-
-  ENGAGEMENT:
-    103 min/wk | 51 MPC | 2.2 active days | 3.5 shows
-
-  RETENTION:
-    61 max ep depth | 100% lock survival | 28.0 eps/session
-
-  CONTENT IDENTITY:
-    Theme (L1):     Forbidden Love (22%), Edgy (19%), Melodrama (17%), Revenge (16%), Secret Lives (10%)
-    Archetype (L2): Hook-Driven Romance
-    Source:         Intl Dubbed (95%), Partner (3%), Original (2%)
-    Origin:         International (95%), Hindi (5%)
-    Top Shows:      Our Love Is The Ocean Of Stars (50,558), Mr. Huo, Your Wife's Back with Babies! (36,964), Why Do You Love Me? (36,381), Back From My Funeral (31,779), Lucky Trio: CEO Daddy's Doting Love (25,933)
-
-  DEMOGRAPHIC PROFILE:
-    72% F / 28% M | 56% 18-24 | 28% 25-34 | 16% 35+
-    Top Cells: F_18-24 (46%), F_25-34 (17%), M_25-34 (11%)
-
-  CHANNEL:
-    Organic 67% | Paid 30% | Push 1%
-
-  COMMERCIAL:
-    Tags 100% | Fashion/Beauty (100%), Electronics/Tech (100%), Home/Kitchen (99%)
+  COMMERCIAL PROFILE (Tiered):
+    Tag Source: 97% ML only | 3% Amazon+ML | 0% Amazon only
+    ┌─────────────────────┬──────────────┬──────────────┐
+    │ Interest Category   │ Amazon (3%)  │ ML (100%)    │
+    ├─────────────────────┼──────────────┼──────────────┤
+    │ Fashion/Beauty      │ 86%          │ 100% ↑overpred│
+    │ Electronics/Tech    │ 94%          │ 100%         │
+    │ Health/Fitness      │ 71%          │ 99% ↑overpred│
+    │ Home/Kitchen        │ 69%          │ 99% ↑overpred│
+    │ Travel              │ 50%          │ 95% ↑overpred│
+    │ Parents/Baby        │ 54%          │ 92% ↑overpred│
+    │ Automotive          │ 68%          │ 97% ↑overpred│
+    │ Affluent/Premium    │ 71%          │ 98% ↑overpred│
+    └─────────────────────┴──────────────┴──────────────┘
+    Note: ML massively over-predicts all categories (95-100%).
+    Amazon rates are more realistic: Travel 50%, Parents/Baby 54%.
+    Best for: Broad reach campaigns, low CPM awareness.
 
 ======================================================================
-CLUSTER 2 — SUSTAIN — 44,047 users (2.3%)
-Content Archetype: CEO/Billionaire Romance | Retention: Full Completer
-======================================================================
-
-  ENGAGEMENT:
-    630 min/wk | 143 MPC | 4.8 active days | 14.7 shows
-
-  RETENTION:
-    97 max ep depth | 100% lock survival | 52.6 eps/session
-
-  CONTENT IDENTITY:
-    Theme (L1):     Forbidden Love (24%), Edgy (17%), Melodrama (14%), Revenge (13%), Secret Lives (13%)
-    Archetype (L2): CEO/Billionaire Romance
-    Source:         Intl Dubbed (98%), Partner (1%), Original (1%)
-    Origin:         International (98%), Hindi (2%)
-    Top Shows:      Our Love Is The Ocean Of Stars (23,496), Lucky Trio: CEO Daddy's Doting Love (20,237), Flash Marriage: Mrs. Gu's Online Unmasking (19,506), Back From My Funeral (18,497), The Cold CEO's Torturous Love Game (17,745)
-
-  DEMOGRAPHIC PROFILE:
-    82% F / 18% M | 56% 18-24 | 28% 25-34 | 16% 35+
-    Top Cells: F_18-24 (49%), F_25-34 (21%), M_18-24 (8%)
-
-  CHANNEL:
-    Organic 86% | Paid 14% | Push 0%
-
-  COMMERCIAL:
-    Tags 91% | Fashion/Beauty (99%), Electronics/Tech (99%), Home/Kitchen (97%)
-
-======================================================================
-CLUSTER 3 — NOURISH — 351,187 users (18.3%)
-Content Archetype: Hook-Driven Romance | Retention: Early Exit
+CLUSTER 3 — GROW — Male Crossover Viewer
+351,187 users (18.3%)
+Content Archetype: Hook-Driven Romance + Hindi Crime | Retention: Early Exit
 ======================================================================
 
   ENGAGEMENT:
@@ -100,24 +61,86 @@ Content Archetype: Hook-Driven Romance | Retention: Early Exit
 
   CONTENT IDENTITY:
     Theme (L1):     Edgy (27%), Forbidden Love (22%), Revenge (13%), Melodrama (11%), Crime (6%)
-    Archetype (L2): Hook-Driven Romance
+    Archetype (L2): Hook-Driven Romance + Hindi Crime signal
     Source:         Intl Dubbed (85%), Original (5%), Repack (5%)
-    Origin:         International (85%), Hindi (15%)
-    Top Shows:      Why Do You Love Me? (49,429), My Cursed Kiss (23,189), Ek Badnaam Aashram (22,073), I Married A Mystery (18,916), His Allergic Love (17,509)
+    Origin:         International (85%), Hindi (15%) — highest Hindi share
+    Top Shows:      Why Do You Love Me? (49K), My Cursed Kiss (23K), Ek Badnaam Aashram (22K)
 
   DEMOGRAPHIC PROFILE:
     34% F / 64% M | 27% 18-24 | 50% 25-34 | 21% 35+
     Top Cells: M_25-34 (35%), F_25-34 (15%), M_18-24 (14%)
 
   CHANNEL:
-    Organic 29% | Paid 51% | Push 15%
+    Paid 51% | Organic 29% | Push 15%
 
-  COMMERCIAL:
-    Tags 24% | Electronics/Tech (71%), Fashion/Beauty (68%), Affluent/Premium (36%)
+  COMMERCIAL PROFILE (Tiered):
+    Tag Source: 15% ML only | 9% Amazon+ML | 74% Amazon only | 3% None
+    ┌─────────────────────┬──────────────┬──────────────┐
+    │ Interest Category   │ Amazon (83%) │ ML (24%)     │
+    ├─────────────────────┼──────────────┼──────────────┤
+    │ Electronics/Tech    │ 98%          │ 71%          │
+    │ Fashion/Beauty      │ 96%          │ 68%          │
+    │ Affluent/Premium    │ 86%          │ 36%          │
+    │ Health/Fitness      │ 88%          │ 13% ↓underpred│
+    │ Home/Kitchen        │ 87%          │ 25% ↓underpred│
+    │ Automotive          │ 83%          │  8% ↓underpred│
+    │ Travel              │ 77%          │ 13% ↓underpred│
+    │ Parents/Baby        │ 76%          │  7% ↓underpred│
+    └─────────────────────┴──────────────┴──────────────┘
+    Note: 74% of this persona are Amazon-only users (no ML profile).
+    ML severely under-predicts their interests. Amazon data shows
+    they're actually high-interest across all categories.
+    Best for: Consumer Electronics (Samsung, OnePlus), Premium (Apple, Tanishq).
+    Unique: Highest Automotive (83%) and Affluent/Premium (86%) of any persona.
 
 ======================================================================
-CLUSTER 5 — NOURISH — 61,215 users (3.2%)
-Content Archetype: Hook-Driven Romance | Retention: Deep Binger
+CLUSTER 1 — NOURISH — Romance Binger
+225,968 users (11.8%)
+Content Archetype: Forbidden Love → Melodrama Transition | Retention: Deep Binger
+======================================================================
+
+  ENGAGEMENT:
+    103 min/wk | 51 MPC | 2.2 active days | 3.5 shows
+
+  RETENTION:
+    61 max ep depth | 100% lock survival | 28.0 eps/session
+
+  CONTENT IDENTITY:
+    Theme (L1):     Forbidden Love (22%), Edgy (19%), Melodrama (17%), Revenge (16%), Secret Lives (10%)
+    Archetype (L2): Forbidden Love → Melodrama transition
+    Source:         Intl Dubbed (95%), Partner (3%), Original (2%)
+    Origin:         International (95%), Hindi (5%)
+    Top Shows:      Ocean Of Stars (51K), Mr. Huo (37K), Why Do You Love Me? (36K)
+
+  DEMOGRAPHIC PROFILE:
+    72% F / 28% M | 56% 18-24 | 28% 25-34 | 16% 35+
+    Top Cells: F_18-24 (46%), F_25-34 (17%), M_25-34 (11%)
+
+  CHANNEL:
+    Organic 67% | Paid 30% | Push 1%
+
+  COMMERCIAL PROFILE (Tiered):
+    Tag Source: 97% ML only | 3% Amazon+ML | 0% Amazon only
+    ┌─────────────────────┬──────────────┬──────────────┐
+    │ Interest Category   │ Amazon (3%)  │ ML (100%)    │
+    ├─────────────────────┼──────────────┼──────────────┤
+    │ Electronics/Tech    │ 93%          │ 100%         │
+    │ Fashion/Beauty      │ 85%          │ 100%         │
+    │ Health/Fitness      │ 73%          │ 99% ↑overpred│
+    │ Home/Kitchen        │ 69%          │ 99% ↑overpred│
+    │ Affluent/Premium    │ 67%          │ 97% ↑overpred│
+    │ Automotive          │ 63%          │ 97% ↑overpred│
+    │ Parents/Baby        │ 55%          │ 95% ↑overpred│
+    │ Travel              │ 51%          │ 95% ↑overpred│
+    └─────────────────────┴──────────────┴──────────────┘
+    Note: Similar ML over-prediction as Sampler. Amazon shows
+    lower Automotive (63%) and Travel (51%) — more realistic.
+    Best for: Fashion/Beauty (Nykaa, Myntra, Lakme, Sugar Cosmetics).
+
+======================================================================
+CLUSTER 5 — NOURISH — Engaged Explorer
+61,215 users (3.2%)
+Content Archetype: Cross-Age Romance Explorer | Retention: Deep Binger
 ======================================================================
 
   ENGAGEMENT:
@@ -128,10 +151,10 @@ Content Archetype: Hook-Driven Romance | Retention: Deep Binger
 
   CONTENT IDENTITY:
     Theme (L1):     Forbidden Love (23%), Edgy (19%), Melodrama (16%), Revenge (16%), Secret Lives (10%)
-    Archetype (L2): Hook-Driven Romance
+    Archetype (L2): Cross-Age Romance Explorer
     Source:         Intl Dubbed (95%), Partner (3%), Original (2%)
     Origin:         International (95%), Hindi (5%)
-    Top Shows:      Our Love Is The Ocean Of Stars (15,346), Mr. Huo, Your Wife's Back with Babies! (11,154), Why Do You Love Me? (10,874), Lucky Trio: CEO Daddy's Doting Love (8,310), Back From My Funeral (7,631)
+    Top Shows:      Ocean Of Stars (15K), Mr. Huo (11K), Why Do You Love Me? (11K)
 
   DEMOGRAPHIC PROFILE:
     64% F / 34% M | 38% 18-24 | 42% 25-34 | 18% 35+
@@ -140,6 +163,107 @@ Content Archetype: Hook-Driven Romance | Retention: Deep Binger
   CHANNEL:
     Organic 73% | Paid 25% | Push 1%
 
-  COMMERCIAL:
-    Tags 22% | Fashion/Beauty (61%), Electronics/Tech (56%), Home/Kitchen (25%)
+  COMMERCIAL PROFILE (Tiered):
+    Tag Source: 13% ML only | 9% Amazon+ML | 76% Amazon only | 2% None
+    ┌─────────────────────┬──────────────┬──────────────┐
+    │ Interest Category   │ Amazon (85%) │ ML (22%)     │
+    ├─────────────────────┼──────────────┼──────────────┤
+    │ Electronics/Tech    │ 98%          │ 56%          │
+    │ Fashion/Beauty      │ 97%          │ 61%          │
+    │ Health/Fitness      │ 90%          │ 15% ↓underpred│
+    │ Home/Kitchen        │ 88%          │ 25% ↓underpred│
+    │ Affluent/Premium    │ 85%          │ 25% ↓underpred│
+    │ Automotive          │ 84%          │  4% ↓underpred│
+    │ Parents/Baby        │ 80%          │ 10% ↓underpred│
+    │ Travel              │ 79%          │ 13% ↓underpred│
+    └─────────────────────┴──────────────┴──────────────┘
+    Note: 76% Amazon-only users, similar to Male Crossover.
+    ML severely under-predicts. Amazon shows high interest across
+    all categories — these are active Amazon shoppers.
+    Best for: Broad premium targeting. Highest Parents/Baby (80%) after Devotee.
 
+======================================================================
+CLUSTER 2 — SUSTAIN — Platform Devotee
+44,047 users (2.3%)
+Content Archetype: CEO/Billionaire Romance | Retention: Full Completer
+======================================================================
+
+  ENGAGEMENT:
+    630 min/wk (10.5 hrs) | 143 MPC | 4.8 active days | 14.7 shows
+
+  RETENTION:
+    97 max ep depth | 100% lock survival | 52.6 eps/session | 2.97 binge
+
+  CONTENT IDENTITY:
+    Theme (L1):     Forbidden Love (24%), Edgy (17%), Melodrama (14%), Revenge (13%), Secret Lives (13%)
+    Archetype (L2): CEO/Billionaire Romance — only persona with distinct archetype
+    Source:         Intl Dubbed (98%)
+    Origin:         International (98%), Hindi (2%)
+    Top Shows:      Ocean Of Stars (23K), Lucky Trio: CEO Daddy (20K), Flash Marriage (20K)
+
+  DEMOGRAPHIC PROFILE:
+    82% F / 18% M | 56% 18-24 | 28% 25-34 | 16% 35+
+    Top Cells: F_18-24 (49%), F_25-34 (21%), M_18-24 (8%)
+
+  CHANNEL:
+    Organic 86% | Paid 14%
+
+  COMMERCIAL PROFILE (Tiered):
+    Tag Source: 88% ML only | 4% Amazon+ML | 8% Amazon only | 0% None
+    ┌─────────────────────┬──────────────┬──────────────┐
+    │ Interest Category   │ Amazon (12%) │ ML (92%)     │
+    ├─────────────────────┼──────────────┼──────────────┤
+    │ Electronics/Tech    │ 97%          │ 99%          │
+    │ Fashion/Beauty      │ 95%          │ 99%          │
+    │ Health/Fitness      │ 87%          │ 96% ↑slight  │
+    │ Home/Kitchen        │ 85%          │ 97% ↑overpred│
+    │ Affluent/Premium    │ 81%          │ 95% ↑overpred│
+    │ Automotive          │ 80%          │ 94% ↑overpred│
+    │ Parents/Baby        │ 76%          │ 92% ↑overpred│
+    │ Travel              │ 74%          │ 93% ↑overpred│
+    └─────────────────────┴──────────────┴──────────────┘
+    Note: Best agreement between Amazon and ML of any persona.
+    Both sources confirm high interest across all categories.
+    Highest value per user. Premium content environments.
+    Best for: Premium brand sponsorships, high-frequency ad exposure.
+
+======================================================================
+KEY FINDING: ML Tag Over-Prediction
+======================================================================
+
+The ML persona model assigns 95-100% of users to nearly every interest
+category, making the tags undifferentiated and commercially useless for
+targeting. Amazon-sourced tags (actual shopping behavior) show much more
+realistic and differentiated rates:
+
+  Category        ML Rate    Amazon Rate    ML Over-Prediction
+  Travel          95%        50-79%         +16 to +44 points
+  Parents/Baby    92%        54-80%         +12 to +38 points
+  Automotive      97%        63-84%         +10 to +34 points
+  Home/Kitchen    99%        69-88%         +11 to +30 points
+
+For the Male Crossover and Engaged Explorer personas (75% Amazon-only
+users), the ML model severely UNDER-predicts because it has no data
+on these users. Amazon tags are the only reliable commercial signal
+for these segments.
+
+Recommendation: Use Amazon-sourced rates as the primary commercial
+signal. Flag ML-only profiles as "predicted — lower confidence."
+
+======================================================================
+AGREEMENT ANALYSIS: 81K Users with Both Sources
+======================================================================
+
+  Category           Amazon    ML      Agreement
+  Fashion/Beauty     91%       81%     73%
+  Electronics/Tech   96%       81%     78%
+  Health/Fitness     80%       59%     46%
+  Home/Kitchen       78%       58%     44%
+  Travel             62%       53%     30%
+  Parents/Baby       65%       51%     38%
+  Automotive         78%       19%      4% ← worst agreement
+  Affluent/Premium   78%       62%     44%
+
+Automotive has 96% DISAGREEMENT between Amazon and ML — the ML model
+is essentially random for this category. Travel and Parents/Baby also
+show poor agreement (<40%).
