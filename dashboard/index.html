@@ -118,6 +118,7 @@ table.at td{padding:.5rem;border-bottom:1px solid var(--border)}
   <div class="mc"><div class="l">Silhouette</div><div class="v" style="color:var(--nourish)">0.43</div><div class="d">Target ≥0.3 ✅</div></div>
   <div class="mc"><div class="l">Hierarchical ARI</div><div class="v">0.75</div><div class="d">Cross-method stability</div></div>
   <div class="mc"><div class="l">Hypotheses</div><div class="v">4/6</div><div class="d">Target ≥4 ✅</div></div>
+  <div class="mc"><div class="l">Interest Tags</div><div class="v">83% ML</div><div class="d">+ 20% Amazon (shopping behavior)</div></div>
   <div class="mc"><div class="l">Demo Overlay</div><div class="v">99.5%</div><div class="d">Age + gender coverage</div></div>
 </div>
 <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem">
@@ -406,8 +407,15 @@ render(genreOrder[0]);
     <div style="display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:.5rem"><div style="width:53%;background:var(--paid)"></div><div style="width:26%;background:var(--organic)"></div><div style="width:13%;background:var(--push)"></div><div style="width:8%;background:var(--crime)"></div></div>
     <div style="display:flex;gap:1rem;font-size:.75rem;color:var(--dim);flex-wrap:wrap"><span>Paid 53%</span><span>Organic 26%</span><span>Push 13%</span></div>
   </div>
-  <div class="ps"><div class="pst">Commercial</div>
-    <div style="font-size:.8rem;color:var(--dim)">Tags 100% | Fashion/Beauty (100%), Electronics/Tech (100%), Home/Kitchen (99%)<br>Broad profile — no differentiation. Best for awareness campaigns.</div>
+  <div class="ps"><div class="pst">Commercial (Tiered)</div>
+    <div style="font-size:.75rem;color:var(--dim);margin-bottom:.5rem">97% ML only · 3% Amazon+ML · <span style="color:var(--convert)">ML over-predicts all categories</span></div>
+    <div class="br"><span class="bl">Electronics</span><div class="bt"><div class="bf" style="width:94%;background:var(--grow)"></div></div><span class="bv">94%<span style="color:var(--dim);font-size:.6rem"> amz</span></span></div>
+    <div class="br"><span class="bl">Fashion</span><div class="bt"><div class="bf" style="width:86%;background:var(--forblove)"></div></div><span class="bv">86%</span></div>
+    <div class="br"><span class="bl">Health</span><div class="bt"><div class="bf" style="width:71%;background:var(--nourish)"></div></div><span class="bv">71%</span></div>
+    <div class="br"><span class="bl">Automotive</span><div class="bt"><div class="bf" style="width:68%;background:var(--dim)"></div></div><span class="bv">68%</span></div>
+    <div class="br"><span class="bl">Travel</span><div class="bt"><div class="bf" style="width:50%;background:var(--dim)"></div></div><span class="bv">50%</span></div>
+    <div class="br"><span class="bl">Parents</span><div class="bt"><div class="bf" style="width:54%;background:var(--dim)"></div></div><span class="bv">54%</span></div>
+    <div style="font-size:.7rem;color:var(--dim);margin-top:.25rem">Amazon rates shown (actual shopping). ML says 95-100% for all — unreliable.</div>
   </div>
 </div>
 </div></div></div>
@@ -465,8 +473,16 @@ render(genreOrder[0]);
     <div style="display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:.5rem"><div style="width:51%;background:var(--paid)"></div><div style="width:29%;background:var(--organic)"></div><div style="width:15%;background:var(--push)"></div></div>
     <div style="font-size:.75rem;color:var(--dim)">Paid 51% | Organic 29% | Push 15%</div>
   </div>
-  <div class="ps"><div class="pst">Commercial</div>
-    <div style="font-size:.8rem;color:var(--dim)">Tags 24% | <strong style="color:var(--text)">Electronics/Tech (71%)</strong>, Fashion/Beauty (68%), <strong style="color:var(--text)">Affluent/Premium (36%)</strong><br>Unique profile: Electronics + Premium. Target: Samsung, OnePlus, Apple, Tanishq.</div>
+  <div class="ps"><div class="pst">Commercial (Tiered)</div>
+    <div style="font-size:.75rem;color:var(--dim);margin-bottom:.5rem">74% Amazon only · 15% ML only · <span style="color:var(--nourish)">Amazon = primary signal</span></div>
+    <div class="br"><span class="bl">Electronics</span><div class="bt"><div class="bf" style="width:98%;background:var(--grow)"></div></div><span class="bv"><strong>98%</strong></span></div>
+    <div class="br"><span class="bl">Fashion</span><div class="bt"><div class="bf" style="width:96%;background:var(--forblove)"></div></div><span class="bv">96%</span></div>
+    <div class="br"><span class="bl">Health</span><div class="bt"><div class="bf" style="width:88%;background:var(--nourish)"></div></div><span class="bv">88%</span></div>
+    <div class="br"><span class="bl">Affluent</span><div class="bt"><div class="bf" style="width:86%;background:var(--accent)"></div></div><span class="bv"><strong>86%</strong></span></div>
+    <div class="br"><span class="bl">Automotive</span><div class="bt"><div class="bf" style="width:83%;background:var(--grow)"></div></div><span class="bv"><strong>83%</strong></span></div>
+    <div class="br"><span class="bl">Travel</span><div class="bt"><div class="bf" style="width:77%;background:var(--dim)"></div></div><span class="bv">77%</span></div>
+    <div class="br"><span class="bl">Parents</span><div class="bt"><div class="bf" style="width:76%;background:var(--dim)"></div></div><span class="bv">76%</span></div>
+    <div style="font-size:.7rem;color:var(--dim);margin-top:.25rem">Amazon rates (actual shopping). ML has only 24% coverage — unreliable for this persona.<br><strong style="color:var(--text)">Unique: Highest Automotive + Affluent/Premium of any persona.</strong></div>
   </div>
 </div>
 </div></div></div>
@@ -525,8 +541,15 @@ render(genreOrder[0]);
     <div style="display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:.5rem"><div style="width:67%;background:var(--organic)"></div><div style="width:30%;background:var(--paid)"></div><div style="width:3%;background:var(--push)"></div></div>
     <div style="font-size:.75rem;color:var(--dim)">Organic 67% | Paid 30%</div>
   </div>
-  <div class="ps"><div class="pst">Commercial</div>
-    <div style="font-size:.8rem;color:var(--dim)">Tags 100% | Fashion/Beauty (100%), Electronics (100%), Home (99%)<br>Target: Nykaa, Myntra, Lakme, Sugar Cosmetics — F18-24 fashion audience.</div>
+  <div class="ps"><div class="pst">Commercial (Tiered)</div>
+    <div style="font-size:.75rem;color:var(--dim);margin-bottom:.5rem">97% ML only · 3% Amazon+ML · <span style="color:var(--convert)">ML over-predicts</span></div>
+    <div class="br"><span class="bl">Electronics</span><div class="bt"><div class="bf" style="width:93%;background:var(--grow)"></div></div><span class="bv">93%<span style="color:var(--dim);font-size:.6rem"> amz</span></span></div>
+    <div class="br"><span class="bl">Fashion</span><div class="bt"><div class="bf" style="width:85%;background:var(--forblove)"></div></div><span class="bv">85%</span></div>
+    <div class="br"><span class="bl">Health</span><div class="bt"><div class="bf" style="width:73%;background:var(--nourish)"></div></div><span class="bv">73%</span></div>
+    <div class="br"><span class="bl">Affluent</span><div class="bt"><div class="bf" style="width:67%;background:var(--dim)"></div></div><span class="bv">67%</span></div>
+    <div class="br"><span class="bl">Automotive</span><div class="bt"><div class="bf" style="width:63%;background:var(--dim)"></div></div><span class="bv">63%</span></div>
+    <div class="br"><span class="bl">Travel</span><div class="bt"><div class="bf" style="width:51%;background:var(--dim)"></div></div><span class="bv">51%</span></div>
+    <div style="font-size:.7rem;color:var(--dim);margin-top:.25rem">Amazon rates. Target: Nykaa, Myntra, Lakme — F18-24 fashion audience.</div>
   </div>
 </div>
 </div></div></div>
@@ -583,8 +606,16 @@ render(genreOrder[0]);
     <div style="display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:.5rem"><div style="width:73%;background:var(--organic)"></div><div style="width:25%;background:var(--paid)"></div></div>
     <div style="font-size:.75rem;color:var(--dim)">Organic 73% | Paid 25%</div>
   </div>
-  <div class="ps"><div class="pst">Commercial</div>
-    <div style="font-size:.8rem;color:var(--dim)">Tags 22% | Fashion/Beauty (61%), Electronics (56%), Home (25%)<br>Low tag coverage — harder to target via Amazon ad infra.</div>
+  <div class="ps"><div class="pst">Commercial (Tiered)</div>
+    <div style="font-size:.75rem;color:var(--dim);margin-bottom:.5rem">76% Amazon only · 13% ML only · <span style="color:var(--nourish)">Amazon = primary signal</span></div>
+    <div class="br"><span class="bl">Electronics</span><div class="bt"><div class="bf" style="width:98%;background:var(--grow)"></div></div><span class="bv">98%</span></div>
+    <div class="br"><span class="bl">Fashion</span><div class="bt"><div class="bf" style="width:97%;background:var(--forblove)"></div></div><span class="bv">97%</span></div>
+    <div class="br"><span class="bl">Health</span><div class="bt"><div class="bf" style="width:90%;background:var(--nourish)"></div></div><span class="bv">90%</span></div>
+    <div class="br"><span class="bl">Home</span><div class="bt"><div class="bf" style="width:88%;background:var(--dim)"></div></div><span class="bv">88%</span></div>
+    <div class="br"><span class="bl">Affluent</span><div class="bt"><div class="bf" style="width:85%;background:var(--accent)"></div></div><span class="bv">85%</span></div>
+    <div class="br"><span class="bl">Automotive</span><div class="bt"><div class="bf" style="width:84%;background:var(--dim)"></div></div><span class="bv">84%</span></div>
+    <div class="br"><span class="bl">Parents</span><div class="bt"><div class="bf" style="width:80%;background:var(--dim)"></div></div><span class="bv">80%</span></div>
+    <div style="font-size:.7rem;color:var(--dim);margin-top:.25rem">Amazon rates. Active Amazon shoppers — high interest across all categories.</div>
   </div>
 </div>
 </div></div></div>
@@ -644,8 +675,16 @@ render(genreOrder[0]);
     <div style="display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:.5rem"><div style="width:86%;background:var(--organic)"></div><div style="width:14%;background:var(--paid)"></div></div>
     <div style="font-size:.75rem;color:var(--dim)"><strong style="color:var(--text)">Organic 86%</strong> | Paid 14% — almost entirely self-returning</div>
   </div>
-  <div class="ps"><div class="pst">Commercial</div>
-    <div style="font-size:.8rem;color:var(--dim)">Tags 91% | Fashion/Beauty (99%), Electronics (99%), Home (97%)<br>Maximum value per user. Premium content environments for brand advertisers.</div>
+  <div class="ps"><div class="pst">Commercial (Tiered)</div>
+    <div style="font-size:.75rem;color:var(--dim);margin-bottom:.5rem">88% ML · 12% Amazon · <span style="color:var(--nourish)">Best source agreement</span></div>
+    <div class="br"><span class="bl">Electronics</span><div class="bt"><div class="bf" style="width:97%;background:var(--grow)"></div></div><span class="bv">97%</span></div>
+    <div class="br"><span class="bl">Fashion</span><div class="bt"><div class="bf" style="width:95%;background:var(--forblove)"></div></div><span class="bv">95%</span></div>
+    <div class="br"><span class="bl">Health</span><div class="bt"><div class="bf" style="width:87%;background:var(--nourish)"></div></div><span class="bv">87%</span></div>
+    <div class="br"><span class="bl">Home</span><div class="bt"><div class="bf" style="width:85%;background:var(--dim)"></div></div><span class="bv">85%</span></div>
+    <div class="br"><span class="bl">Affluent</span><div class="bt"><div class="bf" style="width:81%;background:var(--accent)"></div></div><span class="bv">81%</span></div>
+    <div class="br"><span class="bl">Automotive</span><div class="bt"><div class="bf" style="width:80%;background:var(--dim)"></div></div><span class="bv">80%</span></div>
+    <div class="br"><span class="bl">Travel</span><div class="bt"><div class="bf" style="width:74%;background:var(--dim)"></div></div><span class="bv">74%</span></div>
+    <div style="font-size:.7rem;color:var(--dim);margin-top:.25rem">Amazon rates. Best ML-Amazon agreement of any persona. Premium brand environments.</div>
   </div>
 </div>
 </div></div></div>
@@ -766,18 +805,31 @@ render(genreOrder[0]);
 <!-- COMMERCIAL -->
 <section id="commercial">
 <h2>Commercial Profiles</h2>
-<h3>Advertiser Category Affinity</h3>
+
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;margin-bottom:1.5rem;border-left:4px solid var(--convert)">
+<h3 style="margin-bottom:.75rem;color:var(--convert)">⚠ ML Tag Over-Prediction</h3>
+<p style="font-size:.85rem;color:var(--dim)">The ML persona model assigns 95-100% of users to nearly every interest category — making tags undifferentiated. Amazon-sourced tags (actual shopping behavior) show 20-44 points lower, more realistic rates. All commercial profiles below use Amazon rates where available.</p>
+<div style="display:flex;gap:2rem;margin-top:.75rem;font-size:.8rem;flex-wrap:wrap">
+  <span>Automotive: ML 97% vs <strong style="color:var(--text)">Amazon 68%</strong></span>
+  <span>Travel: ML 95% vs <strong style="color:var(--text)">Amazon 50%</strong></span>
+  <span>Parents: ML 92% vs <strong style="color:var(--text)">Amazon 54%</strong></span>
+</div>
+</div>
+
+<h3>Advertiser Category Affinity (Amazon-sourced rates)</h3>
 <table class="at">
-<thead><tr><th>Vertical</th><th>Key Advertisers</th><th>Best Persona Fit</th></tr></thead>
+<thead><tr><th>Vertical</th><th>Key Advertisers</th><th>Best Persona Fit (Amazon rate)</th></tr></thead>
 <tbody>
-<tr><td>Fashion & Beauty</td><td>Nykaa, Myntra, AJIO, Lakme, Mamaearth</td><td>Romance Binger, Devotee (99-100%)</td></tr>
-<tr><td>Consumer Electronics</td><td>Samsung, OnePlus, Xiaomi, Boat</td><td><strong>Male Crossover (71%)</strong> — unique</td></tr>
-<tr><td>Premium & Luxury</td><td>Apple, Tanishq, Titan</td><td><strong>Male Crossover (36%)</strong> — highest</td></tr>
-<tr><td>Home & Household</td><td>Asian Paints, Godrej, Prestige</td><td>Sampler, Devotee (97-99%)</td></tr>
-<tr><td>Travel</td><td>MakeMyTrip, Goibibo, OYO</td><td>Broad (91-95% in engaged tiers)</td></tr>
-<tr><td>Parenting</td><td>FirstCry, Pampers</td><td>Low in Male Crossover (7%)</td></tr>
+<tr><td>Consumer Electronics</td><td>Samsung, OnePlus, Xiaomi, Boat</td><td><strong>Male Crossover (98%)</strong>, Explorer (98%), Devotee (97%)</td></tr>
+<tr><td>Fashion & Beauty</td><td>Nykaa, Myntra, AJIO, Lakme</td><td>Explorer (97%), Male Crossover (96%), Devotee (95%)</td></tr>
+<tr><td>Health & Fitness</td><td>Himalaya, Cult.fit, Pharmeasy</td><td>Explorer (90%), Male Crossover (88%), Devotee (87%)</td></tr>
+<tr><td>Affluent/Premium</td><td>Apple, Tanishq, Titan</td><td><strong>Male Crossover (86%)</strong>, Explorer (85%), Devotee (81%)</td></tr>
+<tr><td>Automotive</td><td>Maruti, Hyundai, Hero MotoCorp</td><td><strong>Male Crossover (83%)</strong>, Explorer (84%), Devotee (80%)</td></tr>
+<tr><td>Travel</td><td>MakeMyTrip, Goibibo, OYO</td><td>Explorer (79%), Male Crossover (77%), Devotee (74%)</td></tr>
+<tr><td>Parents & Baby</td><td>FirstCry, Pampers, Huggies</td><td>Explorer (80%), Male Crossover (76%), Devotee (76%)</td></tr>
 </tbody>
 </table>
+<div style="font-size:.75rem;color:var(--dim);margin-top:.5rem">Note: Sampler (50-86%) and Romance Binger (51-93%) have only 3% Amazon coverage — rates are directional, not definitive.</div>
 </section>
 
 <!-- VALIDATION -->
