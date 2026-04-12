@@ -1,7 +1,8 @@
 FATAFAT SYNTHETIC PERSONAS — FINAL PERSONA CARDS
 Base: Phase 2.2 clusters (sil=0.43, ARI=0.75)
 Content: Two-level identity (secondary genre + archetype)
-Commercial: Tiered profiles (Amazon shopping behavior + ML predicted)
+Commercial: Tiered profiles (Amazon shopping + ML predicted)
+Cross-Platform: OTT overlap analysis (54.6% overall overlap)
 
 ======================================================================
 CLUSTER 0 — CONVERT — Discovery Sampler
@@ -9,43 +10,28 @@ CLUSTER 0 — CONVERT — Discovery Sampler
 Content Archetype: Hook-Driven Romance | Retention: Early Exit
 ======================================================================
 
-  ENGAGEMENT:
-    2 min/wk | 2 MPC | 1.1 active days | 1.2 shows
-
-  RETENTION:
-    3 max ep depth | 8% lock survival | 2.1 eps/session
+  ENGAGEMENT:  2 min/wk | 2 MPC | 1.1 active days | 1.2 shows
+  RETENTION:   3 max ep | 8% lock survival | 2.1 eps/session
 
   CONTENT IDENTITY:
-    Theme (L1):     Edgy (28%), Forbidden Love (23%), Revenge (12%), Melodrama (11%), Crime (6%)
+    Theme (L1):     Edgy (28%), Forbidden Love (23%), Revenge (12%), Melodrama (11%)
     Archetype (L2): Hook-Driven Romance
-    Source:         Intl Dubbed (87%), Original (5%), Repack (5%)
-    Origin:         International (87%), Hindi (13%)
-    Top Shows:      Why Do You Love Me? (131K), My Cursed Kiss (103K), His Allergic Love (78K)
+    Source:         Intl Dubbed 87% | Hindi 13%
 
-  DEMOGRAPHIC PROFILE:
-    42% F / 58% M | 44% 18-24 | 34% 25-34 | 22% 35+
-    Top Cells: M_25-34 (26%), F_18-24 (25%), M_18-24 (19%)
+  DEMOGRAPHICS:  42% F / 58% M | 44% 18-24 | 34% 25-34 | 22% 35+
+  CHANNEL:       Paid 53% | Organic 26% | Push 13%
 
-  CHANNEL:
-    Paid 53% | Organic 26% | Push 13%
+  COMMERCIAL (Tiered):
+    97% ML only · 3% Amazon
+    Amazon rates: Electronics 94% · Fashion 86% · Health 71% · Automotive 68% · Travel 50%
+    ML over-predicts by 20-44 pts. Best for broad reach, low CPM.
 
-  COMMERCIAL PROFILE (Tiered):
-    Tag Source: 97% ML only | 3% Amazon+ML | 0% Amazon only
-    ┌─────────────────────┬──────────────┬──────────────┐
-    │ Interest Category   │ Amazon (3%)  │ ML (100%)    │
-    ├─────────────────────┼──────────────┼──────────────┤
-    │ Fashion/Beauty      │ 86%          │ 100% ↑overpred│
-    │ Electronics/Tech    │ 94%          │ 100%         │
-    │ Health/Fitness      │ 71%          │ 99% ↑overpred│
-    │ Home/Kitchen        │ 69%          │ 99% ↑overpred│
-    │ Travel              │ 50%          │ 95% ↑overpred│
-    │ Parents/Baby        │ 54%          │ 92% ↑overpred│
-    │ Automotive          │ 68%          │ 97% ↑overpred│
-    │ Affluent/Premium    │ 71%          │ 98% ↑overpred│
-    └─────────────────────┴──────────────┴──────────────┘
-    Note: ML massively over-predicts all categories (95-100%).
-    Amazon rates are more realistic: Travel 50%, Parents/Baby 54%.
-    Best for: Broad reach campaigns, low CPM awareness.
+  CROSS-PLATFORM:
+    OTT Overlap: 51.1% (633K users)
+    OTT: 155 min/wk | Fatafat: 2 min/wk | Ratio: 0.01x → OTT-primary
+    OTT Genres: Drama 78%, Romance 67%, Comedy 56%, Vdesi 56%, Action 38%
+    Top OTT: Sankalp, Kaptaan, True Beauty
+    Gap: Comedy (56%) + Action (38%) watched on OTT, absent from Fatafat
 
 ======================================================================
 CLUSTER 3 — GROW — Male Crossover Viewer
@@ -53,45 +39,28 @@ CLUSTER 3 — GROW — Male Crossover Viewer
 Content Archetype: Hook-Driven Romance + Hindi Crime | Retention: Early Exit
 ======================================================================
 
-  ENGAGEMENT:
-    2 min/wk | 2 MPC | 1.1 active days | 1.2 shows
-
-  RETENTION:
-    3 max ep depth | 9% lock survival | 2.1 eps/session
+  ENGAGEMENT:  2 min/wk | 2 MPC | 1.1 active days | 1.2 shows
+  RETENTION:   3 max ep | 9% lock survival | 2.1 eps/session
 
   CONTENT IDENTITY:
-    Theme (L1):     Edgy (27%), Forbidden Love (22%), Revenge (13%), Melodrama (11%), Crime (6%)
+    Theme (L1):     Edgy (27%), Forbidden Love (22%), Revenge (13%), Melodrama (11%)
     Archetype (L2): Hook-Driven Romance + Hindi Crime signal
-    Source:         Intl Dubbed (85%), Original (5%), Repack (5%)
-    Origin:         International (85%), Hindi (15%) — highest Hindi share
-    Top Shows:      Why Do You Love Me? (49K), My Cursed Kiss (23K), Ek Badnaam Aashram (22K)
+    Source:         Intl Dubbed 85% | Hindi 15% (highest)
 
-  DEMOGRAPHIC PROFILE:
-    34% F / 64% M | 27% 18-24 | 50% 25-34 | 21% 35+
-    Top Cells: M_25-34 (35%), F_25-34 (15%), M_18-24 (14%)
+  DEMOGRAPHICS:  34% F / 64% M | 27% 18-24 | 50% 25-34 | 21% 35+
+  CHANNEL:       Paid 51% | Organic 29% | Push 15%
 
-  CHANNEL:
-    Paid 51% | Organic 29% | Push 15%
+  COMMERCIAL (Tiered):
+    74% Amazon only · 15% ML · Amazon = primary signal
+    Amazon rates: Electronics 98% · Fashion 96% · Affluent 86% · Automotive 83%
+    Unique: Highest Automotive + Affluent/Premium of any persona.
 
-  COMMERCIAL PROFILE (Tiered):
-    Tag Source: 15% ML only | 9% Amazon+ML | 74% Amazon only | 3% None
-    ┌─────────────────────┬──────────────┬──────────────┐
-    │ Interest Category   │ Amazon (83%) │ ML (24%)     │
-    ├─────────────────────┼──────────────┼──────────────┤
-    │ Electronics/Tech    │ 98%          │ 71%          │
-    │ Fashion/Beauty      │ 96%          │ 68%          │
-    │ Affluent/Premium    │ 86%          │ 36%          │
-    │ Health/Fitness      │ 88%          │ 13% ↓underpred│
-    │ Home/Kitchen        │ 87%          │ 25% ↓underpred│
-    │ Automotive          │ 83%          │  8% ↓underpred│
-    │ Travel              │ 77%          │ 13% ↓underpred│
-    │ Parents/Baby        │ 76%          │  7% ↓underpred│
-    └─────────────────────┴──────────────┴──────────────┘
-    Note: 74% of this persona are Amazon-only users (no ML profile).
-    ML severely under-predicts their interests. Amazon data shows
-    they're actually high-interest across all categories.
-    Best for: Consumer Electronics (Samsung, OnePlus), Premium (Apple, Tanishq).
-    Unique: Highest Automotive (83%) and Affluent/Premium (86%) of any persona.
+  CROSS-PLATFORM:
+    OTT Overlap: 46.9% (165K users) — lowest of any persona
+    OTT: 159 min/wk | Fatafat: 2 min/wk | Ratio: 0.01x → OTT-primary
+    OTT Genres: Drama 75%, Romance 62%, Comedy 54%, Vdesi 53%, Action 37%
+    Top OTT: Sankalp, Kaptaan, Bindiya Ke Bahubali
+    Gap: Comedy (54%) + Action (37%) on OTT. Action highest among low-engagement personas.
 
 ======================================================================
 CLUSTER 1 — NOURISH — Romance Binger
@@ -99,43 +68,27 @@ CLUSTER 1 — NOURISH — Romance Binger
 Content Archetype: Forbidden Love → Melodrama Transition | Retention: Deep Binger
 ======================================================================
 
-  ENGAGEMENT:
-    103 min/wk | 51 MPC | 2.2 active days | 3.5 shows
-
-  RETENTION:
-    61 max ep depth | 100% lock survival | 28.0 eps/session
+  ENGAGEMENT:  103 min/wk | 51 MPC | 2.2 active days | 3.5 shows
+  RETENTION:   61 max ep | 100% lock survival | 28.0 eps/session
 
   CONTENT IDENTITY:
-    Theme (L1):     Forbidden Love (22%), Edgy (19%), Melodrama (17%), Revenge (16%), Secret Lives (10%)
+    Theme (L1):     Forbidden Love (22%), Edgy (19%), Melodrama (17%), Revenge (16%)
     Archetype (L2): Forbidden Love → Melodrama transition
-    Source:         Intl Dubbed (95%), Partner (3%), Original (2%)
-    Origin:         International (95%), Hindi (5%)
-    Top Shows:      Ocean Of Stars (51K), Mr. Huo (37K), Why Do You Love Me? (36K)
+    Source:         Intl Dubbed 95% | Hindi 5%
 
-  DEMOGRAPHIC PROFILE:
-    72% F / 28% M | 56% 18-24 | 28% 25-34 | 16% 35+
-    Top Cells: F_18-24 (46%), F_25-34 (17%), M_25-34 (11%)
+  DEMOGRAPHICS:  72% F / 28% M | 56% 18-24 | 28% 25-34 | 16% 35+
+  CHANNEL:       Organic 67% | Paid 30%
 
-  CHANNEL:
-    Organic 67% | Paid 30% | Push 1%
+  COMMERCIAL (Tiered):
+    97% ML only · 3% Amazon
+    Amazon rates: Electronics 93% · Fashion 85% · Health 73% · Affluent 67%
 
-  COMMERCIAL PROFILE (Tiered):
-    Tag Source: 97% ML only | 3% Amazon+ML | 0% Amazon only
-    ┌─────────────────────┬──────────────┬──────────────┐
-    │ Interest Category   │ Amazon (3%)  │ ML (100%)    │
-    ├─────────────────────┼──────────────┼──────────────┤
-    │ Electronics/Tech    │ 93%          │ 100%         │
-    │ Fashion/Beauty      │ 85%          │ 100%         │
-    │ Health/Fitness      │ 73%          │ 99% ↑overpred│
-    │ Home/Kitchen        │ 69%          │ 99% ↑overpred│
-    │ Affluent/Premium    │ 67%          │ 97% ↑overpred│
-    │ Automotive          │ 63%          │ 97% ↑overpred│
-    │ Parents/Baby        │ 55%          │ 95% ↑overpred│
-    │ Travel              │ 51%          │ 95% ↑overpred│
-    └─────────────────────┴──────────────┴──────────────┘
-    Note: Similar ML over-prediction as Sampler. Amazon shows
-    lower Automotive (63%) and Travel (51%) — more realistic.
-    Best for: Fashion/Beauty (Nykaa, Myntra, Lakme, Sugar Cosmetics).
+  CROSS-PLATFORM:
+    OTT Overlap: 75.0% (170K users)
+    OTT: 266 min/wk | Fatafat: 107 min/wk | Ratio: 0.40x → OTT-primary
+    OTT Genres: Romance 85%, Vdesi 83%, Drama 80%, Comedy 68%, Fantasy 45%
+    Top OTT: True Beauty, Sh**ting Stars, My Boss
+    Gap: Comedy (68%) + Vdesi long-form (83%) on OTT. Fantasy/Sci-Fi (45%) also high.
 
 ======================================================================
 CLUSTER 5 — NOURISH — Engaged Explorer
@@ -143,44 +96,27 @@ CLUSTER 5 — NOURISH — Engaged Explorer
 Content Archetype: Cross-Age Romance Explorer | Retention: Deep Binger
 ======================================================================
 
-  ENGAGEMENT:
-    125 min/wk | 58 MPC | 2.3 active days | 3.8 shows
-
-  RETENTION:
-    65 max ep depth | 100% lock survival | 32.0 eps/session
+  ENGAGEMENT:  125 min/wk | 58 MPC | 2.3 active days | 3.8 shows
+  RETENTION:   65 max ep | 100% lock survival | 32.0 eps/session
 
   CONTENT IDENTITY:
-    Theme (L1):     Forbidden Love (23%), Edgy (19%), Melodrama (16%), Revenge (16%), Secret Lives (10%)
+    Theme (L1):     Forbidden Love (23%), Edgy (19%), Melodrama (16%), Revenge (16%)
     Archetype (L2): Cross-Age Romance Explorer
-    Source:         Intl Dubbed (95%), Partner (3%), Original (2%)
-    Origin:         International (95%), Hindi (5%)
-    Top Shows:      Ocean Of Stars (15K), Mr. Huo (11K), Why Do You Love Me? (11K)
+    Source:         Intl Dubbed 95% | Hindi 5%
 
-  DEMOGRAPHIC PROFILE:
-    64% F / 34% M | 38% 18-24 | 42% 25-34 | 18% 35+
-    Top Cells: F_18-24 (26%), F_25-34 (26%), M_25-34 (16%)
+  DEMOGRAPHICS:  64% F / 34% M | 38% 18-24 | 42% 25-34 | 18% 35+
+  CHANNEL:       Organic 73% | Paid 25%
 
-  CHANNEL:
-    Organic 73% | Paid 25% | Push 1%
+  COMMERCIAL (Tiered):
+    76% Amazon only · 13% ML · Amazon = primary signal
+    Amazon rates: Electronics 98% · Fashion 97% · Health 90% · Affluent 85%
 
-  COMMERCIAL PROFILE (Tiered):
-    Tag Source: 13% ML only | 9% Amazon+ML | 76% Amazon only | 2% None
-    ┌─────────────────────┬──────────────┬──────────────┐
-    │ Interest Category   │ Amazon (85%) │ ML (22%)     │
-    ├─────────────────────┼──────────────┼──────────────┤
-    │ Electronics/Tech    │ 98%          │ 56%          │
-    │ Fashion/Beauty      │ 97%          │ 61%          │
-    │ Health/Fitness      │ 90%          │ 15% ↓underpred│
-    │ Home/Kitchen        │ 88%          │ 25% ↓underpred│
-    │ Affluent/Premium    │ 85%          │ 25% ↓underpred│
-    │ Automotive          │ 84%          │  4% ↓underpred│
-    │ Parents/Baby        │ 80%          │ 10% ↓underpred│
-    │ Travel              │ 79%          │ 13% ↓underpred│
-    └─────────────────────┴──────────────┴──────────────┘
-    Note: 76% Amazon-only users, similar to Male Crossover.
-    ML severely under-predicts. Amazon shows high interest across
-    all categories — these are active Amazon shoppers.
-    Best for: Broad premium targeting. Highest Parents/Baby (80%) after Devotee.
+  CROSS-PLATFORM:
+    OTT Overlap: 72.8% (45K users)
+    OTT: 272 min/wk | Fatafat: 131 min/wk | Ratio: 0.48x → OTT-primary
+    OTT Genres: Romance 84%, Vdesi 83%, Drama 80%, Comedy 63%, Fantasy 44%
+    Top OTT: Sh**ting Stars, The Best Thing, True Beauty
+    Gap: Comedy (63%) + Vdesi (83%) on OTT. Similar to Romance Binger.
 
 ======================================================================
 CLUSTER 2 — SUSTAIN — Platform Devotee
@@ -188,82 +124,25 @@ CLUSTER 2 — SUSTAIN — Platform Devotee
 Content Archetype: CEO/Billionaire Romance | Retention: Full Completer
 ======================================================================
 
-  ENGAGEMENT:
-    630 min/wk (10.5 hrs) | 143 MPC | 4.8 active days | 14.7 shows
-
-  RETENTION:
-    97 max ep depth | 100% lock survival | 52.6 eps/session | 2.97 binge
+  ENGAGEMENT:  630 min/wk (10.5 hrs) | 143 MPC | 4.8 active days | 14.7 shows
+  RETENTION:   97 max ep | 100% lock survival | 52.6 eps/session
 
   CONTENT IDENTITY:
-    Theme (L1):     Forbidden Love (24%), Edgy (17%), Melodrama (14%), Revenge (13%), Secret Lives (13%)
-    Archetype (L2): CEO/Billionaire Romance — only persona with distinct archetype
-    Source:         Intl Dubbed (98%)
-    Origin:         International (98%), Hindi (2%)
-    Top Shows:      Ocean Of Stars (23K), Lucky Trio: CEO Daddy (20K), Flash Marriage (20K)
+    Theme (L1):     Forbidden Love (24%), Edgy (17%), Melodrama (14%), Secret Lives (13%)
+    Archetype (L2): CEO/Billionaire Romance — only distinct archetype
+    Source:         Intl Dubbed 98% | Hindi 2%
 
-  DEMOGRAPHIC PROFILE:
-    82% F / 18% M | 56% 18-24 | 28% 25-34 | 16% 35+
-    Top Cells: F_18-24 (49%), F_25-34 (21%), M_18-24 (8%)
+  DEMOGRAPHICS:  82% F / 18% M | 56% 18-24 | 28% 25-34 | 16% 35+
+  CHANNEL:       Organic 86% | Paid 14%
 
-  CHANNEL:
-    Organic 86% | Paid 14%
+  COMMERCIAL (Tiered):
+    88% ML · 12% Amazon · Best source agreement
+    Amazon rates: Electronics 97% · Fashion 95% · Health 87% · Affluent 81%
 
-  COMMERCIAL PROFILE (Tiered):
-    Tag Source: 88% ML only | 4% Amazon+ML | 8% Amazon only | 0% None
-    ┌─────────────────────┬──────────────┬──────────────┐
-    │ Interest Category   │ Amazon (12%) │ ML (92%)     │
-    ├─────────────────────┼──────────────┼──────────────┤
-    │ Electronics/Tech    │ 97%          │ 99%          │
-    │ Fashion/Beauty      │ 95%          │ 99%          │
-    │ Health/Fitness      │ 87%          │ 96% ↑slight  │
-    │ Home/Kitchen        │ 85%          │ 97% ↑overpred│
-    │ Affluent/Premium    │ 81%          │ 95% ↑overpred│
-    │ Automotive          │ 80%          │ 94% ↑overpred│
-    │ Parents/Baby        │ 76%          │ 92% ↑overpred│
-    │ Travel              │ 74%          │ 93% ↑overpred│
-    └─────────────────────┴──────────────┴──────────────┘
-    Note: Best agreement between Amazon and ML of any persona.
-    Both sources confirm high interest across all categories.
-    Highest value per user. Premium content environments.
-    Best for: Premium brand sponsorships, high-frequency ad exposure.
-
-======================================================================
-KEY FINDING: ML Tag Over-Prediction
-======================================================================
-
-The ML persona model assigns 95-100% of users to nearly every interest
-category, making the tags undifferentiated and commercially useless for
-targeting. Amazon-sourced tags (actual shopping behavior) show much more
-realistic and differentiated rates:
-
-  Category        ML Rate    Amazon Rate    ML Over-Prediction
-  Travel          95%        50-79%         +16 to +44 points
-  Parents/Baby    92%        54-80%         +12 to +38 points
-  Automotive      97%        63-84%         +10 to +34 points
-  Home/Kitchen    99%        69-88%         +11 to +30 points
-
-For the Male Crossover and Engaged Explorer personas (75% Amazon-only
-users), the ML model severely UNDER-predicts because it has no data
-on these users. Amazon tags are the only reliable commercial signal
-for these segments.
-
-Recommendation: Use Amazon-sourced rates as the primary commercial
-signal. Flag ML-only profiles as "predicted — lower confidence."
-
-======================================================================
-AGREEMENT ANALYSIS: 81K Users with Both Sources
-======================================================================
-
-  Category           Amazon    ML      Agreement
-  Fashion/Beauty     91%       81%     73%
-  Electronics/Tech   96%       81%     78%
-  Health/Fitness     80%       59%     46%
-  Home/Kitchen       78%       58%     44%
-  Travel             62%       53%     30%
-  Parents/Baby       65%       51%     38%
-  Automotive         78%       19%      4% ← worst agreement
-  Affluent/Premium   78%       62%     44%
-
-Automotive has 96% DISAGREEMENT between Amazon and ML — the ML model
-is essentially random for this category. Travel and Parents/Baby also
-show poor agreement (<40%).
+  CROSS-PLATFORM:
+    OTT Overlap: 84.8% (37K users) — highest of any persona
+    OTT: 265 min/wk | Fatafat: 636 min/wk | Ratio: 2.40x → FATAFAT-NATIVE
+    OTT Genres: Romance 91%, Vdesi 90%, Drama 86%, Comedy 73%, Fantasy 50%
+    Top OTT: My Boss, The Best Thing, Sh**ting Stars
+    Gap: Comedy (73%) is massive. Fantasy/Sci-Fi (50%) also high.
+    Note: ONLY persona that watches more Fatafat than OTT. True micro-drama natives.

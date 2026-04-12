@@ -539,3 +539,55 @@ For the 81,130 users who have both Amazon and ML tags, agreement varies dramatic
 Use Amazon-sourced rates as the primary commercial signal where available (83-85% of Male Crossover and Engaged Explorer). For Discovery Sampler and Romance Binger (97% ML-only), flag commercial profiles as "predicted — lower confidence" and apply a deflation factor based on the Amazon vs ML divergence observed in overlap users.
 
 The most commercially actionable insight: the Male Crossover persona's Amazon profile shows genuine high interest in Automotive (83%), Affluent/Premium (86%), and Health/Fitness (88%) — categories that the ML model almost completely misses for this segment. This is a real advertiser targeting opportunity that was invisible in the ML-only analysis.
+
+
+---
+
+## Appendix D: OTT Cross-Platform Overlap Analysis
+
+### Overall Overlap
+
+54.6% of Fatafat's 1.9M weekly streamers also watch OTT content on the main MX Player platform in the same 7-day window. This cross-platform behavior varies dramatically by persona.
+
+### Per-Persona OTT Profile
+
+| Persona | OTT Overlap | OTT min/wk | FF min/wk | FF/OTT Ratio | Platform Type |
+|---------|------------|------------|----------|-------------|---------------|
+| Platform Devotee | 84.8% | 265 | 636 | 2.40x | **Fatafat-native** |
+| Romance Binger | 75.0% | 266 | 107 | 0.40x | OTT-primary |
+| Engaged Explorer | 72.8% | 272 | 131 | 0.48x | OTT-primary |
+| Discovery Sampler | 51.1% | 155 | 2 | 0.01x | OTT-primary |
+| Male Crossover | 46.9% | 159 | 2 | 0.01x | OTT-primary |
+
+The Platform Devotee is the ONLY persona that watches more Fatafat than OTT (2.4x ratio). Every other persona is OTT-primary — they spend more time on the main platform than on Fatafat. The Samplers and Male Crossover barely engage with Fatafat (2 min/wk) but watch 155-159 min/wk on OTT — they're OTT users who sampled Fatafat and didn't stick.
+
+### OTT Genre Preferences (% of overlap users)
+
+| Genre | Sampler | Male Cross. | Romance | Explorer | Devotee |
+|-------|---------|------------|---------|----------|---------|
+| Drama | 78% | 75% | 80% | 80% | 86% |
+| Romance | 67% | 62% | 85% | 84% | 91% |
+| Comedy | 56% | 54% | 68% | 63% | 73% |
+| Vdesi (Dubbed) | 56% | 53% | 83% | 83% | 90% |
+| Action/Crime | 38% | 37% | 30% | 27% | 32% |
+| Fantasy/Sci-Fi | 30% | 28% | 45% | 44% | 50% |
+| Thriller/Horror | 20% | 19% | 17% | 15% | 16% |
+| Anime | 7% | 7% | 7% | 7% | 6% |
+
+### Content Gap Signals
+
+**Comedy is the biggest cross-platform content gap.** 54-73% of every persona watches Comedy on OTT, but Fatafat has zero Comedy content in its catalog. This is a clear acquisition signal — Comedy micro-dramas could serve every persona.
+
+**Vdesi (dubbed long-form)** is watched by 53-90% of overlap users on OTT. These are the same dubbed international content fans who watch Fatafat's micro-dramas, but they also consume long-form dubbed content. This validates the dubbed content pipeline as the platform's core.
+
+**Action/Crime** is watched by 27-38% on OTT. Fatafat has Crime content (which doesn't convert per the slate gap analysis), but not Action. Action micro-dramas could serve the Male Crossover persona specifically.
+
+**Fantasy/Sci-Fi** is watched by 28-50% on OTT, with the highest rates in the engaged tiers (Devotee 50%, Romance Binger 45%). Fatafat has only 16 Fantasy shows — there may be room for more.
+
+### Implication for Content Strategy
+
+The OTT overlap data confirms and extends the slate gap analysis:
+1. **Comedy micro-dramas** should be the #1 new genre to acquire — universal demand across all personas
+2. **Action micro-dramas** could unlock the Male Crossover segment (37% watch Action on OTT)
+3. The Platform Devotee's Fatafat-native behavior (2.4x ratio) confirms they're the micro-drama core — protect this segment with content freshness
+4. The Sampler and Male Crossover's OTT-primary behavior (0.01x ratio) means Fatafat is competing for their attention against the full OTT catalog — the hook content needs to be compelling enough to pull them from long-form

@@ -101,6 +101,7 @@ table.at td{padding:.5rem;border-bottom:1px solid var(--border)}
   <li><a href="#content-signal">Content Signal</a></li>
   <li><a href="#content-taxonomy">Taxonomy</a></li>
   <li><a href="#personas">Personas</a></li>
+  <li><a href="#cross-platform">OTT Overlap</a></li>
   <li><a href="#strategy">Strategy</a></li>
   <li><a href="#slate-gaps">Slate Gaps</a></li>
   <li><a href="#commercial">Commercial</a></li>
@@ -408,14 +409,17 @@ render(genreOrder[0]);
     <div style="display:flex;gap:1rem;font-size:.75rem;color:var(--dim);flex-wrap:wrap"><span>Paid 53%</span><span>Organic 26%</span><span>Push 13%</span></div>
   </div>
   <div class="ps"><div class="pst">Commercial (Tiered)</div>
-    <div style="font-size:.75rem;color:var(--dim);margin-bottom:.5rem">97% ML only · 3% Amazon+ML · <span style="color:var(--convert)">ML over-predicts all categories</span></div>
-    <div class="br"><span class="bl">Electronics</span><div class="bt"><div class="bf" style="width:94%;background:var(--grow)"></div></div><span class="bv">94%<span style="color:var(--dim);font-size:.6rem"> amz</span></span></div>
-    <div class="br"><span class="bl">Fashion</span><div class="bt"><div class="bf" style="width:86%;background:var(--forblove)"></div></div><span class="bv">86%</span></div>
-    <div class="br"><span class="bl">Health</span><div class="bt"><div class="bf" style="width:71%;background:var(--nourish)"></div></div><span class="bv">71%</span></div>
-    <div class="br"><span class="bl">Automotive</span><div class="bt"><div class="bf" style="width:68%;background:var(--dim)"></div></div><span class="bv">68%</span></div>
-    <div class="br"><span class="bl">Travel</span><div class="bt"><div class="bf" style="width:50%;background:var(--dim)"></div></div><span class="bv">50%</span></div>
-    <div class="br"><span class="bl">Parents</span><div class="bt"><div class="bf" style="width:54%;background:var(--dim)"></div></div><span class="bv">54%</span></div>
-    <div style="font-size:.7rem;color:var(--dim);margin-top:.25rem">Amazon rates shown (actual shopping). ML says 95-100% for all — unreliable.</div>
+    <div style="font-size:.8rem;color:var(--dim)">
+      <span style="display:inline-block;padding:2px 6px;background:rgba(231,76,60,.1);border-radius:4px;font-size:.7rem;color:var(--convert);margin-bottom:.4rem">97% ML only · 3% Amazon</span><br>
+      Amazon rates: Electronics 94% · Fashion 86% · Health 71% · Automotive 68% · Travel 50% · Parents 54%<br>
+      <span style="color:var(--convert);font-size:.7rem">ML says 95-100% for all — over-predicts by 20-44 pts.</span> Best for broad reach, low CPM.
+    </div>
+  </div>
+  <div class="ps"><div class="pst">Cross-Platform</div>
+    <div style="font-size:.8rem;color:var(--dim)">
+      OTT overlap: 51% · 155 min/wk OTT vs 2 min/wk Fatafat · <span style="color:var(--convert)">OTT-primary (0.01x)</span><br>
+      OTT genres: Drama 78%, Romance 67%, <strong style="color:var(--text)">Comedy 56%</strong>, Action 38%
+    </div>
   </div>
 </div>
 </div></div></div>
@@ -474,15 +478,17 @@ render(genreOrder[0]);
     <div style="font-size:.75rem;color:var(--dim)">Paid 51% | Organic 29% | Push 15%</div>
   </div>
   <div class="ps"><div class="pst">Commercial (Tiered)</div>
-    <div style="font-size:.75rem;color:var(--dim);margin-bottom:.5rem">74% Amazon only · 15% ML only · <span style="color:var(--nourish)">Amazon = primary signal</span></div>
-    <div class="br"><span class="bl">Electronics</span><div class="bt"><div class="bf" style="width:98%;background:var(--grow)"></div></div><span class="bv"><strong>98%</strong></span></div>
-    <div class="br"><span class="bl">Fashion</span><div class="bt"><div class="bf" style="width:96%;background:var(--forblove)"></div></div><span class="bv">96%</span></div>
-    <div class="br"><span class="bl">Health</span><div class="bt"><div class="bf" style="width:88%;background:var(--nourish)"></div></div><span class="bv">88%</span></div>
-    <div class="br"><span class="bl">Affluent</span><div class="bt"><div class="bf" style="width:86%;background:var(--accent)"></div></div><span class="bv"><strong>86%</strong></span></div>
-    <div class="br"><span class="bl">Automotive</span><div class="bt"><div class="bf" style="width:83%;background:var(--grow)"></div></div><span class="bv"><strong>83%</strong></span></div>
-    <div class="br"><span class="bl">Travel</span><div class="bt"><div class="bf" style="width:77%;background:var(--dim)"></div></div><span class="bv">77%</span></div>
-    <div class="br"><span class="bl">Parents</span><div class="bt"><div class="bf" style="width:76%;background:var(--dim)"></div></div><span class="bv">76%</span></div>
-    <div style="font-size:.7rem;color:var(--dim);margin-top:.25rem">Amazon rates (actual shopping). ML has only 24% coverage — unreliable for this persona.<br><strong style="color:var(--text)">Unique: Highest Automotive + Affluent/Premium of any persona.</strong></div>
+    <div style="font-size:.8rem;color:var(--dim)">
+      <span style="display:inline-block;padding:2px 6px;background:rgba(0,184,148,.1);border-radius:4px;font-size:.7rem;color:var(--nourish);margin-bottom:.4rem">74% Amazon only · 15% ML · Amazon = primary signal</span><br>
+      Amazon rates: <strong style="color:var(--text)">Electronics 98%</strong> · Fashion 96% · <strong style="color:var(--text)">Affluent 86%</strong> · <strong style="color:var(--text)">Automotive 83%</strong> · Travel 77% · Parents 76%<br>
+      <span style="font-size:.7rem">Unique: Highest Automotive + Affluent/Premium of any persona. Target: Samsung, OnePlus, Apple, Tanishq.</span>
+    </div>
+  </div>
+  <div class="ps"><div class="pst">Cross-Platform</div>
+    <div style="font-size:.8rem;color:var(--dim)">
+      OTT overlap: 47% (lowest) · 159 min/wk OTT vs 2 min/wk Fatafat · <span style="color:var(--convert)">OTT-primary (0.01x)</span><br>
+      OTT genres: Drama 75%, Romance 62%, <strong style="color:var(--text)">Comedy 54%</strong>, <strong style="color:var(--text)">Action 37%</strong>
+    </div>
   </div>
 </div>
 </div></div></div>
@@ -542,14 +548,17 @@ render(genreOrder[0]);
     <div style="font-size:.75rem;color:var(--dim)">Organic 67% | Paid 30%</div>
   </div>
   <div class="ps"><div class="pst">Commercial (Tiered)</div>
-    <div style="font-size:.75rem;color:var(--dim);margin-bottom:.5rem">97% ML only · 3% Amazon+ML · <span style="color:var(--convert)">ML over-predicts</span></div>
-    <div class="br"><span class="bl">Electronics</span><div class="bt"><div class="bf" style="width:93%;background:var(--grow)"></div></div><span class="bv">93%<span style="color:var(--dim);font-size:.6rem"> amz</span></span></div>
-    <div class="br"><span class="bl">Fashion</span><div class="bt"><div class="bf" style="width:85%;background:var(--forblove)"></div></div><span class="bv">85%</span></div>
-    <div class="br"><span class="bl">Health</span><div class="bt"><div class="bf" style="width:73%;background:var(--nourish)"></div></div><span class="bv">73%</span></div>
-    <div class="br"><span class="bl">Affluent</span><div class="bt"><div class="bf" style="width:67%;background:var(--dim)"></div></div><span class="bv">67%</span></div>
-    <div class="br"><span class="bl">Automotive</span><div class="bt"><div class="bf" style="width:63%;background:var(--dim)"></div></div><span class="bv">63%</span></div>
-    <div class="br"><span class="bl">Travel</span><div class="bt"><div class="bf" style="width:51%;background:var(--dim)"></div></div><span class="bv">51%</span></div>
-    <div style="font-size:.7rem;color:var(--dim);margin-top:.25rem">Amazon rates. Target: Nykaa, Myntra, Lakme — F18-24 fashion audience.</div>
+    <div style="font-size:.8rem;color:var(--dim)">
+      <span style="display:inline-block;padding:2px 6px;background:rgba(231,76,60,.1);border-radius:4px;font-size:.7rem;color:var(--convert);margin-bottom:.4rem">97% ML only · 3% Amazon</span><br>
+      Amazon rates: Electronics 93% · Fashion 85% · Health 73% · Affluent 67% · Automotive 63% · Travel 51%<br>
+      <span style="font-size:.7rem">Target: Nykaa, Myntra, Lakme — F18-24 fashion audience.</span>
+    </div>
+  </div>
+  <div class="ps"><div class="pst">Cross-Platform</div>
+    <div style="font-size:.8rem;color:var(--dim)">
+      OTT overlap: 75% · 266 min/wk OTT vs 107 min/wk Fatafat · <span style="color:var(--dim)">OTT-primary (0.4x)</span><br>
+      OTT genres: Romance 85%, Vdesi 83%, <strong style="color:var(--text)">Comedy 68%</strong>, Fantasy 45%
+    </div>
   </div>
 </div>
 </div></div></div>
@@ -607,15 +616,17 @@ render(genreOrder[0]);
     <div style="font-size:.75rem;color:var(--dim)">Organic 73% | Paid 25%</div>
   </div>
   <div class="ps"><div class="pst">Commercial (Tiered)</div>
-    <div style="font-size:.75rem;color:var(--dim);margin-bottom:.5rem">76% Amazon only · 13% ML only · <span style="color:var(--nourish)">Amazon = primary signal</span></div>
-    <div class="br"><span class="bl">Electronics</span><div class="bt"><div class="bf" style="width:98%;background:var(--grow)"></div></div><span class="bv">98%</span></div>
-    <div class="br"><span class="bl">Fashion</span><div class="bt"><div class="bf" style="width:97%;background:var(--forblove)"></div></div><span class="bv">97%</span></div>
-    <div class="br"><span class="bl">Health</span><div class="bt"><div class="bf" style="width:90%;background:var(--nourish)"></div></div><span class="bv">90%</span></div>
-    <div class="br"><span class="bl">Home</span><div class="bt"><div class="bf" style="width:88%;background:var(--dim)"></div></div><span class="bv">88%</span></div>
-    <div class="br"><span class="bl">Affluent</span><div class="bt"><div class="bf" style="width:85%;background:var(--accent)"></div></div><span class="bv">85%</span></div>
-    <div class="br"><span class="bl">Automotive</span><div class="bt"><div class="bf" style="width:84%;background:var(--dim)"></div></div><span class="bv">84%</span></div>
-    <div class="br"><span class="bl">Parents</span><div class="bt"><div class="bf" style="width:80%;background:var(--dim)"></div></div><span class="bv">80%</span></div>
-    <div style="font-size:.7rem;color:var(--dim);margin-top:.25rem">Amazon rates. Active Amazon shoppers — high interest across all categories.</div>
+    <div style="font-size:.8rem;color:var(--dim)">
+      <span style="display:inline-block;padding:2px 6px;background:rgba(0,184,148,.1);border-radius:4px;font-size:.7rem;color:var(--nourish);margin-bottom:.4rem">76% Amazon only · 13% ML · Amazon = primary signal</span><br>
+      Amazon rates: Electronics 98% · Fashion 97% · Health 90% · Home 88% · Affluent 85% · Automotive 84% · Parents 80%<br>
+      <span style="font-size:.7rem">Active Amazon shoppers — high interest across all categories.</span>
+    </div>
+  </div>
+  <div class="ps"><div class="pst">Cross-Platform</div>
+    <div style="font-size:.8rem;color:var(--dim)">
+      OTT overlap: 73% · 272 min/wk OTT vs 131 min/wk Fatafat · <span style="color:var(--dim)">OTT-primary (0.5x)</span><br>
+      OTT genres: Romance 84%, Vdesi 83%, <strong style="color:var(--text)">Comedy 63%</strong>, Fantasy 44%
+    </div>
   </div>
 </div>
 </div></div></div>
@@ -676,19 +687,68 @@ render(genreOrder[0]);
     <div style="font-size:.75rem;color:var(--dim)"><strong style="color:var(--text)">Organic 86%</strong> | Paid 14% — almost entirely self-returning</div>
   </div>
   <div class="ps"><div class="pst">Commercial (Tiered)</div>
-    <div style="font-size:.75rem;color:var(--dim);margin-bottom:.5rem">88% ML · 12% Amazon · <span style="color:var(--nourish)">Best source agreement</span></div>
-    <div class="br"><span class="bl">Electronics</span><div class="bt"><div class="bf" style="width:97%;background:var(--grow)"></div></div><span class="bv">97%</span></div>
-    <div class="br"><span class="bl">Fashion</span><div class="bt"><div class="bf" style="width:95%;background:var(--forblove)"></div></div><span class="bv">95%</span></div>
-    <div class="br"><span class="bl">Health</span><div class="bt"><div class="bf" style="width:87%;background:var(--nourish)"></div></div><span class="bv">87%</span></div>
-    <div class="br"><span class="bl">Home</span><div class="bt"><div class="bf" style="width:85%;background:var(--dim)"></div></div><span class="bv">85%</span></div>
-    <div class="br"><span class="bl">Affluent</span><div class="bt"><div class="bf" style="width:81%;background:var(--accent)"></div></div><span class="bv">81%</span></div>
-    <div class="br"><span class="bl">Automotive</span><div class="bt"><div class="bf" style="width:80%;background:var(--dim)"></div></div><span class="bv">80%</span></div>
-    <div class="br"><span class="bl">Travel</span><div class="bt"><div class="bf" style="width:74%;background:var(--dim)"></div></div><span class="bv">74%</span></div>
-    <div style="font-size:.7rem;color:var(--dim);margin-top:.25rem">Amazon rates. Best ML-Amazon agreement of any persona. Premium brand environments.</div>
+    <div style="font-size:.8rem;color:var(--dim)">
+      <span style="display:inline-block;padding:2px 6px;background:rgba(0,184,148,.1);border-radius:4px;font-size:.7rem;color:var(--nourish);margin-bottom:.4rem">88% ML · 12% Amazon · Best source agreement</span><br>
+      Amazon rates: Electronics 97% · Fashion 95% · Health 87% · Home 85% · Affluent 81% · Automotive 80% · Travel 74%<br>
+      <span style="font-size:.7rem">Highest value per user. Premium content environments for brand advertisers.</span>
+    </div>
+  </div>
+  <div class="ps"><div class="pst">Cross-Platform</div>
+    <div style="font-size:.8rem;color:var(--dim)">
+      OTT overlap: 85% (highest) · 265 min/wk OTT vs 636 min/wk Fatafat · <span style="color:var(--sustain)">Fatafat-native (2.4x)</span><br>
+      OTT genres: Romance 91%, Vdesi 90%, <strong style="color:var(--text)">Comedy 73%</strong>, Fantasy 50%
+    </div>
   </div>
 </div>
 </div></div></div>
 
+</section>
+</div>
+
+<!-- CROSS-PLATFORM -->
+<section id="cross-platform">
+<h2>Cross-Platform: OTT Overlap</h2>
+<p style="color:var(--dim);font-size:.9rem;margin-bottom:1.5rem">54.6% of Fatafat users also watch OTT content. Their OTT behavior reveals content gaps and platform positioning.</p>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.75rem;margin-bottom:1.5rem">
+  <div class="mc"><div class="l">OTT Overlap</div><div class="v" style="color:var(--accent)">54.6%</div><div class="d">1.05M of 1.92M users</div></div>
+  <div class="mc"><div class="l">Devotee Overlap</div><div class="v">84.8%</div><div class="d">Highest — but Fatafat-native (2.4x)</div></div>
+  <div class="mc"><div class="l">Male Cross. Overlap</div><div class="v">46.9%</div><div class="d">Lowest — most Fatafat-isolated</div></div>
+  <div class="mc"><div class="l">#1 OTT Gap</div><div class="v" style="color:var(--nourish)">Comedy</div><div class="d">54-73% watch on OTT, 0 on Fatafat</div></div>
+</div>
+
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;margin-bottom:1.5rem;overflow-x:auto">
+<table class="at" style="min-width:600px">
+<thead><tr><th>Persona</th><th>OTT %</th><th>OTT min</th><th>FF min</th><th>Ratio</th><th>Type</th><th>Top OTT Genre</th></tr></thead>
+<tbody>
+<tr><td>Platform Devotee</td><td><strong>84.8%</strong></td><td>265</td><td>636</td><td style="color:var(--sustain)"><strong>2.4x</strong></td><td style="color:var(--sustain)">Fatafat-native</td><td>Romance 91%</td></tr>
+<tr><td>Romance Binger</td><td>75.0%</td><td>266</td><td>107</td><td>0.4x</td><td style="color:var(--dim)">OTT-primary</td><td>Romance 85%</td></tr>
+<tr><td>Engaged Explorer</td><td>72.8%</td><td>272</td><td>131</td><td>0.5x</td><td style="color:var(--dim)">OTT-primary</td><td>Romance 84%</td></tr>
+<tr><td>Discovery Sampler</td><td>51.1%</td><td>155</td><td>2</td><td style="color:var(--convert)">0.01x</td><td style="color:var(--convert)">OTT-primary</td><td>Drama 78%</td></tr>
+<tr><td>Male Crossover</td><td>46.9%</td><td>159</td><td>2</td><td style="color:var(--convert)">0.01x</td><td style="color:var(--convert)">OTT-primary</td><td>Drama 75%</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Content Gaps: Genres on OTT but Absent from Fatafat</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem">
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;border-left:3px solid var(--nourish)">
+    <strong style="color:var(--nourish)">Comedy — 54-73%</strong>
+    <p style="font-size:.8rem;color:var(--dim);margin-top:.5rem">Every persona watches Comedy on OTT. Fatafat has zero Comedy. Biggest new-genre opportunity.</p>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;border-left:3px solid var(--grow)">
+    <strong style="color:var(--grow)">Action — 27-38%</strong>
+    <p style="font-size:.8rem;color:var(--dim);margin-top:.5rem">Strongest in Sampler + Male Crossover. Action micro-dramas could unlock the male audience.</p>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;border-left:3px solid var(--accent)">
+    <strong style="color:var(--accent)">Fantasy/Sci-Fi — 28-50%</strong>
+    <p style="font-size:.8rem;color:var(--dim);margin-top:.5rem">Devotee 50%, Romance Binger 45%. Only 16 Fantasy shows on Fatafat — room to grow.</p>
+  </div>
+</div>
+
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;margin-top:1rem">
+  <p style="font-size:.85rem;color:var(--dim)"><strong style="color:var(--text)">Key insight:</strong> Platform Devotee is the only persona watching more Fatafat than OTT (2.4x). Everyone else is OTT-primary — Fatafat competes against the full OTT catalog for their attention.</p>
+</div>
 </section>
 </div>
 
