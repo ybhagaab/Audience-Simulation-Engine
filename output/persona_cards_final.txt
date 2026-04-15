@@ -9,6 +9,11 @@ Geographic: Two-level (regional split + top cities)
 CLUSTER 0 — CONVERT — Discovery Sampler
 1,239,814 users (64.5%)
 Content Archetype: Hook-Driven Romance | Retention: Early Exit
+
+3 out of 5 weekly users — mostly OTT viewers who tried Fatafat and didn't stick
+(51% also watch OTT at 155 min/wk vs 2 min/wk here). "Edgy" hook content attracts
+them but doesn't retain. South India over-represents at 21%. The 1→2 show transition
+is the highest-leverage conversion point — OTT-overlap users convert 1.5x better.
 ======================================================================
 
   ENGAGEMENT:  2 min/wk | 2 MPC | 1.1 active days | 1.2 shows
@@ -44,6 +49,11 @@ Content Archetype: Hook-Driven Romance | Retention: Early Exit
 CLUSTER 3 — GROW — Male Crossover Viewer
 351,187 users (18.3%)
 Content Archetype: Hook-Driven Romance + Hindi Crime | Retention: Early Exit
+
+The untapped male audience. M25-34 dominant (35%), 74% Amazon-identified with no ML
+profile. Lowest OTT overlap (47%) — the most Fatafat-isolated persona. Hindi content
+(Ek Badnaam Aashram) in top 3 shows. Highest Affluent/Premium (86%) and Automotive
+(83%) affinity. South India at 22%. The OTT-overlap half has 1.7x lock survival.
 ======================================================================
 
   ENGAGEMENT:  2 min/wk | 2 MPC | 1.1 active days | 1.2 shows
@@ -79,6 +89,11 @@ Content Archetype: Hook-Driven Romance + Hindi Crime | Retention: Early Exit
 CLUSTER 1 — NOURISH — Romance Binger
 225,968 users (11.8%)
 Content Archetype: Forbidden Love → Melodrama Transition | Retention: Deep Binger
+
+The first engaged tier — the "converted" sampler. 100% lock survival, content shifts
+from Edgy to Forbidden Love + Melodrama. 72% female, F_18-24 dominant. South India
+drops to 12% (from 21% in Sampler). 75% also watch OTT (266 min/wk) — cross-platform
+entertainment consumers.
 ======================================================================
 
   ENGAGEMENT:  103 min/wk | 51 MPC | 2.2 active days | 3.5 shows
@@ -113,6 +128,10 @@ Content Archetype: Forbidden Love → Melodrama Transition | Retention: Deep Bin
 CLUSTER 5 — NOURISH — Engaged Explorer
 61,215 users (3.2%)
 Content Archetype: Cross-Age Romance Explorer | Retention: Deep Binger
+
+The cross-age engaged viewer. Top cells split equally F_18-24 and F_25-34. Highest
+West India concentration (27%) — Maharashtra and Gujarat over-index. 76% Amazon-
+identified. 73% OTT overlap. Similar content to Romance Binger but older demographic.
 ======================================================================
 
   ENGAGEMENT:  125 min/wk | 58 MPC | 2.3 active days | 3.8 shows
@@ -147,6 +166,12 @@ Content Archetype: Cross-Age Romance Explorer | Retention: Deep Binger
 CLUSTER 2 — SUSTAIN — Platform Devotee
 44,047 users (2.3%)
 Content Archetype: CEO/Billionaire Romance | Retention: Full Completer
+
+The platform's most valuable viewers — and the ONLY persona that watches more Fatafat
+than OTT (2.4x ratio, 636 vs 265 min/wk). True micro-drama natives. 82% female, 86%
+organic. Only persona with a distinct archetype: CEO/Billionaire Romance. Lowest South
+India (11%), highest Gujarat (10.4%) and West Bengal (8.2%) over-index. Secret Lives
+demand 2x sampler rate.
 ======================================================================
 
   ENGAGEMENT:  630 min/wk (10.5 hrs) | 143 MPC | 4.8 active days | 14.7 shows
