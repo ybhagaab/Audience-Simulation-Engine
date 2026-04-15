@@ -591,3 +591,41 @@ The OTT overlap data confirms and extends the slate gap analysis:
 2. **Action micro-dramas** could unlock the Male Crossover segment (37% watch Action on OTT)
 3. The Platform Devotee's Fatafat-native behavior (2.4x ratio) confirms they're the micro-drama core — protect this segment with content freshness
 4. The Sampler and Male Crossover's OTT-primary behavior (0.01x ratio) means Fatafat is competing for their attention against the full OTT catalog — the hook content needs to be compelling enough to pull them from long-form
+
+
+---
+
+## Appendix E: Geographic Profile
+
+### Coverage
+94.9% of users (1,823,727 of 1,922,238) have geo data from the `regionname` and `city` fields on the engagement table.
+
+### Regional Distribution by Persona
+
+| Persona | Hindi Belt | South | West | East | Top State |
+|---------|-----------|-------|------|------|-----------|
+| Discovery Sampler | 46.6% | **20.5%** | 20.6% | 8.8% | Uttar Pradesh |
+| Male Crossover | 43.2% | **22.0%** | 22.8% | 8.7% | Maharashtra |
+| Romance Binger | 48.7% | **12.1%** | 23.5% | 11.8% | Maharashtra |
+| Engaged Explorer | 46.4% | **12.7%** | **26.5%** | 10.9% | Maharashtra |
+| Platform Devotee | 46.5% | **11.2%** | **25.6%** | 12.7% | Maharashtra |
+
+### Key Geographic Signal
+
+**South India drops sharply as engagement deepens.** South India (TN, KA, TS, KL, AP) makes up 20-22% of low-engagement personas but only 11-13% of engaged ones. Tamil Nadu is the biggest under-indexer: 7.9% of Samplers but 3.3% of Devotees (0.47x index). This suggests Fatafat's dubbed content resonates less in South India — a potential content localization opportunity.
+
+**West India (Maharashtra, Gujarat) over-indexes in engaged tiers.** Gujarat specifically over-indexes in Devotee (10.4%, 1.31x) and Explorer (10.1%, 1.28x). These states have the highest conversion rates from sampler to engaged viewer.
+
+**West Bengal and East India over-index in engaged personas.** WB is 8.2% of Devotees vs 6.1% overall (1.34x). Kolkata is a top-5 city for every engaged persona.
+
+### Top 5 Cities by Persona
+
+| Persona | #1 | #2 | #3 | #4 | #5 |
+|---------|----|----|----|----|-----|
+| Sampler | Patna 8.7% | Lucknow 8.7% | Mumbai 5.7% | Chennai 5.6% | Kolkata 5.4% |
+| Male Cross. | Lucknow 7.4% | Patna 7.2% | Mumbai 6.5% | Chennai 5.6% | Kolkata 5.4% |
+| Romance | Lucknow 9.0% | Patna 7.9% | Kolkata 6.9% | Mumbai 6.4% | Delhi 5.7% |
+| Explorer | Lucknow 7.9% | Mumbai 7.4% | Patna 6.9% | Kolkata 6.7% | Delhi 5.9% |
+| Devotee | Lucknow 8.5% | Patna 8.1% | Kolkata 7.6% | Mumbai 7.0% | Delhi 5.6% |
+
+Note: Chennai appears in top 5 for Sampler and Male Crossover but drops out for engaged personas — consistent with the South India under-indexing pattern.

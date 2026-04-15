@@ -194,3 +194,36 @@ Pipeline:
   ott_overlap_analysis.py           →  Cross-platform profiles
   slate_gap_analysis.py             →  Demand vs supply gaps
 ```
+
+
+---
+
+## Section 8: Geographic Profile (Two-Level)
+
+### Level 1: Regional Split
+
+| Field | Description | Source | Computation |
+|-------|-------------|--------|-------------|
+| Hindi Belt % | % of persona from UP, Bihar, MP, Rajasthan, Jharkhand, Chhattisgarh, Haryana, Uttarakhand, HP, Delhi | `fatafat.mxp_fatafat_player_engagement.regionname` | Per user: primary state by highest watchtime. Per cluster: count users in Hindi Belt states / total |
+| South % | % from Tamil Nadu, Karnataka, Telangana, Kerala, Andhra Pradesh | Same | Same method |
+| West % | % from Maharashtra, Gujarat, Goa | Same | Same method |
+| East % | % from West Bengal, Odisha, Assam | Same | Same method |
+
+### Level 2: Top Cities
+
+| Field | Description | Source | Computation |
+|-------|-------------|--------|-------------|
+| Top 5 Cities | Cities with highest user concentration | `fatafat.mxp_fatafat_player_engagement.city` | Per user: primary city by highest watchtime. Per cluster: value_counts top 5 |
+
+### Regional Classification
+
+| Region | States |
+|--------|--------|
+| Hindi Belt | Uttar Pradesh, Bihar, Madhya Pradesh, Rajasthan, Jharkhand, Chhattisgarh, Haryana, Uttarakhand, Himachal Pradesh, National Capital Territory of Delhi |
+| South | Tamil Nadu, Karnataka, Telangana, Kerala, Andhra Pradesh |
+| West | Maharashtra, Gujarat, Goa |
+| East | West Bengal, Odisha, Assam |
+
+### Key Geo Signal
+
+South India (20-22% of low-engagement personas) drops to 11-13% in engaged personas — these users sample but don't convert. West India (Maharashtra, Gujarat) over-indexes in engaged tiers (25-27% vs 21% in samplers). Tamil Nadu is the biggest under-indexer in engaged personas (7.9% sampler → 3.3% devotee, 0.47x index).

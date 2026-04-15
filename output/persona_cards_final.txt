@@ -3,6 +3,7 @@ Base: Phase 2.2 clusters (sil=0.43, ARI=0.75)
 Content: Two-level identity (secondary genre + archetype)
 Commercial: Tiered profiles (Amazon shopping + ML predicted)
 Cross-Platform: OTT overlap analysis (54.6% overall overlap)
+Geographic: Two-level (regional split + top cities)
 
 ======================================================================
 CLUSTER 0 — CONVERT — Discovery Sampler
@@ -33,6 +34,12 @@ Content Archetype: Hook-Driven Romance | Retention: Early Exit
     Top OTT: Sankalp, Kaptaan, True Beauty
     Gap: Comedy (56%) + Action (38%) watched on OTT, absent from Fatafat
 
+  GEOGRAPHIC PROFILE:
+    Region (L1):  Hindi Belt 47% · South 21% · West 21% · East 9%
+    Cities (L2):  Patna 8.7%, Lucknow 8.7%, Mumbai 5.7%, Chennai 5.6%, Kolkata 5.4%
+    Note: Broadest geo distribution. South India at 21% — highest of any persona.
+          Tamil Nadu 7.9% (over-indexes vs engaged personas at 3.3%).
+
 ======================================================================
 CLUSTER 3 — GROW — Male Crossover Viewer
 351,187 users (18.3%)
@@ -62,6 +69,12 @@ Content Archetype: Hook-Driven Romance + Hindi Crime | Retention: Early Exit
     Top OTT: Sankalp, Kaptaan, Bindiya Ke Bahubali
     Gap: Comedy (54%) + Action (37%) on OTT. Action highest among low-engagement personas.
 
+  GEOGRAPHIC PROFILE:
+    Region (L1):  Hindi Belt 43% · South 22% · West 23% · East 9%
+    Cities (L2):  Lucknow 7.4%, Patna 7.2%, Mumbai 6.5%, Chennai 5.6%, Kolkata 5.4%
+    Note: Lowest Hindi Belt share (43%). Highest South share (22%) tied with Sampler.
+          Telangana over-indexes (5.0% vs 4.1% overall, 1.20x).
+
 ======================================================================
 CLUSTER 1 — NOURISH — Romance Binger
 225,968 users (11.8%)
@@ -89,6 +102,12 @@ Content Archetype: Forbidden Love → Melodrama Transition | Retention: Deep Bin
     OTT Genres: Romance 85%, Vdesi 83%, Drama 80%, Comedy 68%, Fantasy 45%
     Top OTT: True Beauty, Sh**ting Stars, My Boss
     Gap: Comedy (68%) + Vdesi long-form (83%) on OTT. Fantasy/Sci-Fi (45%) also high.
+
+  GEOGRAPHIC PROFILE:
+    Region (L1):  Hindi Belt 49% · South 12% · West 24% · East 12%
+    Cities (L2):  Lucknow 9.0%, Patna 7.9%, Kolkata 6.9%, Mumbai 6.4%, Delhi 5.7%
+    Note: South drops to 12% (from 21% in Sampler). West Bengal over-indexes (7.5%, 1.22x).
+          MP over-indexes (6.7%, 1.25x). Tamil Nadu under-indexes (3.6%, 0.51x).
 
 ======================================================================
 CLUSTER 5 — NOURISH — Engaged Explorer
@@ -118,6 +137,12 @@ Content Archetype: Cross-Age Romance Explorer | Retention: Deep Binger
     Top OTT: Sh**ting Stars, The Best Thing, True Beauty
     Gap: Comedy (63%) + Vdesi (83%) on OTT. Similar to Romance Binger.
 
+  GEOGRAPHIC PROFILE:
+    Region (L1):  Hindi Belt 46% · South 13% · West 27% · East 11%
+    Cities (L2):  Lucknow 7.9%, Mumbai 7.4%, Patna 6.9%, Kolkata 6.7%, Delhi 5.9%
+    Note: Highest West share (27%) — Maharashtra 16.1%, Gujarat 10.1% (1.28x over-index).
+          Tamil Nadu under-indexes (3.4%, 0.48x). Similar geo to Devotee.
+
 ======================================================================
 CLUSTER 2 — SUSTAIN — Platform Devotee
 44,047 users (2.3%)
@@ -146,3 +171,10 @@ Content Archetype: CEO/Billionaire Romance | Retention: Full Completer
     Top OTT: My Boss, The Best Thing, Sh**ting Stars
     Gap: Comedy (73%) is massive. Fantasy/Sci-Fi (50%) also high.
     Note: ONLY persona that watches more Fatafat than OTT. True micro-drama natives.
+
+  GEOGRAPHIC PROFILE:
+    Region (L1):  Hindi Belt 47% · South 11% · West 26% · East 13%
+    Cities (L2):  Lucknow 8.5%, Patna 8.1%, Kolkata 7.6%, Mumbai 7.0%, Delhi 5.6%
+    Note: Lowest South share (11%). Highest West (26%) and East (13%).
+          Gujarat 10.4% (1.31x over-index). West Bengal 8.2% (1.34x over-index).
+          Tamil Nadu 3.3% (0.47x) — biggest under-indexer in engaged personas.
